@@ -1,21 +1,38 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import nisam from "./assets/nisam vm.png";
 import logo from "./assets/d logo.png";
 import img1 from "./assets/asna2.png";
 import img2 from "./assets/aflu2.png";
 import img3 from "./assets/asna1.png";
 import img4 from "./assets/aflu-1.png";
-import { GraduationCap, Minus, Plus } from "lucide-react";
+import jesna from './assets/jesna.png';
+import shamsudheen from './assets/shamsudheen.png';
+import sreelal from './assets/sreelal.png';
+import abidarasheed from './assets/abida rasheed.png';
+import badarulmuneer from './assets/badarul muneer.png'
+import faisal from './assets/faisal.png'
+import fazil from './assets/fazil.png'
+import feroz from './assets/feroz.png'
+import hennaayoob from './assets/henna ayoob.png'
+import hennagazal from './assets/henna gazal.png'
+
+import { Check, ChevronLeft, ChevronRight, GraduationCap, Instagram, Linkedin, MessageCircle, Minus, Plus, X } from "lucide-react";
+import { CourseMentorSection } from "./CourseMentorSection";
 
 const HeroSection = () => {
   const [openModuleId, setOpenModuleId] = useState(null);
-
-
+  const [openFaqs, setOpenFaqs] = useState({});
+  const scrollRef = useRef(null);
   const toggleModule = (id) => {
     setOpenModuleId((prev) => (prev === id ? null : id));
   };
+  const toggleFaq = (id) => {
+    setOpenFaqs(prev => ({ ...prev, [id]: !prev[id] }));
+  };
 
-
+  const scrollToPricing = () => {
+    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
 
   return (
@@ -55,7 +72,7 @@ const HeroSection = () => {
           <div className="absolute top-[15%] right-[15%] text-white text-3xl md:text-5xl opacity-80">
             ✦
           </div>
-          <div className="absolute bottom-[30%] right-[28%] text-[#9dc657] text-4xl sm:mb-8 md:text-6xl md:mb-1 xl:mb-14 z-90 opacity-70">
+          <div className="absolute bottom-[29%] right-[28%] text-[#9dc657] text-4xl sm:mb-8 md:text-6xl md:mb-1 xl:mb-14 z-90 opacity-70">
             ✦
           </div>
 
@@ -79,10 +96,11 @@ const HeroSection = () => {
           </h1>
 
           {/* Mentor Area */}
-          <div className="relative min-h-[300px] md:min-h-[600px]">
+          <div className="relative min-h-[200px] md:min-h-[600px]">
             {/* SVG Curve */}
             <svg
-              className="absolute bottom-0 left-0 w-full h-[300px] md:h-[450px] z-9"
+              className="absolute bottom-0 left-0 w-full sm:ml-[-19px]
+                sm:w-[729px]  h-[170px] md:ml-[-25px] md:w-[1000px] md:h-[450px] z-9"
               viewBox="0 0 1440 320"
               preserveAspectRatio="none"
             >
@@ -121,8 +139,8 @@ const HeroSection = () => {
                 left-[75%]
                 -translate-x-1/2
                 w-60
-                sm:w-[250px] sm:ml-[-150px] sm:bottom-[50%]
-                md:bottom-[35%] md:left-[82%] md:w-[320px]
+                sm:w-[250px] sm:ml-[-250px] sm:bottom-[50%]
+                md:bottom-[35%] md:left-[98%] md:w-[320px]
                 lg:w-[360px] lg:ml-[-400px]
                 2xl:w-[300px]
                 z-10
@@ -132,7 +150,7 @@ const HeroSection = () => {
                 className="
                   text-xs ml-18
                   sm:text-sm sm:ml-20
-                  md:text-4xl md:ml-27
+                  md:text-4xl md:ml-30
                   lg:text-4xl
                   xl:text-5xl
                   2xl:text-5xl
@@ -169,8 +187,8 @@ const HeroSection = () => {
             <div
               className="
                 absolute
-                bottom-[82%]
-                right-[4%]
+                bottom-[68%]
+                right-[5%]
                 flex items-start gap-2
                 bg-white text-[#435c19]
                 rounded-xl shadow-lg
@@ -198,7 +216,10 @@ const HeroSection = () => {
                 absolute bottom-13 left-0 w-full
                 h-[250px]
                 sm:h-[260px] sm:mb-16
+                sm:ml-[-19px]
+                sm:w-[729px]
                 md:h-[330px]
+                md:ml-[-25px] md:w-[1000px]
                 lg:h-[330px]
                 xl:h-[420px]
                 2xl:h-[560px]
@@ -320,21 +341,211 @@ const HeroSection = () => {
 
       <CourseMentorSection />
 
-<CreatorsSection/>
+      <CreatorsSection />
+
+      <ScrollBanner />
+
+      {/* pricing section */}
+
+      <section id="pricing" className="py-12 md:py-20 px-4 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
+            Choose Your <span className="text-[#8dc73d]">Plan</span>
+          </h2>
+
+          <div className="relative max-w-5xl mx-auto">
+            {/* LEFT ARROW */}
+            <button
+              onClick={() =>
+                scrollRef.current?.scrollBy({ left: -300, behavior: "smooth" })
+              }
+              className="
+    flex
+    lg:hidden
+
+    absolute
+    left-[-16px]
+    top-1/2
+    -translate-y-1/2
+    z-20
+
+    text-white
+
+    p-2
+    sm:p-3
+    rounded-full
+    shadow-lg
+
+    hover:scale-110
+    transition
+  "
+            >
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+            </button>
+
+
+            {/* RIGHT ARROW */}
+            <button
+              onClick={() =>
+                scrollRef.current?.scrollBy({ left: 300, behavior: "smooth" })
+              }
+              className="
+    flex
+    lg:hidden
+
+    absolute
+    right-[-16px]
+    top-1/2
+    -translate-y-1/2
+    z-20
+
+
+    text-white
+    p-2
+    sm:p-3
+    rounded-full
+    shadow-lg
+
+    hover:scale-110
+    transition
+  "
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+            </button>
+
+            {/* CARDS */}
+            <div
+              ref={scrollRef}
+              className="
+          flex
+          gap-6
+          overflow-x-auto
+          pb-4
+          snap-x snap-mandatory
+          scrollbar-hide
+
+          lg:grid
+          lg:grid-cols-3
+          lg:gap-8
+          lg:overflow-visible
+        "
+            >
+              {pricingPlans.map((plan, idx) => (
+                <div
+                  key={idx}
+                  className="
+              min-w-[85%]
+              sm:min-w-[70%]
+              md:min-w-[50%]
+              lg:min-w-0
+              snap-center
+            "
+                >
+                  <PricingCard plan={plan} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* faq */}
+      <section className="py-12 md:py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
+            Frequently <span className="text-white">Asked</span><br />
+            <span className="text-[#8dc73d]">Questions</span>
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {faqs.map((faq) => (
+              <ModuleItem
+                key={faq.id}
+                module={faq}
+                isOpen={openFaqs[faq.id]}
+                toggle={() => toggleFaq(faq.id)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-[#6a9413] py-8 px-4">
+  <div className="max-w-6xl mx-auto">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+
+      {/* Left Section */}
+      <div className="text-center md:text-left">
+        <p className="font-bold text-white mb-2 text-lg">
+          Follow us on
+        </p>
+        <div className="flex gap-4 justify-center md:justify-start">
+          <a
+            href="#"
+            className="text-white transition-transform hover:scale-110 active:scale-95"
+          >
+            <Linkedin className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+          </a>
+          <a
+            href="#"
+            className="text-white transition-transform hover:scale-110 active:scale-95"
+          >
+            <Instagram className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+          </a>
+        </div>
+      </div>
+
+      {/* Center Logo */}
+      <div className="flex items-center justify-center">
+        <img
+          src={logo}
+          alt="D School"
+          className="w-20 sm:w-24 md:w-28 object-contain"
+        />
+      </div>
+
+      {/* Right Section */}
+      <div className="text-center md:text-right">
+        <p className="font-bold text-white mb-2 text-lg">
+          Contact us on
+        </p>
+        <div className="flex gap-4 justify-center md:justify-end">
+          <a
+            href="#"
+            className="text-white transition-transform hover:scale-110 active:scale-95"
+          >
+            <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+      <div className="fixed bottom-0 left-0 right-0 z-50 p-4 flex justify-center">
+        <button
+          onClick={scrollToPricing}
+          className="bg-white text-[#6a9413] px-12 py-4 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform w-full max-w-md"
+        >
+          Enroll Now
+        </button>
+      </div>
 
     </div>
   );
 };
 const ScrollBanner = () => (
   <section className="relative w-full h-40 md:h-44 bg-black overflow-hidden flex items-center justify-center my-8">
-    <div className="absolute w-[200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
+    <div className="absolute w-[700%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
       {Array(20).fill('Create Engage Grow').map((text, i) => (
-        <span key={i} className="mx-4">. {text}</span>
+        <span key={i} className="mx-4">· {text}</span>
       ))}
     </div>
     <div className="absolute w-[200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform -rotate-6 sm:-rotate-3 md:-rotate-3 shadow-lg animate-scroll-right">
       {Array(20).fill('Create Engage Grow').map((text, i) => (
-        <span key={i} className="mx-4">. {text}</span>
+        <span key={`dup-${i}`} className="mx-4">· {text}</span>
       ))}
     </div>
   </section>
@@ -413,140 +624,157 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
   </div>
 );
 
-const CourseMentorSection = () => (
-  <section className="py-12 md:py-20 px-4">
-    <div className="max-w-7xl mx-auto">
-      <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
-        <span className="text-white">Course </span>
-        <span className="text-[#8dc73d]">Mentor</span>
-      </h2>
 
-      <div className="relative min-h-[420px] md:min-h-[500px]">
+// pricing card module
 
-        {/* Mentor Image */}
+// Pricing Card Component
+const PricingCard = ({ plan }) => (
+  <div
+    className="
+      bg-[#58751c]
+      rounded-[20px_100px_30px_30px]
 
-        <div
-          className="
-    absolute
-    left-0
-    top-1/2
-    -translate-y-1/2
+      p-6
+      sm:p-8
+      md:p-10
 
-    z-30
-    pointer-events-none
-  "
-        >
-          <img
-            src={nisam}
-            alt="Nisam VM"
-            className="
-      h-[260px]        /* small phones */
-      sm:h-[320px]     /* big phones */
-      md:h-[520px]     /* tablets */
-      md:mt-[-230px]
-      md:ml-[-30px]
-      lg:h-[750px]
-      lg:mt-[-245px] 
-      lg:ml-[10px]    /* laptops */
-      xl:h-[620px]     /* desktops */
+      flex
+      flex-col
 
-      w-auto
-      object-contain
+      min-h-[480px]
+      md:min-h-[520px]
+      lg:min-h-[560px]
+
+      border-2 border-transparent
+
+      transition-all duration-300 ease-out
+
+      md:hover:scale-[1.03]
+      md:hover:shadow-2xl
+      md:hover:border-[#8dc73d]
     "
-          />
-        </div>
+  >
+    {/* Title */}
+    <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white text-center mb-4">
+      {plan.title}
+    </h3>
 
-
-
-        {/* Card */}
-        <div
-          className="
-          bg-gray-100
-          rounded-3xl
-          md:rounded-[30px_30px_110px_30px]
-          md:p-12
-          w-full
-          md:ml-[0%]
-          relative
-          z-10
-          min-h-[320px]
-
-          flex
-          flex-col
-          md:flex-row
-          items-center
-          md:items-stretch
-          justify-between
-
-          overflow-visible   /* 🔑 IMPORTANT */
-        "
-        >
-
-          {/* Name Badge */}
-          <div
-            className="
-            bg-[#8dc73d]
-            rounded-[40px_40px_40px_0]
-            px-5 py-4
-
-            mt-40
-            md:absolute
-            md:w-[250px]
-            md:mt-0
-            md:left-[31%]
-            md:top-36
-            md:-translate-y-1/2
-
-            lg:w-[300px]
-            lg:ml-[-10px]
-            lg:mt-[40px]
-
-            z-20
-            min-w-[200px]
-            text-center
-            md:text-left
-          "
-          >
-            <div className="text-xl md:text-2xl  md:pl-[50px] font-extrabold text-white uppercase mb-1">
-              NISAM VM
-            </div>
-            <div className="text-sm md:text-base md:pl-[50px]  font-semibold text-white leading-snug">
-              CEO - Desgro Media<br />Demand School
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div
-            className="
-            text-center
-            md:text-right
-            ml-auto
-            mt-6
-            md:mt-10
-          "
-          >
-            <div className="text-4xl sm:text-5xl md:text-5xl md:mt-5  lg:text-7xl font-black text-[#556B2F]">
-              146k+
-            </div>
-            <div className="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-black text-[#556B2F]">
-              Followers
-            </div>
-            <div className="text-xl sm:text-2xl md:text-7xl lg:text-7xl font-black text-[#556B2F]">
-              on Instagram
-            </div>
-          </div>
-        </div>
-      </div>
+    {/* Price */}
+    <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center mb-6">
+      {plan.price}
     </div>
-  </section>
+
+    {/* Features */}
+    <div className="flex-1 space-y-4 mb-6">
+      {plan.features.map((feature, idx) => (
+        <div
+          key={idx}
+          className="flex items-start gap-3 text-white text-base sm:text-lg md:text-xl"
+        >
+          {feature.included ? (
+            <Check className="w-5 h-5 mt-1 flex-shrink-0" />
+          ) : (
+            <X className="w-5 h-5 mt-1 flex-shrink-0" />
+          )}
+          <span>{feature.text}</span>
+        </div>
+      ))}
+    </div>
+
+    {/* Button */}
+    <button
+      onClick={() =>
+        document
+          .getElementById("pricing")
+          ?.scrollIntoView({ behavior: "smooth" })
+      }
+      className="
+        bg-white
+        text-[#58751c]
+        py-3
+        sm:py-4
+        px-6
+        sm:px-8
+        rounded-2xl
+        text-base
+        sm:text-lg
+        font-bold
+
+        transition-all duration-300
+
+        md:hover:shadow-lg
+        md:hover:-translate-y-1
+      "
+    >
+      Enroll Now
+    </button>
+  </div>
 );
+
+
+
+
+
+
+const faqs = [
+  { id: 1, title: 'Who is this course for?', content: 'This course is designed for creators, freelancers, entrepreneurs, and anyone who wants to build a strong personal brand that attracts clients and opportunities.' },
+  { id: 2, title: 'How long is the course?', content: 'The core masterclass runs for 1 hr 30+ minutes, but you\'ll also get monthly live mentorship sessions (depending on your plan).' },
+  { id: 3, title: 'Will this help me grow on Instagram?', content: 'Yes. You\'ll learn content pillars, engagement strategies, and community-building techniques specifically for Instagram.' },
+  { id: 4, title: 'Is this course suitable for working professionals?', content: 'Yes! All sessions can be watched anytime, and the system is built for busy schedules.' },
+];
 
 const CreatorsSection = () => {
   const creators = [
-    'JESNA M', 'SHAMSUDHEEN', 'SREELAL', 'ABIDA RASHEED', 'BADARUL MUNEER',
-    'FAISAL', 'FAZIL', 'FEROZ', 'HENNA AYOOB', 'HENNA GAZAL',
-    'ISHAQ', 'JAVAD', 'JESNA JAMES', 'KADEEJA', 'PHILIP',
-    'SAFEENA', 'SHAFI', 'SHAHEEN', 'SUHAIL', 'SUHANA'
+    {
+      name: "JESNA M",
+      image: jesna,
+      profession: "Content Creator",
+    },
+    {
+      name: "SHAMSUDHEEN",
+      image: shamsudheen,
+      profession: "Video Creator",
+    },
+    {
+      name: "SREELAL",
+      image: sreelal,
+      profession: "Content Creator",
+    },
+    {
+      name: "ABIDA RASHEED",
+      image: abidarasheed,
+      profession: "Lifestyle Creator",
+    },
+    {
+      name: "BADARUL MUNEER",
+      image: badarulmuneer,
+      profession: "Content Creator",
+    },
+    {
+      name: "FAISAL",
+      image: faisal,
+      profession: "Influencer",
+    },
+    {
+      name: "FAZIL",
+      image: fazil,
+      profession: "Content Creator",
+    },
+    {
+      name: "FEROZ",
+      image: feroz,
+      profession: "Digital Creator",
+    },
+    {
+      name: "HENNA AYOOB",
+      image: hennaayoob,
+      profession: "Content Creator",
+    },
+    {
+      name: "HENNA GAZAL",
+      image: hennagazal,
+      profession: "Content Creator",
+    },
   ];
 
   return (
@@ -556,15 +784,32 @@ const CreatorsSection = () => {
           <span className="text-[#8dc73d]">Creators </span>
           <span className="text-white">we Work with</span>
         </h2>
+
         <div className="relative overflow-hidden">
-          <div className="flex gap-6 animate-scroll-creators">
-            {[...creators, ...creators].map((name, idx) => (
-              <div key={idx} className="flex-shrink-0 w-64">
-                <div className="relative mb-4">
-                  <div className="w-full aspect-[3/4] bg-gray-600 rounded-2xl"></div>
+          <div className="flex gap-6 w-max animate-scroll-creators">
+            {[...creators, ...creators].map((creator, idx) => (
+              <div
+                key={idx}
+                className="flex-shrink-0 w-[220px] sm:w-[260px]"
+              >
+                {/* Image */}
+                <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden mb-4">
+                  <img
+                    src={creator.image}
+                    alt={creator.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="text-[#8dc73d] text-xl font-extrabold text-center uppercase">{name}</div>
-                <div className="text-white text-base font-semibold text-center">Content Creator</div>
+
+                {/* Name */}
+                <div className="text-[#8dc73d] text-lg font-extrabold text-center uppercase">
+                  {creator.name}
+                </div>
+
+                {/* Profession */}
+                <div className="text-white text-sm font-semibold text-center">
+                  {creator.profession}
+                </div>
               </div>
             ))}
           </div>
@@ -573,6 +818,7 @@ const CreatorsSection = () => {
     </section>
   );
 };
+
 
 
 
@@ -585,6 +831,40 @@ const modules = [
   { id: 6, title: 'Module 6:\nCommunity Building and Engagement', content: 'Difference between followers and community. Building trust through authentic interaction. How to engage using comments, DMs, and stories.' },
   { id: 7, title: 'Module 7:\nEstablishing Industry Authority', content: 'Positioning yourself as an industry expert. Creating thought leadership content. Sharing insights, opinions, and experiences confidently.' },
   { id: 8, title: 'Module 8:\nThe Motivation and The Consistency', content: 'Developing the right mindset for long-term growth. Overcoming fear, self-doubt, and burnout. Building habits that keep your personal brand growing.' },
+];
+
+
+const pricingPlans = [
+  {
+    title: 'Basic Plan',
+    price: '₹1,799',
+    features: [
+      { text: 'Pre-recorded Masterclass Videos', included: true },
+      { text: 'Live Classes', included: false },
+      { text: 'Certificate of Completion', included: true },
+      { text: 'Access Validity: 3 Month', included: true },
+    ]
+  },
+  {
+    title: 'Standard Plan',
+    price: '₹2,499',
+    features: [
+      { text: 'Pre-recorded Masterclass Videos', included: true },
+      { text: '1 Live Class', included: true },
+      { text: 'Certificate of Completion', included: true },
+      { text: 'Access Validity: 3 Month', included: true },
+    ]
+  },
+  {
+    title: 'Advanced Plan',
+    price: '₹3,499',
+    features: [
+      { text: 'Pre-recorded Masterclass Videos', included: true },
+      { text: '6 Live Classes', included: true },
+      { text: 'Certificate of Completion', included: true },
+      { text: 'Access Validity: 12 Month', included: true },
+    ]
+  },
 ];
 
 
