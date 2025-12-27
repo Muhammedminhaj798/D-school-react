@@ -9,7 +9,7 @@ export function CourseMentorSection() {
           <span className="text-[#8dc73d]">Mentor</span>
         </h2>
 
-        <div className="relative min-h-[420px] md:min-h-[500px]">
+        <div className="relative  md:min-h-[500px]">
           {/* Card */}
           <div
             className="
@@ -23,7 +23,8 @@ export function CourseMentorSection() {
           relative
           z-10
          min-h-fit
-h-[303px]
+h-[175px]
+mt-[80px]
 sm:h-[318px]
 md:h-[373px]
 lg:h-[380px]
@@ -54,9 +55,9 @@ xl:h-[380px]
                             sm:mt-[-107px]
                             sm:ml-[-350px]
                             sm:w-[380px]
-                            w-[200px]
-                            mt-[79px]
-                            ml-[-150px]
+                            w-[250px]
+                            mt-[-105px]
+                            ml-[-210px]
                           
                             
                         "
@@ -73,13 +74,15 @@ xl:h-[380px]
             <div
               className="
             bg-[#8dc73d]
-            rounded-[40px_40px_40px_0]
+            rounded-[0px_20px_10px_20px]
             px-5 py-4
             
             
 
-            mt-28
-            ml-[110px]
+            
+            w-[200px]
+            h-[70px]
+            ml-[40px]
             sm:ml-[20px]
             sm:w-[230px]
             
@@ -99,10 +102,10 @@ xl:h-[380px]
             md:text-left
           "
             >
-              <div className="text-xl  md:text-2xl  md:pl-[50px] font-extrabold text-white uppercase mb-1">
+              <div className="text-xl h-2 ml-[0px] mt-[-14px] md:text-2xl  md:pl-[50px] font-medium text-white uppercase mb-1">
                 NISAM VM
               </div>
-              <div className="text-sm md:text-base md:pl-[50px]  font-semibold text-white leading-snug">
+              <div className="text-sm mt-5 ml-[25px] md:text-base md:pl-[50px]  font-semibold text-white leading-snug">
                 CEO - Desgro Media
                 <br />
                 Demand School
@@ -117,15 +120,15 @@ xl:h-[380px]
             
             md:text-right
             ml-auto
-            mt-6
+            
             md:mt-10
             lg:ml-[660px]
           "
             >
-              <div className="text-4xl ml-[-200px] mt-[-300px] sm:text-5xl md:text-5xl sm:ml-[0px] md:mt-5 sm:mt-[-230px] lg:text-7xl font-black text-[#556B2F]">
+              <div className="text-3xl ml-[-140px] mt-[-100px] sm:text-5xl md:text-5xl sm:ml-[0px] md:mt-5 sm:mt-[-230px] lg:text-7xl font-black text-[#556B2F]">
                 146k+
               </div>
-              <div className="text-xl ml-[-163px] sm:text-4xl md:text-4xl sm:ml-[-50px] lg:text-5xl font-black text-[#556B2F]">
+              <div className="text-xl ml-[-173px] sm:text-4xl md:text-4xl sm:ml-[-50px] lg:text-5xl font-black text-[#556B2F]">
                 Followers
               </div>
               <div className="text-xl ml-[-200px] sm:text-4xl sm:ml-[-100px] md:text-4xl lg:ml-[-150px] lg:mt-2 lg:w-[400px] lg:text-6xl font-black text-[#556B2F]">

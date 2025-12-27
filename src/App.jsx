@@ -190,7 +190,7 @@ const HeroSection = () => {
               className="
                 absolute
                 bottom-[68%]
-                right-[5%]
+                right-[3%]
                 flex items-start gap-2
                 bg-white text-[#435c19]
                 rounded-xl shadow-lg
@@ -782,7 +782,7 @@ const CreatorsSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4 overflow-hidden">
+    <section className=" md:py-20 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
           <span className="text-[#8dc73d]">Creators </span>
