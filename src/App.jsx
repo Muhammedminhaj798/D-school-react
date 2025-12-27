@@ -221,7 +221,7 @@ const HeroSection = () => {
                 sm:ml-[-19px]
                 sm:w-[729px]
                 md:h-[330px]
-                
+                 
                 md:ml-[-25px] md:w-[750px]
                 lg:h-[300px]
                 lg:w-[1281px]
