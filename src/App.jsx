@@ -542,13 +542,13 @@ const HeroSection = () => {
 };
 const ScrollBanner = () => (
   <section className="relative w-full h-40 md:h-44 bg-black overflow-hidden flex items-center justify-center my-8">
-    <div className="absolute w-[700%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
-      {Array(20).fill('Create Engage Grow').map((text, i) => (
+    <div className="absolute w-[1680%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
+      {Array(80).fill('Create Engage Grow').map((text, i) => (
         <span key={i} className="mx-4">· {text}</span>
       ))}
     </div>
-    <div className="absolute w-[200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform -rotate-6 sm:-rotate-3 md:-rotate-3 shadow-lg animate-scroll-right">
-      {Array(20).fill('Create Engage Grow').map((text, i) => (
+    <div className="absolute w-[1670%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform -rotate-6 sm:-rotate-3 md:-rotate-3 shadow-lg animate-scroll-right">
+      {Array(80).fill('Create Engage Grow').map((text, i) => (
         <span key={`dup-${i}`} className="mx-4">· {text}</span>
       ))}
     </div>
