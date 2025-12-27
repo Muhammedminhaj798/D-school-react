@@ -99,8 +99,8 @@ const HeroSection = () => {
           <div className="relative min-h-[200px] md:min-h-[600px]">
             {/* SVG Curve */}
             <svg
-              className="absolute bottom-0 left-0 w-full sm:ml-[-19px]
-                sm:w-[729px]  h-[170px] md:ml-[-25px] md:w-[1000px] md:h-[450px] z-9"
+              className="absolute bottom-0 left-0 ml-[-23px] w-[392px] sm:ml-[-19px]
+                sm:w-[729px]  h-[170px] md:ml-[-25px] md:w-[750px] md:h-[450px] lg:w-[1281px] z-9"
               viewBox="0 0 1440 320"
               preserveAspectRatio="none"
             >
@@ -152,7 +152,8 @@ const HeroSection = () => {
                   sm:text-sm sm:ml-20
                   md:text-4xl md:ml-30
                   lg:text-4xl
-                  xl:text-5xl
+                  xl:text-4xl
+                  xl:ml-[-100px]
                   2xl:text-5xl
                   font-semibold
                   text-white
@@ -167,10 +168,11 @@ const HeroSection = () => {
               <div
                 className="
                   bg-[#8dc73d]
-                  px-3 py-2 w-32 ml-12
+                  px-3 py-2 w-32 ml-15 
                   sm:px-4 sm:py-2 sm:w-50
                   md:px-6 md:py-3 md:w-[300px]
                   lg:w-[400px]
+                  xl:ml-[-180px]
                   rounded-lg sm:rounded-xl md:rounded-2xl
                   text-[10px] sm:text-xs md:text-2xl lg:text-2xl xl:text-3xl
                   leading-tight md:leading-snug
@@ -213,15 +215,17 @@ const HeroSection = () => {
           <div className="relative z-30 mt-16 md:mt-24 flex flex-col gap-4 items-center">
             <svg
               className="
-                absolute bottom-13 left-0 w-full
-                h-[250px]
+                absolute bottom-13 left-0 ml-[-23px] w-[392px]
+                h-[235px]
                 sm:h-[260px] sm:mb-16
                 sm:ml-[-19px]
                 sm:w-[729px]
                 md:h-[330px]
-                md:ml-[-25px] md:w-[1000px]
-                lg:h-[330px]
-                xl:h-[420px]
+                
+                md:ml-[-25px] md:w-[750px]
+                lg:h-[300px]
+                lg:w-[1281px]
+                xl:h-[340px]
                 2xl:h-[560px]
                 z-0
               "
