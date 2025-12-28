@@ -784,7 +784,7 @@ const CreatorsSection = () => {
   return (
     <section className=" md:py-20 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-center ">
           <span className="text-[#8dc73d]">Creators </span>
           <span className="text-white">we Work with</span>
         </h2>

@@ -55,9 +55,9 @@ xl:h-[380px]
                             sm:mt-[-107px]
                             sm:ml-[-350px]
                             sm:w-[380px]
-                            w-[250px]
-                            mt-[-105px]
-                            ml-[-210px]
+                            w-[230px]
+                            mt-[-82px]
+                            ml-[-175px]
                           
                             
                         "
@@ -87,7 +87,9 @@ xl:h-[380px]
             sm:w-[230px]
             
             md:absolute
-            md:w-[250px]
+            md:h-[80px]
+            md:ml-[-10px]
+            md:w-[275px]
             md:mt-0
             md:left-[32%]
             md:top-36
@@ -96,6 +98,7 @@ xl:h-[380px]
             lg:w-[300px]
             lg:ml-[-20px]
             lg:mt-[40px]
+            xl:h-[80px]
 
             z-20
             text-center
@@ -105,7 +108,7 @@ xl:h-[380px]
               <div className="text-xl h-2 ml-[0px] mt-[-14px] md:text-2xl  md:pl-[50px] font-medium text-white uppercase mb-1">
                 NISAM VM
               </div>
-              <div className="text-sm mt-5 ml-[25px] md:text-base md:pl-[50px]  font-semibold text-white leading-snug">
+              <div className="text-sm mt-5 ml-[25px] md:text-base md:pl-[60px]  font-semibold text-white leading-snug">
                 CEO - Desgro Media
                 <br />
                 Demand School
