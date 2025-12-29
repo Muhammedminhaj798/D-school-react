@@ -9,7 +9,7 @@ export function CourseMentorSection() {
           <span className="text-[#8dc73d]">Mentor</span>
         </h2>
 
-        <div className="relative  md:min-h-[500px]">
+        <div className="relative  ">
           {/* Card */}
           <div
             className="
@@ -96,9 +96,10 @@ xl:h-[380px]
             md:-translate-y-1/2
 
             lg:w-[300px]
-            lg:ml-[-20px]
+            lg:ml-[60px]
             lg:mt-[40px]
             xl:h-[80px]
+            xl:ml-[-20px]
 
             z-20
             text-center

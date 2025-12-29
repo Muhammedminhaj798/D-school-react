@@ -38,21 +38,21 @@ const HeroSection = () => {
   return (
     <div className="bg-black text-white font-sans overflow-x-hidden">
       {/* Top Strip */}
-      <div className="bg-[#8dc73d] text-white text-center py-4 text-lg md:text-xl font-semibold">
+      <div className="bg-[#8dc73d] text-white text-center py-1 text-xl md:text-xl font-semibold">
         Create Engage Grow
       </div>
 
       {/* Navigation */}
-      <nav className="bg-[#708a46] px-4 py-3">
+      <nav className="bg-[#708a46] pl-6">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="text-white">
-            <div className="text-xl md:text-2xl font-normal">Personal</div>
-            <div className="text-xl md:text-2xl font-normal">
+            <div className=" md:text-2xl font-normal">Personal</div>
+            <div className=" md:text-2xl font-normal">
               Branding Masterclass
             </div>
           </div>
 
-          <div className="w-24 h-24 md:w-32 md:h-3 flex items-center justify-center">
+          <div className="w-24 h-1 md:w-32 md:h-3 flex items-center justify-center">
             <img
               src={logo}
               alt="Logo"
@@ -64,7 +64,7 @@ const HeroSection = () => {
 
       {/* Hero Section */}
       <section className="px-4 py-8 md:py-12 bg-black">
-        <div className="max-w-7xl mx-auto bg-gradient-to-br from-[#435c19] to-[#556b2f] rounded-3xl md:rounded-[40px] px-6 py-12 md:py-16 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto bg-gradient-to-br from-[#435c19] to-[#556b2f] rounded-3xl md:rounded-[40px] px-6 py-6 md:py-16 relative overflow-hidden">
           {/* Sparkles */}
           <div className="absolute top-[15%] left-[10%] text-white text-3xl md:text-5xl opacity-80">
             ✦
@@ -78,25 +78,26 @@ const HeroSection = () => {
 
           {/* Inner Banner */}
           <div className="bg-[#729535dc] w-fit px-6 md:px-8 py-3 mx-auto mb-8 rounded-full text-center shadow-lg">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white">
+            <h2 className="text-xl md:text-4xl lg:text-5xl font-extrabold text-white mt-[-10px]">
               Personal Branding Mastery
             </h2>
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-7xl text-center font-bold mb-8">
+          <h1 className="text-2xl w-full md:text-5xl lg:text-7xl text-center font-bold mb-8">
             <span className="font-light">Build a Personal Brand</span>
             <br />
             <span className="font-light">That Gets You</span>
+          
+            <span className="font-bold">Clients,</span>
             <br />
-            <span className="font-black">Clients,</span>
-            <br />
-            <span className="font-black">Respect</span> &{" "}
-            <span className="font-black">Opportunities</span>
+            <div className=" flex text-2xl space-x-1 ml-[35px] sm:text-2xl sm:ml-[75px] md:text-5xl lg:text-7xl lg:ml-[70px] xl:ml-[210px]">
+            <span className="font-bold">Respect</span> & {" "} <span className="font-bold">Opportunities</span>
+            </div>
           </h1>
 
           {/* Mentor Area */}
-          <div className="relative min-h-[200px] md:min-h-[600px]">
+          <div className="relative min-h-[170px] md:min-h-[600px]">
             {/* SVG Curve */}
             <svg
               className="absolute bottom-0 left-0 ml-[-23px] w-[392px] sm:ml-[-19px]
@@ -113,8 +114,8 @@ const HeroSection = () => {
             {/* Mentor Image */}
             <div
               className="
-                absolute bottom-0
-                w-40 mb-5
+                absolute bottom-6
+                w-40 
                 sm:w-[300px] sm:ml-[60px]
                 md:w-[400px] md:ml-[-50px]
                 lg:w-[500px]
@@ -135,8 +136,8 @@ const HeroSection = () => {
             <div
               className="
                 absolute
-                bottom-[35%]
-                left-[75%]
+                bottom-[50%]
+                left-[50%]
                 -translate-x-1/2
                 w-60
                 sm:w-[250px] sm:ml-[-250px] sm:bottom-[50%]
@@ -189,38 +190,38 @@ const HeroSection = () => {
             <div
               className="
                 absolute
-                bottom-[68%]
+                bottom-[80%]
                 right-[3%]
                 flex items-start gap-2
                 bg-white text-[#435c19]
                 rounded-xl shadow-lg
                 px-3 py-2
-                w-[110px]
+                w-[135px]
                 text-xs
                 z-1
                 sm:w-[130px] sm:bottom-[81%] sm:right-[9%] sm:text-sm
                 md:bottom-[60%] md:right-[5%] md:px-5 md:py-4 md:w-[250px]
                 md:text-2xl md:rounded-2xl
-                lg:w-[350px] lg:bottom-[61%] lg:right-[7%] lg:text-4xl
+                lg:w-[350px] lg:bottom-[60%] lg:h-[100px] lg:right-[2%] lg:text-4xl
               "
             >
               <GraduationCap className="w-6 h-6 md:w-12 md:h-12 shrink-0" />
               <span className="font-normal leading-tight">
-                565+ <br className="md:hidden" /> Enrolled
+                565 + Enrolled
               </span>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="relative z-30 mt-16 md:mt-24 flex flex-col gap-4 items-center">
+          <div className="relative z-30 mt-[-20px] md:mt-[-23px] lg:mt-[10px] xl:mt-[40px] flex flex-col gap-4 items-center">
             <svg
               className="
-                absolute bottom-13 left-0 ml-[-23px] w-[392px]
-                h-[235px]
+                absolute bottom-5 left-0 ml-[-23px] w-[392px]
+                h-[135px]
                 sm:h-[260px] sm:mb-16
                 sm:ml-[-19px]
                 sm:w-[729px]
-                md:h-[330px]
+                md:h-[250px]
                  
                 md:ml-[-25px] md:w-[750px]
                 lg:h-[300px]
@@ -247,16 +248,20 @@ const HeroSection = () => {
             <button
               className="
                 bg-white text-[#435c19]
-                px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4
+                px-5 py-0 sm:px-6 sm:py-3 md:px-8 md:py-4
                 rounded-full
                 font-bold
+                
                 text-base sm:text-lg md:text-3xl lg:text-3xl xl:text-4xl
-                min-w-[220px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px]
+              
+                min-w-[250px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px]
+                h-[50px] sm:h-[110px]
+                
                 shadow-lg z-10
                 hover:scale-105 transition-transform
               "
             >
-              <span className="font-medium">Course Duration</span>
+              <span className="font-semibold">Course Duration</span>
               <br />
               <span className="font-extrabold">1hr 30 min +</span>
             </button>
@@ -264,11 +269,13 @@ const HeroSection = () => {
             <button
               className="
                 bg-white text-[#435c19]
-                px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4
+                px-5 py-0 sm:px-6 sm:py-3 md:px-8 md:py-4
+                mb-[0px]
                 rounded-full
                 font-bold
+                h-[50px] sm:h-[110px]
                 text-base sm:text-lg md:text-3xl lg:text-3xl xl:text-4xl
-                min-w-[220px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px]
+                min-w-[250px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px]
                 shadow-lg z-10
                 hover:scale-105 transition-transform
               "
@@ -286,19 +293,19 @@ const HeroSection = () => {
       {/*  Video Sectio */}
 
       <section className="py-8 md:py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl relative pt-[56.25%]">
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Course Preview"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </section>
+  <div className="max-w-4xl mx-auto">
+    <div className="bg-white rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl relative pt-[56.25%]">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
+        title="Course Preview"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+      />
+    </div>
+  </div>
+</section>
+
       {/* pain point section */}
 
       <PainPointsSection />
@@ -476,7 +483,7 @@ const HeroSection = () => {
 
       <footer className="bg-[#6a9413] py-8 px-4">
   <div className="max-w-6xl mx-auto">
-    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+    <div className="flex flex-row mb-[50px] md:flex-row items-center justify-between gap-8">
 
       {/* Left Section */}
       <div className="text-center md:text-left">
@@ -541,14 +548,14 @@ const HeroSection = () => {
   );
 };
 const ScrollBanner = () => (
-  <section className="relative w-full h-40 md:h-44 bg-black overflow-hidden flex items-center justify-center my-8">
-    <div className="absolute w-[1680%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
-      {Array(80).fill('Create Engage Grow').map((text, i) => (
+  <section className="relative w-full h-40 md:h-44 bg-black overflow-hidden flex items-center justify-center ">
+    <div className="absolute w-[550%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
+      {Array(35).fill('Create Engage Grow').map((text, i) => (
         <span key={i} className="mx-4">· {text}</span>
       ))}
     </div>
-    <div className="absolute w-[1670%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform -rotate-6 sm:-rotate-3 md:-rotate-3 shadow-lg animate-scroll-right">
-      {Array(80).fill('Create Engage Grow').map((text, i) => (
+    <div className="absolute w-[450%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform -rotate-6 sm:-rotate-3 md:-rotate-3 shadow-lg animate-scroll-right">
+      {Array(35).fill('Create Engage Grow').map((text, i) => (
         <span key={`dup-${i}`} className="mx-4">· {text}</span>
       ))}
     </div>
@@ -557,44 +564,116 @@ const ScrollBanner = () => (
 
 const PainPointsSection = () => {
   const painPoints = [
-    { text: 'Not Knowing\nWhere\nto Start', img: img1, position: 'right', color: 'bg-[#8dc73d]', rounded: 'rounded-tr-3xl rounded-bl-3xl rounded-br-3xl' },
-    { text: 'Low\nEngagement &\nNo Community', img: img2, position: 'left', color: 'bg-[#556b2f]', rounded: 'rounded-tl-3xl rounded-bl-3xl rounded-br-3xl' },
-    { text: 'Poor Content\nStructure', img: img3, position: 'right', color: 'bg-[#8dc73d]', rounded: ' rounded-tr-3xl rounded-bl-3xl rounded-br-3xl' },
-    { text: 'Lack of\nConsistency', img: img4, position: 'left', color: 'bg-[#556b2f]', rounded: 'rounded-tl-3xl rounded-bl-3xl rounded-br-3xl' },
+    {
+      text: "Not Knowing\nWhere\nto Start",
+      img: img1,
+      position: "right",
+      color: "bg-[#8dc73d]",
+      rounded: "rounded-tr-3xl rounded-bl-3xl rounded-br-3xl",
+    },
+    {
+      text: "Low\nEngagement &\nNo Community",
+      img: img2,
+      position: "left",
+      color: "bg-[#556b2f]",
+      rounded: "rounded-tl-3xl rounded-bl-3xl rounded-br-3xl",
+    },
+    {
+      text: "Poor Content\nStructure",
+      img: img3,
+      position: "right",
+      color: "bg-[#8dc73d]",
+      rounded: "rounded-tr-3xl rounded-bl-3xl rounded-br-3xl",
+    },
+    {
+      text: "Lack of\nConsistency",
+      img: img4,
+      position: "left",
+      color: "bg-[#556b2f]",
+      rounded: "rounded-tl-3xl rounded-bl-3xl rounded-br-3xl",
+    },
   ];
-
-
 
   return (
     <section className="py-12 md:py-20 px-4">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
-          <span className="text-[#8dc73d]">Struggling</span> With<br />Any of These?
+          <span className="text-[#8dc73d]">Struggling</span> With
+          <br />
+          Any of These?
         </h2>
+
         <div className="grid md:grid-cols-2 gap-5">
           {painPoints.map((point, idx) => (
-            <div key={idx} className={`${point.color} ${point.rounded} p-6 md:p-8 relative overflow-hidden min-h-[130px] md:min-h-[180px] flex items-center ${point.position === 'left' ? 'justify-end' : 'justify-start'}`}>
-              <h3 className={`text-2xl md:text-3xl font-extrabold text-white z-10 whitespace-pre-line ${point.position === 'left' ? 'text-right' : 'text-left'} max-w-[60%]`}>
+            <div
+              key={idx}
+              className={`
+                ${point.color}
+                ${point.rounded}
+                p-6 md:p-8
+                relative overflow-hidden
+                min-h-[130px] md:min-h-[180px]
+                flex items-center
+                ${point.position === "left" ? "justify-end" : "justify-start"}
+              `}
+            >
+              {/* TEXT */}
+              <h3
+                className={`
+                  text-2xl md:text-3xl font-extrabold text-white
+                  whitespace-pre-line
+                  max-w-[60%]
+                  z-21 md:z-21
+                  ${
+                    point.position === "left"
+                      ? "text-right"
+                      : "text-left"
+                  }
+                  ${
+                    idx === 1
+                      ? "relative z-0 md:z-10"
+                      : "relative z-10"
+                  }
+                `}
+              >
                 {point.text}
               </h3>
+
+              {/* IMAGE */}
               <div
                 className={`
-                    absolute
-                    ${point.position === "right" ? "right-0" : "left-0"}
-                    bottom-0
-                    w-[45%]
-                    h-full
+                  absolute
+                  ${point.position === "right" ? "right-0" : "left-0"}
+                  bottom-0
 
-                    ${idx < 3 ? "translate-y-6 md:translate-y-10" : ""}
-                `}>
+                  w-[50%] md:w-[45%]
 
+                  ${
+                    idx === 1 || idx === 2
+                      ? "h-[140%] md:h-[140%] bottom-[-10px] md:bottom-[-40px]"
+                      : "h-full"
+                  }
+                  ${
+                    idx === 1 ? "md:h-[320px] bottom-[-15px]":""
+                  }
+                  ${
+                    idx === 2 ? "md:h-[320px]":""
+                  }
+                  ${
+                    idx === 0 ? "md:bottom-[-10px] lg:bottom-10 lg:h-[140px]":""
+                  }
+                  
+                  ${idx < 3 ? "translate-y-6 md:translate-y-10" : ""}
+
+                  ${idx === 1 ? "z-20" : "z-0"}
+                `}
+              >
                 <img
                   src={point.img}
                   alt=""
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover"
                 />
               </div>
-
             </div>
           ))}
         </div>
@@ -602,6 +681,8 @@ const PainPointsSection = () => {
     </section>
   );
 };
+
+
 
 
 // Module Item Component
@@ -806,7 +887,7 @@ const CreatorsSection = () => {
                 </div>
 
                 {/* Name */}
-                <div className="text-[#8dc73d] text-lg font-extrabold text-center uppercase">
+                <div className="text-[#8dc73d] mt-[-50px] text-lg font-extrabold text-center uppercase">
                   {creator.name}
                 </div>
 
