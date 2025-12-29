@@ -327,7 +327,7 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
       </section>
 
       {/* course module section */}
-      <section className="py-12 md:py-20 px-4">
+      <section className=" md:py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
             Course <span className="text-[#8dc73d]">Module</span>
@@ -358,7 +358,7 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
 
       {/* pricing section */}
 
-      <section id="pricing" className="py-12 md:py-20 px-4 overflow-hidden">
+      <section id="pricing" className=" md:py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
             Choose Your <span className="text-[#8dc73d]">Plan</span>
@@ -487,21 +487,21 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
 
       {/* Left Section */}
       <div className="text-center md:text-left">
-        <p className="font-bold text-white mb-2 text-lg">
+        <p className="font-bold text-white mb-2 ">
           Follow us on
         </p>
         <div className="flex gap-4 justify-center md:justify-start">
           <a
-            href="#"
+            href="https://www.linkedin.com/company/demandschoolofficial?originalSubdomain=in"
             className="text-white transition-transform hover:scale-110 active:scale-95"
           >
-            <Linkedin className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+            <Linkedin className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8" />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/demand.school/?utm_source=qr#"
             className="text-white transition-transform hover:scale-110 active:scale-95"
           >
-            <Instagram className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+            <Instagram className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8" />
           </a>
         </div>
       </div>
@@ -511,13 +511,13 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
         <img
           src={logo}
           alt="D School"
-          className="w-20 sm:w-24 md:w-28 object-contain"
+          className="w-35 sm:w-25 md:w-28 object-contain"
         />
       </div>
 
       {/* Right Section */}
       <div className="text-center md:text-right">
-        <p className="font-bold text-white mb-2 text-lg">
+        <p className="font-bold text-white mb-2 ">
           Contact us on
         </p>
         <div className="flex gap-4 justify-center md:justify-end">
@@ -525,7 +525,7 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
             href="#"
             className="text-white transition-transform hover:scale-110 active:scale-95"
           >
-            <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+            <MessageCircle className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8" />
           </a>
         </div>
       </div>
@@ -549,13 +549,13 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
 };
 const ScrollBanner = () => (
   <section className="relative w-full h-40 md:h-44 bg-black overflow-hidden flex items-center justify-center ">
-    <div className="absolute w-[550%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
-      {Array(35).fill('Create Engage Grow').map((text, i) => (
+    <div className="absolute w-[2500%] mt-[-110px] ml-[-200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
+      {Array(60).fill('Create Engage Grow').map((text, i) => (
         <span key={i} className="mx-4">· {text}</span>
       ))}
     </div>
-    <div className="absolute w-[450%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform -rotate-6 sm:-rotate-3 md:-rotate-3 shadow-lg animate-scroll-right">
-      {Array(35).fill('Create Engage Grow').map((text, i) => (
+    <div className="absolute w-[1000%] mt-[-110px] ml-[200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform -rotate-6 sm:-rotate-3 md:-rotate-3 shadow-lg animate-scroll-right">
+      {Array(60).fill('Create Engage Grow').map((text, i) => (
         <span key={`dup-${i}`} className="mx-4">· {text}</span>
       ))}
     </div>
@@ -595,7 +595,7 @@ const PainPointsSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4">
+    <section className=" md:py-20 px-4">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
           <span className="text-[#8dc73d]">Struggling</span> With
@@ -646,21 +646,21 @@ const PainPointsSection = () => {
                   ${point.position === "right" ? "right-0" : "left-0"}
                   bottom-0
 
-                  w-[50%] md:w-[45%]
+                  w-[60%] md:w-[75%]
 
                   ${
                     idx === 1 || idx === 2
-                      ? "h-[140%] md:h-[140%] bottom-[-10px] md:bottom-[-40px]"
+                      ? "h-[190%] md:h-[140%] bottom-[-40px] md:bottom-[-40px]"
                       : "h-full"
                   }
                   ${
-                    idx === 1 ? "md:h-[320px] bottom-[-15px]":""
+                    idx === 1 ? "md:h-[420px] bottom-[-15px] md:bottom-[-59px]":""
                   }
                   ${
                     idx === 2 ? "md:h-[320px]":""
                   }
                   ${
-                    idx === 0 ? "md:bottom-[-10px] lg:bottom-10 lg:h-[140px]":""
+                    idx === 0 ? "bottom-6 md:bottom-[15px] lg:bottom-10 lg:h-[180px]":""
                   }
                   
                   ${idx < 3 ? "translate-y-6 md:translate-y-10" : ""}
