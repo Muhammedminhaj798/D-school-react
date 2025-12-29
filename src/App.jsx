@@ -462,7 +462,7 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
 
 
       {/* faq */}
-      <section className="py-12 md:py-20 px-4">
+      <section className="py-12 md:py-8 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
             Frequently <span className="text-white">Asked</span><br />
@@ -495,13 +495,13 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
             href="https://www.linkedin.com/company/demandschoolofficial?originalSubdomain=in"
             className="text-white transition-transform hover:scale-110 active:scale-95"
           >
-            <Linkedin className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+            <Linkedin className="w-4 h-4 sm:w-7 sm:h-7 md:w-6 md:h-6" />
           </a>
           <a
             href="https://www.instagram.com/demand.school/?utm_source=qr#"
             className="text-white transition-transform hover:scale-110 active:scale-95"
           >
-            <Instagram className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+            <Instagram className="w-4 h-4 sm:w-7 sm:h-7 md:w-6 md:h-6" />
           </a>
         </div>
       </div>
@@ -511,7 +511,7 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
         <img
           src={logo}
           alt="D School"
-          className="w-35 sm:w-25 md:w-28 object-contain"
+          className="w-35 sm:w-25 md:w-38 object-contain"
         />
       </div>
 
@@ -525,7 +525,7 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
             href="#"
             className="text-white transition-transform hover:scale-110 active:scale-95"
           >
-            <MessageCircle className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+            <MessageCircle className="w-4 h-4 sm:w-7 sm:h-7 md:w-6 md:h-6" />
           </a>
         </div>
       </div>
@@ -549,7 +549,7 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
 };
 const ScrollBanner = () => (
   <section className="relative w-full h-40 md:h-44 bg-black overflow-hidden flex items-center justify-center ">
-    <div className="absolute w-[2500%] mt-[-110px] ml-[-200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
+    <div className="absolute w-[1000%] mt-[-110px] ml-[-200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
       {Array(60).fill('Create Engage Grow').map((text, i) => (
         <span key={i} className="mx-4">· {text}</span>
       ))}
