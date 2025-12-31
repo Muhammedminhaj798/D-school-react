@@ -18,6 +18,7 @@ import hennagazal from './assets/henna gazal.png'
 
 import { ArrowUpRight, Check, ChevronLeft, ChevronRight, GraduationCap, Instagram, Linkedin, MessageCircle, Minus, Plus, X } from "lucide-react";
 import { CourseMentorSection } from "./CourseMentorSection";
+import PricingCard from "./PricingCard";
 
 const HeroSection = () => {
   const [openModuleId, setOpenModuleId] = useState(null);
@@ -750,70 +751,70 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
 // pricing card module
 
 // Pricing Card Component
-const PricingCard = ({ plan }) => (
-  <div
-  style={{ backgroundColor: plan.color }}
-    className="rounded-[20px_100px_30px_30px] p-6 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px] w-[300px] lg:w-[330px] border-3 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
-    "
-  >
-    {/* Title */}
-    <h3 className="text-2xl sm:text-2xl  md:text-3xl font-clash font-semibold text-white ">
-      {plan.title}
-    </h3>
+// const PricingCard = ({ plan }) => (
+//   <div
+//   style={{ backgroundColor: plan.color }}
+//     className="rounded-[20px_100px_30px_30px] p-6 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px] w-[300px] lg:w-[330px] border-3 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
+//     "
+//   >
+//     {/* Title */}
+//     <h3 className="text-2xl sm:text-2xl  md:text-3xl font-clash font-semibold text-white ">
+//       {plan.title}
+//     </h3>
 
-    {/* Price */}
-    <div className="text-4xl sm:text-4xl md:text-5xl font-clash font-semibold text-white  mb-6 font-montserrat leading-none">
-      {plan.price}
-    </div>
+//     {/* Price */}
+//     <div className="text-4xl sm:text-4xl md:text-5xl font-clash font-semibold text-white  mb-6 font-montserrat leading-none">
+//       {plan.price}
+//     </div>
 
 
-    {/* Features */}
-    <div className="flex-1 space-y-2 mb-6">
-      {plan.features.map((feature, idx) => (
-        <div
-          key={idx}
-          className="flex items-start gap-3 font-clash font-black text-white text-base sm:text-lg md:text-xl"
-        >
-          {feature.included ? (
-            <ArrowUpRight className="w-8 h-8 mt-1 text-2xl text-green-600  flex-shrink-0" />
-          ) : (
-            <X className="w-8 h-8 mt-1 text-green-600 flex-shrink-0" />
-          )}
-          <span className="text-lg md:text-2xl">{feature.text}</span>
-        </div>
-      ))}
-    </div>
+//     {/* Features */}
+//     <div className="flex-1 space-y-2 mb-6">
+//       {plan.features.map((feature, idx) => (
+//         <div
+//           key={idx}
+//           className="flex items-start gap-3 font-clash font-black text-white text-base sm:text-lg md:text-xl"
+//         >
+//           {feature.included ? (
+//             <ArrowUpRight className="w-8 h-8 mt-1 text-2xl text-green-600  flex-shrink-0" />
+//           ) : (
+//             <X className="w-8 h-8 mt-1 text-green-600 flex-shrink-0" />
+//           )}
+//           <span className="text-lg md:text-2xl">{feature.text}</span>
+//         </div>
+//       ))}
+//     </div>
 
-    {/* Button */}
-    <button
-      onClick={() =>
-        document
-          .getElementById("pricing")
-          ?.scrollIntoView({ behavior: "smooth" })
-      }
-      className="
-        bg-white
-        text-[#58751c]
-        py-3
-        sm:py-4
-        px-6
-        sm:px-8
-        rounded-2xl
-        text-base
-        sm:text-lg
-        font-clash
-        font-bold
+//     {/* Button */}
+//     <button
+//       onClick={() =>
+//         document
+//           .getElementById("pricing")
+//           ?.scrollIntoView({ behavior: "smooth" })
+//       }
+//       className="
+//         bg-white
+//         text-[#58751c]
+//         py-3
+//         sm:py-4
+//         px-6
+//         sm:px-8
+//         rounded-2xl
+//         text-base
+//         sm:text-lg
+//         font-clash
+//         font-bold
 
-        transition-all duration-300
+//         transition-all duration-300
 
-        md:hover:shadow-lg
-        md:hover:-translate-y-1
-      "
-    >
-      Enroll Now
-    </button>
-  </div>
-);
+//         md:hover:shadow-lg
+//         md:hover:-translate-y-1
+//       "
+//     >
+//       Enroll Now
+//     </button>
+//   </div>
+// );
 
 
 
