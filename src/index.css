@@ -1,4 +1,15 @@
 @import "tailwindcss";
+@layer utilities {
+  .font-clash {
+    font-family: "Clash Display", sans-serif;
+    
+    
+  }
+  .font-mundial {
+    font-family: "Mundial", sans-serif;
+  }
+}
+
 
 @keyframes scroll-left {
   0% { transform: translateX(0); }
@@ -11,11 +22,11 @@
 } 
 
 .animate-scroll-left {
-  animation: scroll-left 38s linear infinite;
+  animation: scroll-left 50s linear infinite;
 }
 
 .animate-scroll-right {
-  animation: scroll-right 38s linear infinite;
+  animation: scroll-right 50s linear infinite;
 }
 
 
@@ -32,36 +43,22 @@
   animation: scroll-creators 25s linear infinite;
 }
 
-@keyframes scroll-creators {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
-.animate-scroll-creators {
-  animation: scroll-creators 25s linear infinite;
-}
 
-@keyframes scroll-creators {
-  0% {
-    transform: translateX(0);
+@keyframes scrollCreators {
+  from {
+    transform: translate3d(0, 0, 0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 .animate-scroll-creators {
-  animation: scroll-creators 25s linear infinite;
+  animation: scrollCreators 35s linear infinite;
+  will-change: transform;
 }
 
-/* 🔑 THIS IS THE FIX */
-.animate-scroll-creators:hover {
-  animation-play-state: paused;
-}
 
 
 /* Hide scrollbar */
@@ -73,3 +70,37 @@
   scrollbar-width: none;
 }
 
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mundial";
+  src: url("/fonts/mundial/MundialRegular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mundial";
+  src: url("/fonts/mundial/MundialDemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mundial";
+  src: url("/fonts/mundial/MundialBold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}

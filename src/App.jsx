@@ -16,7 +16,7 @@ import feroz from './assets/feroz.png'
 import hennaayoob from './assets/henna ayoob.png'
 import hennagazal from './assets/henna gazal.png'
 
-import { Check, ChevronLeft, ChevronRight, GraduationCap, Instagram, Linkedin, MessageCircle, Minus, Plus, X } from "lucide-react";
+import { ArrowUpRight, Check, ChevronLeft, ChevronRight, GraduationCap, Instagram, Linkedin, MessageCircle, Minus, Plus, X } from "lucide-react";
 import { CourseMentorSection } from "./CourseMentorSection";
 
 const HeroSection = () => {
@@ -44,19 +44,16 @@ const HeroSection = () => {
 
       {/* Navigation */}
       <nav className="bg-[#708a46] pl-6">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-white">
-            <div className=" md:text-2xl font-normal">Personal</div>
-            <div className=" md:text-2xl font-normal">
-              Branding Masterclass
-            </div>
-          </div>
+        <div className="max-w-10xl h-12 mx-auto flex justify-between items-center">
+            <div className=" md:text-2xl font-bold ml-[-10px]">Personal Branding Masterclass</div>
+            
+          
 
           <div className="w-24 h-1 md:w-32 md:h-3 flex items-center justify-center">
             <img
               src={logo}
               alt="Logo"
-              className="w-full h-auto rounded-3xl md:rounded-[40px]"
+              className="w-full h-auto"
             />
           </div>
         </div>
@@ -77,8 +74,8 @@ const HeroSection = () => {
           </div>
 
           {/* Inner Banner */}
-          <div className="bg-[#729535dc] w-fit px-6 md:px-8 py-3 mx-auto mb-8 rounded-full text-center shadow-lg">
-            <h2 className="text-xl md:text-4xl lg:text-5xl font-extrabold text-white mt-[-10px]">
+          <div className="bg-[#729535dc] h-10 sm:h-14 md:h-17 w-fit px-6 md:px-8 py-3 mx-auto mb-8 rounded-full text-center shadow-lg">
+            <h2 className=" md:text-4xl lg:text-5xl mt-[-6px]  font-extrabold text-white ">
               Personal Branding Mastery
             </h2>
           </div>
@@ -87,12 +84,12 @@ const HeroSection = () => {
           <h1 className="text-2xl w-full md:text-5xl lg:text-7xl text-center font-bold mb-8">
             <span className="font-light">Build a Personal Brand</span>
             <br />
-            <span className="font-light">That Gets You</span>
-          
+            <span className="font-light">That Gets You </span>
+
             <span className="font-bold">Clients,</span>
             <br />
             <div className=" flex text-2xl space-x-1 ml-[35px] sm:text-2xl sm:ml-[75px] md:text-5xl lg:text-7xl lg:ml-[70px] xl:ml-[210px]">
-            <span className="font-bold">Respect</span> & {" "} <span className="font-bold">Opportunities</span>
+              <span className="font-bold">Respect</span> & {" "} <span className="font-bold pl-1">Opportunities</span>
             </div>
           </h1>
 
@@ -149,7 +146,7 @@ const HeroSection = () => {
             >
               <div
                 className="
-                  text-xs ml-18
+                  text-xs ml-25
                   sm:text-sm sm:ml-20
                   md:text-4xl md:ml-30
                   lg:text-4xl
@@ -169,7 +166,7 @@ const HeroSection = () => {
               <div
                 className="
                   bg-[#8dc73d]
-                  px-3 py-2 w-32 ml-15 
+                  px-3 py-2 w-38 ml-14.5 text-right
                   sm:px-4 sm:py-2 sm:w-50
                   md:px-6 md:py-3 md:w-[300px]
                   lg:w-[400px]
@@ -258,7 +255,7 @@ const HeroSection = () => {
                 h-[50px] sm:h-[110px]
                 
                 shadow-lg z-10
-                hover:scale-105 transition-transform
+                
               "
             >
               <span className="font-semibold">Course Duration</span>
@@ -277,7 +274,7 @@ const HeroSection = () => {
                 text-base sm:text-lg md:text-3xl lg:text-3xl xl:text-4xl
                 min-w-[250px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px]
                 shadow-lg z-10
-                hover:scale-105 transition-transform
+                
               "
             >
               <span className="font-medium">Monthly</span>
@@ -293,18 +290,18 @@ const HeroSection = () => {
       {/*  Video Sectio */}
 
       <section className="py-8 md:py-12 px-4">
-  <div className="max-w-4xl mx-auto">
-    <div className="bg-white rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl relative pt-[56.25%]">
-      <iframe
-        className="absolute top-0 left-0 w-full h-full"
-src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
-        title="Course Preview"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-      />
-    </div>
-  </div>
-</section>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl relative pt-[56.25%]">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
+              title="Course Preview"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
 
       {/* pain point section */}
 
@@ -482,63 +479,63 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
       </section>
 
       <footer className="bg-[#6a9413] py-8 px-4">
-  <div className="max-w-6xl mx-auto">
-    <div className="flex flex-row mb-[50px] md:flex-row items-center justify-between gap-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-row mb-[50px] md:flex-row items-center justify-between gap-8">
 
-      {/* Left Section */}
-      <div className="text-center md:text-left">
-        <p className="font-bold text-white mb-2 ">
-          Follow us on
-        </p>
-        <div className="flex gap-4 justify-center md:justify-start">
-          <a
-            href="https://www.linkedin.com/company/demandschoolofficial?originalSubdomain=in"
-            className="text-white transition-transform hover:scale-110 active:scale-95"
-          >
-            <Linkedin className="w-4 h-4 sm:w-7 sm:h-7 md:w-6 md:h-6" />
-          </a>
-          <a
-            href="https://www.instagram.com/demand.school/?utm_source=qr#"
-            className="text-white transition-transform hover:scale-110 active:scale-95"
-          >
-            <Instagram className="w-4 h-4 sm:w-7 sm:h-7 md:w-6 md:h-6" />
-          </a>
+            {/* Left Section */}
+            <div className="text-center mt-[-50px] sm:mt-0 md:text-left">
+              <p className="font-clash w-25  text-white mb-2 ">
+                Follow us on
+              </p>
+              <div className="flex gap-4 justify-center md:justify-start">
+                <a
+                  href="https://www.linkedin.com/company/demandschoolofficial?originalSubdomain=in"
+                  className="text-white transition-transform hover:scale-110 active:scale-95"
+                >
+                  <Linkedin className="w-4 h-4 sm:w-7 sm:h-7 md:w-6 md:h-6" />
+                </a>
+                <a
+                  href="https://www.instagram.com/demand.school/?utm_source=qr#"
+                  className="text-white transition-transform hover:scale-110 active:scale-95"
+                >
+                  <Instagram className="w-4 h-4 sm:w-7 sm:h-7 md:w-6 md:h-6" />
+                </a>
+              </div>
+            </div>
+
+            {/* Center Logo */}
+            <div className="flex items-center justify-center">
+              <img
+                src={logo}
+                alt="D School"
+                className="w-35 sm:w-25 md:w-38 object-contain"
+              />
+            </div>
+
+            {/* Right Section */}
+            <div className="text-center mt-[-50px] sm:mt-0 md:text-right">
+              <p className="font-clash w-35 text-white mb-2 ">
+                Contact us on
+              </p>
+              <div className="flex gap-4 justify-center md:justify-end">
+                <a
+                  href="#"
+                  className="text-white transition-transform hover:scale-110 active:scale-95"
+                >
+                  <MessageCircle className="w-4 h-4 sm:w-7 sm:h-7 md:w-6 md:h-6" />
+                </a>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
-
-      {/* Center Logo */}
-      <div className="flex items-center justify-center">
-        <img
-          src={logo}
-          alt="D School"
-          className="w-35 sm:w-25 md:w-38 object-contain"
-        />
-      </div>
-
-      {/* Right Section */}
-      <div className="text-center md:text-right">
-        <p className="font-bold text-white mb-2 ">
-          Contact us on
-        </p>
-        <div className="flex gap-4 justify-center md:justify-end">
-          <a
-            href="#"
-            className="text-white transition-transform hover:scale-110 active:scale-95"
-          >
-            <MessageCircle className="w-4 h-4 sm:w-7 sm:h-7 md:w-6 md:h-6" />
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</footer>
+      </footer>
 
 
       <div className="fixed bottom-0 left-0 right-0 z-50 p-4 flex justify-center">
         <button
           onClick={scrollToPricing}
-          className="bg-white text-[#6a9413] px-12 py-4 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform w-full max-w-md"
+          className="bg-white text-[#709722] px-12 py-4 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform w-full max-w-md"
         >
           Enroll Now
         </button>
@@ -549,7 +546,7 @@ src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
 };
 const ScrollBanner = () => (
   <section className="relative w-full h-40 md:h-44 bg-black overflow-hidden flex items-center justify-center ">
-    <div className="absolute w-[1000%] mt-[-110px] ml-[-200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
+    <div className="absolute lg:w-[1250%] w-[1000%] mt-[-110px] ml-[-200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
       {Array(60).fill('Create Engage Grow').map((text, i) => (
         <span key={i} className="mx-4">· {text}</span>
       ))}
@@ -620,19 +617,17 @@ const PainPointsSection = () => {
               {/* TEXT */}
               <h3
                 className={`
-                  text-2xl md:text-3xl font-extrabold text-white
+                  text-2xl md:text-3xl font-clash font-bold text-white
                   whitespace-pre-line
                   max-w-[60%]
                   z-21 md:z-21
-                  ${
-                    point.position === "left"
-                      ? "text-right"
-                      : "text-left"
+                  ${point.position === "left"
+                    ? "text-right"
+                    : "text-left"
                   }
-                  ${
-                    idx === 1
-                      ? "relative z-0 md:z-10"
-                      : "relative z-10"
+                  ${idx === 1
+                    ? "relative z-0 md:z-10"
+                    : "relative z-10"
                   }
                 `}
               >
@@ -648,19 +643,15 @@ const PainPointsSection = () => {
 
                   w-[60%] md:w-[75%]
 
-                  ${
-                    idx === 1 || idx === 2
-                      ? "h-[190%] md:h-[140%] bottom-[-40px] md:bottom-[-40px]"
-                      : "h-full"
+                  ${idx === 1 || idx === 2
+                    ? "h-[190%] md:h-[140%] bottom-[-40px] md:bottom-[-40px]"
+                    : "h-full"
                   }
-                  ${
-                    idx === 1 ? "md:h-[420px] bottom-[-15px] md:bottom-[-59px]":""
+                  ${idx === 1 ? "md:h-[420px] bottom-[-15px] md:bottom-[-59px]" : ""
                   }
-                  ${
-                    idx === 2 ? "md:h-[320px]":""
+                  ${idx === 2 ? "md:h-[320px]" : ""
                   }
-                  ${
-                    idx === 0 ? "bottom-6 md:bottom-[15px] lg:bottom-10 lg:h-[180px]":""
+                  ${idx === 0 ? "bottom-6 md:bottom-[15px] lg:bottom-10 lg:h-[180px]" : ""
                   }
                   
                   ${idx < 3 ? "translate-y-6 md:translate-y-10" : ""}
@@ -687,13 +678,13 @@ const PainPointsSection = () => {
 
 // Module Item Component
 const ModuleItem = ({ module, isOpen, toggle }) => (
-  <div className="bg-[#8dc73d] rounded-2xl overflow-hidden transition-all self-start">
+  <div className="bg-[#8dc73d] rounded-2xl overflow-hidden transition-all self-start lg:h-[80px]">
     {/* Header */}
     <div
       onClick={toggle}
       className="px-6 py-5 cursor-pointer flex justify-between items-center text-white font-extrabold text-lg md:text-xl"
     >
-      <span className="leading-tight whitespace-pre-line">
+      <span className="leading-tight whitespace-pre-line ">
         {module.title}
       </span>
       {isOpen ? <Minus className="w-6 h-6" /> : <Plus className="w-6 h-6" />}
@@ -715,53 +706,34 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
 // Pricing Card Component
 const PricingCard = ({ plan }) => (
   <div
-    className="
-      bg-[#58751c]
-      rounded-[20px_100px_30px_30px]
-
-      p-6
-      sm:p-8
-      md:p-10
-
-      flex
-      flex-col
-
-      min-h-[480px]
-      md:min-h-[520px]
-      lg:min-h-[560px]
-
-      border-2 border-transparent
-
-      transition-all duration-300 ease-out
-
-      md:hover:scale-[1.03]
-      md:hover:shadow-2xl
-      md:hover:border-[#8dc73d]
+  style={{ backgroundColor: plan.color }}
+    className="rounded-[20px_100px_30px_30px] p-16 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px] lg:w-[330px] border-2 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
     "
   >
     {/* Title */}
-    <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white text-center mb-4">
+    <h3 className="text-2xl sm:text-2xl  md:text-3xl font-clash font-semibold text-white ">
       {plan.title}
     </h3>
 
     {/* Price */}
-    <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white text-center mb-6">
+    <div className="text-4xl sm:text-4xl md:text-5xl font-clash font-semibold text-white  mb-6 font-montserrat leading-none">
       {plan.price}
     </div>
+
 
     {/* Features */}
     <div className="flex-1 space-y-4 mb-6">
       {plan.features.map((feature, idx) => (
         <div
           key={idx}
-          className="flex items-start gap-3 text-white text-base sm:text-lg md:text-xl"
+          className="flex items-start gap-3 font-clash font-semibold text-white text-base sm:text-lg md:text-xl"
         >
           {feature.included ? (
-            <Check className="w-5 h-5 mt-1 flex-shrink-0" />
+            <ArrowUpRight className="w-8 h-8 mt-1 text-2xl text-green-600  flex-shrink-0" />
           ) : (
-            <X className="w-5 h-5 mt-1 flex-shrink-0" />
+            <X className="w-8 h-8 mt-1 text-green-600 flex-shrink-0" />
           )}
-          <span>{feature.text}</span>
+          <span className="text-2xl">{feature.text}</span>
         </div>
       ))}
     </div>
@@ -783,6 +755,7 @@ const PricingCard = ({ plan }) => (
         rounded-2xl
         text-base
         sm:text-lg
+        font-clash
         font-bold
 
         transition-all duration-300
@@ -863,7 +836,7 @@ const CreatorsSection = () => {
   ];
 
   return (
-    <section className=" md:py-20 px-4 overflow-hidden">
+    <section className=" overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-extrabold text-center ">
           <span className="text-[#8dc73d]">Creators </span>
@@ -871,28 +844,31 @@ const CreatorsSection = () => {
         </h2>
 
         <div className="relative overflow-hidden">
-          <div className="flex gap-6 w-max animate-scroll-creators">
+          <div className="flex w-max animate-scroll-creators will-change-transform">
             {[...creators, ...creators].map((creator, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-[220px] sm:w-[260px]"
+                className="flex-shrink-0 w-[200px] md:w-[300px] sm:w-[260px]"
               >
                 {/* Image */}
-                <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden mb-4">
+                <div className="w-[350px] h-[350px] md:w-[550px] md:h-[550px] aspect-[3/4] rounded-2xl overflow-hidden mb-4">
                   <img
                     src={creator.image}
                     alt={creator.name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
+
                 </div>
 
                 {/* Name */}
-                <div className="text-[#8dc73d] mt-[-50px] text-lg font-extrabold text-center uppercase">
+                <div className="text-[#8dc73d] w-[350px] md:w-[550px] md:mt-[-40px]  transform -translate-y-15  text-lg font-extrabold text-center uppercase">
                   {creator.name}
                 </div>
 
                 {/* Profession */}
-                <div className="text-white text-sm font-semibold text-center">
+                <div className="text-white w-[350px] md:w-[550px]  text-sm -translate-y-15 font-semibold text-center">
                   {creator.profession}
                 </div>
               </div>
@@ -923,6 +899,7 @@ const pricingPlans = [
   {
     title: 'Basic Plan',
     price: '₹1,799',
+    color:'#58751c',
     features: [
       { text: 'Pre-recorded Masterclass Videos', included: true },
       { text: 'Live Classes', included: false },
@@ -933,6 +910,7 @@ const pricingPlans = [
   {
     title: 'Standard Plan',
     price: '₹2,499',
+    color:'#58751c',
     features: [
       { text: 'Pre-recorded Masterclass Videos', included: true },
       { text: '1 Live Class', included: true },
@@ -943,6 +921,7 @@ const pricingPlans = [
   {
     title: 'Advanced Plan',
     price: '₹3,499',
+    color:'#58751c',
     features: [
       { text: 'Pre-recorded Masterclass Videos', included: true },
       { text: '6 Live Classes', included: true },
