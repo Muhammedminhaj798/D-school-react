@@ -483,7 +483,7 @@ const HeroSection = () => {
           <div className="flex flex-row mb-[50px] md:flex-row items-center justify-between gap-8">
 
             {/* Left Section */}
-            <div className="text-center mt-[-50px] sm:mt-0 md:text-left">
+            <div className="text-center mt-[-30px] sm:mt-0 md:text-left">
               <p className="font-clash w-25  text-white mb-2 ">
                 Follow us on
               </p>
@@ -513,7 +513,7 @@ const HeroSection = () => {
             </div>
 
             {/* Right Section */}
-            <div className="text-center mt-[-50px] sm:mt-0 md:text-right">
+            <div className="text-center mt-[-30px] sm:mt-0 md:text-right">
               <p className="font-clash w-35 text-white mb-2 ">
                 Contact us on
               </p>
@@ -532,7 +532,7 @@ const HeroSection = () => {
       </footer>
 
 
-      <div className="fixed bottom-0 left-0 right-0 z-50 p-4 flex justify-center">
+      <div className=" fixed bottom-0 left-0 right-0 z-50 p-4 flex justify-center">
         <button
           onClick={scrollToPricing}
           className="bg-white text-[#709722] px-12 py-4 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform w-full max-w-md"
@@ -544,20 +544,66 @@ const HeroSection = () => {
     </div>
   );
 };
-const ScrollBanner = () => (
-  <section className="relative w-full h-40 md:h-44 bg-black overflow-hidden flex items-center justify-center ">
-    <div className="absolute lg:w-[1250%] w-[1000%] mt-[-110px] ml-[-200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform rotate-6 sm:rotate-3 md:rotate-3 shadow-lg animate-scroll-left">
-      {Array(60).fill('Create Engage Grow').map((text, i) => (
-        <span key={i} className="mx-4">· {text}</span>
-      ))}
-    </div>
-    <div className="absolute w-[1000%] mt-[-110px] ml-[200%] bg-[#8dc73d] text-white font-bold text-lg md:text-2xl uppercase whitespace-nowrap flex items-center transform -rotate-6 sm:-rotate-3 md:-rotate-3 shadow-lg animate-scroll-right">
-      {Array(60).fill('Create Engage Grow').map((text, i) => (
-        <span key={`dup-${i}`} className="mx-4">· {text}</span>
-      ))}
-    </div>
-  </section>
-);
+
+const ScrollBanner = () => {
+  const text = "Create Engage Grow . ";
+  const repeatedText = text.repeat(40); // കൂടുതൽ repeat for mobile seamless scroll
+
+  return (
+    <section className="relative w-full h-[180px] bg-black overflow-hidden flex justify-center items-center -mt-[50px] z-10">
+      {/* Band 1: Left to Right */}
+      <div className="
+        absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+        w-[140vw] md:w-[120vw] 
+        bg-[#8dc73d] text-white py-1 md:py-2 
+        flex items-center justify-center 
+        shadow-[0_0_20px_rgba(138,189,76,0.4)]
+        rotate-5 md:rotate-2 lg:rotate-2
+      ">
+        <div
+          className="whitespace-nowrap"
+          style={{ animation: 'scroll-left-to-right 35s linear infinite' }}
+        >
+          {repeatedText}
+        </div>
+      </div>
+
+      {/* Band 2: Right to Left */}
+      <div className="
+        absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+        w-[140vw] md:w-[120vw] 
+        bg-[#8dc73d] text-white py-1 md:py-2 
+        flex items-center justify-center 
+        shadow-[0_0_20px_rgba(138,189,76,0.4)]
+        -rotate-5 md:-rotate-2 lg:-rotate-2
+      ">
+        <div
+          className="whitespace-nowrap"
+          style={{ animation: 'scroll-right-to-left 35s linear infinite' }}
+        >
+          {repeatedText}
+        </div>
+      </div>
+
+      {/* Global Keyframes - Add this to your global CSS (index.css or App.css) */}
+      <style jsx global>{`
+        @keyframes scroll-left-to-right {
+          0% { transform: translateX(-30%); }
+          100% { transform: translateX(30%); }
+        }
+
+        @keyframes scroll-right-to-left {
+          0% { transform: translateX(30%); }
+          100% { transform: translateX(-30%); }
+        }
+      `}</style>
+    </section>
+  );
+};
+
+  
+
+
 
 const PainPointsSection = () => {
   const painPoints = [
@@ -707,7 +753,7 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
 const PricingCard = ({ plan }) => (
   <div
   style={{ backgroundColor: plan.color }}
-    className="rounded-[20px_100px_30px_30px] p-16 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px] lg:w-[330px] border-2 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
+    className="rounded-[20px_100px_30px_30px] p-6 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px] w-[300px] lg:w-[330px] border-3 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
     "
   >
     {/* Title */}
@@ -722,18 +768,18 @@ const PricingCard = ({ plan }) => (
 
 
     {/* Features */}
-    <div className="flex-1 space-y-4 mb-6">
+    <div className="flex-1 space-y-2 mb-6">
       {plan.features.map((feature, idx) => (
         <div
           key={idx}
-          className="flex items-start gap-3 font-clash font-semibold text-white text-base sm:text-lg md:text-xl"
+          className="flex items-start gap-3 font-clash font-black text-white text-base sm:text-lg md:text-xl"
         >
           {feature.included ? (
             <ArrowUpRight className="w-8 h-8 mt-1 text-2xl text-green-600  flex-shrink-0" />
           ) : (
             <X className="w-8 h-8 mt-1 text-green-600 flex-shrink-0" />
           )}
-          <span className="text-2xl">{feature.text}</span>
+          <span className="text-lg md:text-2xl">{feature.text}</span>
         </div>
       ))}
     </div>
