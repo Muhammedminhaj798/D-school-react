@@ -75,31 +75,31 @@ const HeroSection = () => {
           </div>
 
           {/* Inner Banner */}
-          <div className="bg-[#729535dc] h-10 sm:h-14 md:h-17 w-fit px-6 md:px-8 py-3 mx-auto mb-8 rounded-full text-center shadow-lg">
-            <h2 className=" md:text-4xl lg:text-5xl mt-[-6px]  font-extrabold text-white ">
+          <div className="bg-[#729535dc] h-10 sm:h-14 md:h-17 md:mt-[-40px] w-fit px-6 md:px-8 py-3 mx-auto mb-8 rounded-full text-center shadow-lg">
+            <h2 className=" md:text-4xl lg:text-3xl mt-[-6px] xl:mt-0 font-extrabold text-white ">
               Personal Branding Mastery
             </h2>
           </div>
 
           {/* Headline */}
-          <h1 className="text-2xl w-full md:text-5xl lg:text-7xl text-center font-bold mb-8">
+          <h1 className="text-2xl w-full md:text-5xl lg:text-6xl text-center font-bold mb-8">
             <span className="font-light">Build a Personal Brand</span>
             <br />
             <span className="font-light">That Gets You </span>
 
             <span className="font-bold">Clients,</span>
             <br />
-            <div className=" flex text-2xl space-x-1 ml-[35px] sm:text-2xl sm:ml-[7rem] md:text-5xl md:ml-[4rem] lg:text-7xl lg:ml-[4rem] xl:ml-[210px]">
+            <div className=" flex text-2xl space-x-1 ml-[35px] sm:text-2xl sm:ml-[7rem] md:text-5xl md:ml-[4rem] lg:text-6xl lg:ml-[4rem] xl:text-6xl xl:ml-[17rem]">
               <span className="font-bold pr-1 md:pr-2">Respect</span> & {" "} <span className="font-bold pl-1 md:pl-2 lg:pl-1">Opportunities</span>
             </div>
           </h1>
 
           {/* Mentor Area */}
-          <div className="relative min-h-[170px] md:min-h-[600px]">
+          <div className="relative min-h-[130px] md:min-h-[440px] mt-[76px] xl:mt-[-36px]">
             {/* SVG Curve */}
             <svg
               className="absolute bottom-0 left-0 ml-[-23px] w-[392px] sm:ml-[-19px]
-                sm:w-[729px]  h-[170px] md:ml-[-25px] md:w-[750px] md:h-[450px] lg:w-[1281px] z-9"
+                sm:w-[729px]  h-[170px] md:ml-[-25px] md:w-[750px] md:h-[350px] lg:w-[1281px] z-9"
               viewBox="0 0 1440 320"
               preserveAspectRatio="none"
             >
@@ -117,9 +117,10 @@ const HeroSection = () => {
                 sm:w-[300px] sm:ml-[60px]
                 md:w-[400px] md:ml-[-50px]
                 lg:w-[500px]
-                xl:w-[520px]
+                xl:w-[320px] xl:h-[200px] xl:mb-60 xl:ml-16
                 2xl:w-[560px]
                 md:left-[10%]
+                
                 z-20
               "
             >
@@ -188,7 +189,7 @@ const HeroSection = () => {
             <div
               className="
                 absolute
-                bottom-[80%]
+                bottom-[100%]
                 right-[3%]
                 flex items-start gap-2
                 bg-white text-[#435c19]
@@ -211,7 +212,7 @@ const HeroSection = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="relative z-30 mt-[-20px] md:mt-[-23px] lg:mt-[10px] xl:mt-[40px] flex flex-col gap-4 items-center">
+          <div className="relative z-30 mt-[-20px] md:mt-[-23px] lg:mt-[10px] xl:mt-[-40px] flex flex-col gap-4 items-center">
             <svg
               className="
                 absolute bottom-5 left-0 ml-[-23px] w-[392px]
@@ -224,7 +225,7 @@ const HeroSection = () => {
                 md:ml-[-25px] md:w-[750px]
                 lg:h-[300px]
                 lg:w-[1281px]
-                xl:h-[340px]
+                xl:h-[240px]
                 2xl:h-[360px]
                 z-0
               "
@@ -248,12 +249,12 @@ const HeroSection = () => {
                 bg-white text-[#435c19]
                 px-5 py-0 sm:px-6 sm:py-3 md:px-8 md:py-4
                 rounded-full
-                font-bold
+                font-semibold
                 
-                text-base sm:text-lg md:text-3xl lg:text-3xl xl:text-4xl
+                text-base sm:text-lg md:text-3xl lg:text-3xl xl:text-3xl
               
-                min-w-[250px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px]
-                h-[50px] sm:h-[110px]
+                min-w-[250px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px] xl:min-w-[500px]
+                h-[50px] sm:h-[110px] xl:h-[90px]
                 
                 shadow-lg z-10
                 
@@ -272,8 +273,8 @@ const HeroSection = () => {
                 rounded-full
                 font-bold
                 h-[50px] sm:h-[110px]
-                text-base sm:text-lg md:text-3xl lg:text-3xl xl:text-4xl
-                min-w-[250px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px]
+                text-base sm:text-lg md:text-3xl lg:text-3xl xl:text-3xl
+                min-w-[250px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px] xl:min-w-[500px]
                 shadow-lg z-10
                 
               "
