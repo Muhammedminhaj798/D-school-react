@@ -18,7 +18,7 @@ import hennagazal from './assets/henna gazal.png'
 
 import { ArrowUpRight, Check, ChevronLeft, ChevronRight, GraduationCap, Instagram, Linkedin, MessageCircle, Minus, Plus, X } from "lucide-react";
 import { CourseMentorSection } from "./CourseMentorSection";
-import PricingCard from "./PricingCard";
+// import PricingCard from "./PricingCard";
 
 const HeroSection = () => {
   const [openModuleId, setOpenModuleId] = useState(null);
@@ -89,8 +89,8 @@ const HeroSection = () => {
 
             <span className="font-bold">Clients,</span>
             <br />
-            <div className=" flex text-2xl space-x-1 ml-[35px] sm:text-2xl sm:ml-[75px] md:text-5xl lg:text-7xl lg:ml-[70px] xl:ml-[210px]">
-              <span className="font-bold">Respect</span> & {" "} <span className="font-bold pl-1">Opportunities</span>
+            <div className=" flex text-2xl space-x-1 ml-[35px] sm:text-2xl sm:ml-[7rem] md:text-5xl md:ml-[4rem] lg:text-7xl lg:ml-[4rem] xl:ml-[210px]">
+              <span className="font-bold pr-1 md:pr-2">Respect</span> & {" "} <span className="font-bold pl-1 md:pl-2 lg:pl-1">Opportunities</span>
             </div>
           </h1>
 
@@ -725,13 +725,14 @@ const PainPointsSection = () => {
 
 // Module Item Component
 const ModuleItem = ({ module, isOpen, toggle }) => (
-  <div className="bg-[#8dc73d] rounded-2xl overflow-hidden transition-all self-start lg:h-[80px]">
+  <div className="bg-[#8dc73d] rounded-2xl overflow-hidden transition-all self-start">
+    
     {/* Header */}
     <div
       onClick={toggle}
-      className="px-6 py-5 cursor-pointer flex justify-between items-center text-white font-extrabold text-lg md:text-xl"
+      className="px-6 py-5 lg:h-[80px] cursor-pointer flex justify-between items-center text-white font-extrabold text-lg md:text-xl"
     >
-      <span className="leading-tight whitespace-pre-line ">
+      <span className="leading-tight whitespace-pre-line">
         {module.title}
       </span>
       {isOpen ? <Minus className="w-6 h-6" /> : <Plus className="w-6 h-6" />}
@@ -739,11 +740,13 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
 
     {/* Content */}
     <div
-      className={`bg-[#3a3939] text-white px-6 transition-all duration-300 overflow-hidden ${isOpen ? "max-h-96 py-6" : "max-h-0 py-0"
-        }`}
+      className={`bg-[#3a3939] text-white px-6 overflow-hidden transition-[max-height,padding] duration-300 ease-in-out ${
+        isOpen ? "max-h-[1000px] py-6" : "max-h-0 py-0"
+      }`}
     >
       <p className="text-base leading-relaxed">{module.content}</p>
     </div>
+
   </div>
 );
 
@@ -751,70 +754,70 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
 // pricing card module
 
 // Pricing Card Component
-// const PricingCard = ({ plan }) => (
-//   <div
-//   style={{ backgroundColor: plan.color }}
-//     className="rounded-[20px_100px_30px_30px] p-6 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px] w-[300px] lg:w-[330px] border-3 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
-//     "
-//   >
-//     {/* Title */}
-//     <h3 className="text-2xl sm:text-2xl  md:text-3xl font-clash font-semibold text-white ">
-//       {plan.title}
-//     </h3>
+const PricingCard = ({ plan }) => (
+  <div
+  style={{ backgroundColor: plan.color }}
+    className="rounded-[20px_100px_30px_30px] p-6 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px] w-[300px] lg:w-[330px] border-3 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
+    "
+  >
+    {/* Title */}
+    <h3 className="text-2xl sm:text-2xl  md:text-3xl font-clash font-semibold text-white ">
+      {plan.title}
+    </h3>
 
-//     {/* Price */}
-//     <div className="text-4xl sm:text-4xl md:text-5xl font-clash font-semibold text-white  mb-6 font-montserrat leading-none">
-//       {plan.price}
-//     </div>
+    {/* Price */}
+    <div className="text-4xl sm:text-4xl md:text-5xl font-clash font-semibold text-white  mb-6 font-montserrat leading-none">
+      {plan.price}
+    </div>
 
 
-//     {/* Features */}
-//     <div className="flex-1 space-y-2 mb-6">
-//       {plan.features.map((feature, idx) => (
-//         <div
-//           key={idx}
-//           className="flex items-start gap-3 font-clash font-black text-white text-base sm:text-lg md:text-xl"
-//         >
-//           {feature.included ? (
-//             <ArrowUpRight className="w-8 h-8 mt-1 text-2xl text-green-600  flex-shrink-0" />
-//           ) : (
-//             <X className="w-8 h-8 mt-1 text-green-600 flex-shrink-0" />
-//           )}
-//           <span className="text-lg md:text-2xl">{feature.text}</span>
-//         </div>
-//       ))}
-//     </div>
+    {/* Features */}
+    <div className="flex-1 space-y-2 mb-6">
+      {plan.features.map((feature, idx) => (
+        <div
+          key={idx}
+          className="flex items-start gap-3 font-clash font-black text-white text-base sm:text-lg md:text-xl"
+        >
+          {feature.included ? (
+            <ArrowUpRight className="w-8 h-8 mt-1 text-2xl text-green-600  flex-shrink-0" />
+          ) : (
+            <X className="w-8 h-8 mt-1 text-green-600 flex-shrink-0" />
+          )}
+          <span className="text-lg md:text-2xl">{feature.text}</span>
+        </div>
+      ))}
+    </div>
 
-//     {/* Button */}
-//     <button
-//       onClick={() =>
-//         document
-//           .getElementById("pricing")
-//           ?.scrollIntoView({ behavior: "smooth" })
-//       }
-//       className="
-//         bg-white
-//         text-[#58751c]
-//         py-3
-//         sm:py-4
-//         px-6
-//         sm:px-8
-//         rounded-2xl
-//         text-base
-//         sm:text-lg
-//         font-clash
-//         font-bold
+    {/* Button */}
+    <button
+      onClick={() =>
+        document
+          .getElementById("pricing")
+          ?.scrollIntoView({ behavior: "smooth" })
+      }
+      className="
+        bg-white
+        text-[#58751c]
+        py-3
+        sm:py-4
+        px-6
+        sm:px-8
+        rounded-2xl
+        text-base
+        sm:text-lg
+        font-clash
+        font-bold
 
-//         transition-all duration-300
+        transition-all duration-300
 
-//         md:hover:shadow-lg
-//         md:hover:-translate-y-1
-//       "
-//     >
-//       Enroll Now
-//     </button>
-//   </div>
-// );
+        md:hover:shadow-lg
+        md:hover:-translate-y-1
+      "
+    >
+      Enroll Now
+    </button>
+  </div>
+);
 
 
 
