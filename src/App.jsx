@@ -18,6 +18,7 @@ import hennagazal from './assets/henna gazal.png'
 
 import { ArrowUpRight, Check, ChevronLeft, ChevronRight, GraduationCap, Instagram, Linkedin, MessageCircle, Minus, Plus, X } from "lucide-react";
 import { CourseMentorSection } from "./CourseMentorSection";
+import EnrollButtonWithCountdown from "./EnrollNow";
 // import PricingCard from "./PricingCard";
 
 const HeroSection = () => {
@@ -46,9 +47,9 @@ const HeroSection = () => {
       {/* Navigation */}
       <nav className="bg-[#708a46] pl-6">
         <div className="max-w-10xl h-12 mx-auto flex justify-between items-center">
-            <div className=" md:text-2xl font-bold ml-[-10px]">Personal Branding Masterclass</div>
-            
-          
+          <div className=" md:text-2xl font-clash font-black ml-[-10px]">Personal Branding Masterclass</div>
+
+
 
           <div className="w-24 h-1 md:w-32 md:h-3 flex items-center justify-center">
             <img
@@ -61,7 +62,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="px-4 py-8 md:py-12 bg-black">
+      <section className="px-4 py-15 md:py-15 bg-black">
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-[#435c19] to-[#556b2f] rounded-3xl md:rounded-[40px] px-6 py-6 md:py-16 relative overflow-hidden">
           {/* Sparkles */}
           <div className="absolute top-[15%] left-[10%] text-white text-3xl md:text-5xl opacity-80">
@@ -75,31 +76,56 @@ const HeroSection = () => {
           </div>
 
           {/* Inner Banner */}
-          <div className="bg-[#729535dc] h-10 sm:h-14 md:h-17 md:mt-[-40px] w-fit px-6 md:px-8 py-3 mx-auto mb-8 rounded-full text-center shadow-lg">
-            <h2 className=" md:text-4xl lg:text-3xl mt-[-6px] xl:mt-0 font-extrabold text-white ">
+          <div
+            className="
+    bg-[#729535dc]
+    px-6 sm:px-8 md:px-10
+    py-2 
+    mx-auto mb-3
+    rounded-full
+    text-center
+    shadow-lg
+    w-fit
+    max-w-[95%]
+  "
+          >
+            <h2
+              className="
+      text-sm sm:text-lg md:text-2xl lg:text-3xl
+      font-extrabold
+      text-white
+      leading-tight
+      whitespace-nowrap
+    "
+            >
               Personal Branding Mastery
             </h2>
           </div>
 
+
           {/* Headline */}
-          <h1 className="text-2xl w-full md:text-5xl lg:text-6xl text-center font-bold mb-8">
+          <h1 className="text-2xl w-full md:text-4xl lg:text-6xl text-center font-mundial font-bold">
             <span className="font-light">Build a Personal Brand</span>
             <br />
             <span className="font-light">That Gets You </span>
 
             <span className="font-bold">Clients,</span>
             <br />
-            <div className=" flex text-2xl space-x-1 ml-[35px] sm:text-2xl sm:ml-[7rem] md:text-5xl md:ml-[4rem] lg:text-6xl lg:ml-[4rem] xl:text-6xl xl:ml-[17rem]">
-              <span className="font-bold pr-1 md:pr-2">Respect</span> & {" "} <span className="font-bold pl-1 md:pl-2 lg:pl-1">Opportunities</span>
-            </div>
+
+            {/* 👇 div → span ആക്കി, inline-flex + space-x കൊടുത്തു */}
+            <span className="inline-flex items-center justify-center space-x-1 md:space-x-2">
+              <span className="font-bold">Respect</span>
+              <span>&</span>
+              <span className="font-bold">Opportunities</span>
+            </span>
           </h1>
 
           {/* Mentor Area */}
-          <div className="relative min-h-[130px] md:min-h-[440px] mt-[76px] xl:mt-[-36px]">
+          <div className="relative min-h-[130px] md:min-h-[150px] mt-18 lg:min-h-[250px] lg:mt-[200px] xl:mt-[186px] md:bottom-5">
             {/* SVG Curve */}
             <svg
               className="absolute bottom-0 left-0 ml-[-23px] w-[392px] sm:ml-[-19px]
-                sm:w-[729px]  h-[170px] md:ml-[-25px] md:w-[750px] md:h-[350px] lg:w-[1281px] z-9"
+                sm:w-[729px]  sm:bottom-30 md:bottom-[-3rem] lg:bottom-20 h-[170px] md:ml-[-25px]  md:w-[980px] md:h-[200px] lg:w-[1281px] lg:h-[250px] z-9"
               viewBox="0 0 1440 320"
               preserveAspectRatio="none"
             >
@@ -112,12 +138,13 @@ const HeroSection = () => {
             {/* Mentor Image */}
             <div
               className="
-                absolute bottom-6
+                absolute
                 w-40 
-                sm:w-[300px] sm:ml-[60px]
-                md:w-[400px] md:ml-[-50px]
-                lg:w-[500px]
-                xl:w-[320px] xl:h-[200px] xl:mb-60 xl:ml-16
+                bottom-2
+                sm:w-[200px] sm:ml-36 sm:bottom-30
+                md:w-[220px] md:ml-[30px] md:bottom-[-3rem]
+                lg:w-[320px] lg:ml-14 lg:bottom-19
+                xl:w-[290px] xl:h-[200px] xl:mb-42 xl:ml-16
                 2xl:w-[560px]
                 md:left-[10%]
                 
@@ -139,9 +166,10 @@ const HeroSection = () => {
                 left-[50%]
                 -translate-x-1/2
                 w-60
-                sm:w-[250px] sm:ml-[-250px] sm:bottom-[50%]
-                md:bottom-[35%] md:left-[98%] md:w-[320px]
-                lg:w-[360px] lg:ml-[-400px]
+                sm:w-[200px] sm:bottom-[50%]
+                md:bottom-[15%] md:left-[48%] md:w-[320px]
+                lg:w-[360px] lg:ml-[40px] lg:bottom-[63%]
+                xl:ml-[5rem] xl:bottom-[80%] 
                 2xl:w-[300px]
                 z-10
               "
@@ -149,11 +177,10 @@ const HeroSection = () => {
               <div
                 className="
                   text-xs ml-25
-                  sm:text-sm sm:ml-20
-                  md:text-4xl md:ml-30
-                  lg:text-4xl
-                  xl:text-4xl
-                  xl:ml-[-100px]
+                  sm:text-sm sm:ml-25
+                  md:text-2xl md:ml-30
+                  lg:text-3xl lg:ml-35
+                  xl:text-3xl xl:ml-[0%] 
                   2xl:text-5xl
                   font-semibold
                   text-white
@@ -174,7 +201,7 @@ const HeroSection = () => {
                   lg:w-[400px]
                   xl:ml-[-180px]
                   rounded-lg sm:rounded-xl md:rounded-2xl
-                  text-[10px] sm:text-xs md:text-2xl lg:text-2xl xl:text-3xl
+                  text-[10px] sm:text-xs md:text-lg lg:text-2xl xl:text-2xl
                   leading-tight md:leading-snug
                   font-bold text-white shadow-lg text-center
                 "
@@ -198,34 +225,34 @@ const HeroSection = () => {
                 w-[135px]
                 text-xs
                 z-1
-                sm:w-[130px] sm:bottom-[81%] sm:right-[9%] sm:text-sm
-                md:bottom-[60%] md:right-[5%] md:px-5 md:py-4 md:w-[250px]
+                sm:w-[130px] sm:bottom-[101%] sm:right-[9%] sm:text-sm
+                md:bottom-[70%] md:right-[0%] md:px-5 md:py-4 md:w-[260px]
                 md:text-2xl md:rounded-2xl
-                lg:w-[350px] lg:bottom-[60%] lg:h-[100px] lg:right-[2%] lg:text-4xl
+                lg:w-[350px] lg:bottom-[106%] lg:h-[100px] lg:right-[2%] lg:text-4xl
               "
             >
               <GraduationCap className="w-6 h-6 md:w-12 md:h-12 shrink-0" />
-              <span className="font-normal leading-tight">
+              <span className="font-clash font-normal leading-tight">
                 565 + Enrolled
               </span>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="relative z-30 mt-[-20px] md:mt-[-23px] lg:mt-[10px] xl:mt-[-40px] flex flex-col gap-4 items-center">
+          <div className="relative z-30  flex flex-col gap-4 items-center bottom-0 md:bottom-0 lg:bottom-10 xl:bottom-19 2xl:bottom-20">
             <svg
               className="
                 absolute bottom-5 left-0 ml-[-23px] w-[392px]
-                h-[135px]
-                sm:h-[260px] sm:mb-16
+                h-[140px] sm:bottom-[-1.2rem]
+                sm:h-[90px] 
                 sm:ml-[-19px]
                 sm:w-[729px]
-                md:h-[250px]
-                 
-                md:ml-[-25px] md:w-[750px]
-                lg:h-[300px]
-                lg:w-[1281px]
-                xl:h-[240px]
+                md:h-[216px]
+
+                md:ml-[-25px] md:w-[980px]
+                lg:h-[160px]
+                lg:w-[1281px]  lg:bottom-[72%]
+                xl:h-[260px]  xl:w-[1282px] xl:bottom-[5%]
                 2xl:h-[360px]
                 z-0
               "
@@ -246,43 +273,71 @@ const HeroSection = () => {
 
             <button
               className="
-                bg-white text-[#435c19]
-                px-5 py-0 sm:px-6 sm:py-3 md:px-8 md:py-4
-                rounded-full
-                font-semibold
-                
-                text-base sm:text-lg md:text-3xl lg:text-3xl xl:text-3xl
-              
-                min-w-[250px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px] xl:min-w-[500px]
-                h-[50px] sm:h-[110px] xl:h-[90px]
-                
-                shadow-lg z-10
-                
-              "
+    relative z-10
+    bg-white text-[#435c19]
+    rounded-full
+    shadow-lg
+    transition-all duration-200
+
+    px-4 py-2
+    sm:px-6 sm:py-3
+    md:px-8 md:py-4
+
+    text-xs sm:text-sm md:text-lg lg:text-xl
+    w-auto
+    
+    min-w-[180px]
+    sm:min-w-[260px]
+    md:min-w-[380px]
+    lg:min-w-[520px]
+    max-w-full
+    bottom-0
+    md:bottom-[-20px]
+  "
             >
-              <span className="font-semibold">Course Duration</span>
-              <br />
-              <span className="font-extrabold">1hr 30 min +</span>
+              <span className="block font-medium leading-tight">
+                Course Duration
+              </span>
+              <span className="block font-extrabold leading-tight">
+                1hr 30 min +
+              </span>
             </button>
+
+
 
             <button
               className="
-                bg-white text-[#435c19]
-                px-5 py-0 sm:px-6 sm:py-3 md:px-8 md:py-4
-                mb-[0px]
-                rounded-full
-                font-bold
-                h-[50px] sm:h-[110px]
-                text-base sm:text-lg md:text-3xl lg:text-3xl xl:text-3xl
-                min-w-[250px] sm:min-w-[360px] md:min-w-[550px] lg:min-w-[600px] xl:min-w-[500px]
-                shadow-lg z-10
-                
-              "
+    relative z-10
+    bg-white text-[#435c19]
+    rounded-full
+    shadow-lg
+    transition-all duration-200
+
+    px-4 py-2
+    sm:px-6 sm:py-3
+    md:px-8 md:py-4
+
+    text-xs sm:text-sm md:text-lg lg:text-xl
+
+    w-auto
+    min-w-[180px]
+    sm:min-w-[260px]
+    md:min-w-[380px]
+    lg:min-w-[520px]
+    max-w-full
+    bottom-0
+    md:bottom-[-20px]
+  "
             >
-              <span className="font-medium">Monthly</span>
-              <br />
-              <span className="font-extrabold">Mentorship Session</span>
+              <span className="block font-medium leading-tight">
+                Monthly
+              </span>
+              <span className="block font-extrabold leading-tight">
+                Mentorship Session
+              </span>
             </button>
+
+
           </div>
         </div>
       </section>
@@ -312,7 +367,7 @@ const HeroSection = () => {
       {/* achieve section */}
       <section className="py-12 md:py-20 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-12">
+          <h2 className="text-3xl md:text-5xl font-clash font-extrabold mb-12">
             Here's What<br />You'll <span className="text-[#8dc73d]">Achieve</span>
           </h2>
           <div className="flex flex-col md:flex-row gap-6">
@@ -328,7 +383,7 @@ const HeroSection = () => {
       {/* course module section */}
       <section className=" md:py-20 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-clash font-extrabold text-center mb-12">
             Course <span className="text-[#8dc73d]">Module</span>
           </h2>
 
@@ -425,28 +480,31 @@ const HeroSection = () => {
 
             {/* CARDS */}
             <div
-              ref={scrollRef}
-              className="
-          flex
-          gap-6
-          overflow-x-auto
-          pb-4
-          snap-x snap-mandatory
-          scrollbar-hide
+  ref={scrollRef}
+  className="
+    flex
+    gap-4
+    overflow-x-auto
+    pb-4
+    px-3 sm:px-4
+    snap-x snap-mandatory
+    scrollbar-hide
 
-          lg:grid
-          lg:grid-cols-3
-          lg:gap-8
-          lg:overflow-visible
-        "
-            >
+    lg:grid
+    lg:grid-cols-3
+    lg:gap-8
+    lg:overflow-visible
+    lg:px-0
+  "
+>
+
               {pricingPlans.map((plan, idx) => (
                 <div
                   key={idx}
                   className="
               min-w-[85%]
               sm:min-w-[70%]
-              md:min-w-[50%]
+              md:min-w-[70%]
               lg:min-w-0
               snap-center
             "
@@ -532,16 +590,16 @@ const HeroSection = () => {
           </div>
         </div>
       </footer>
+      <EnrollButtonWithCountdown scrollToPricing={scrollToPricing} />
 
-
-      <div className=" fixed bottom-0 left-0 right-0 z-50 p-4 flex justify-center">
+      {/* <div className=" fixed bottom-0 left-0 right-0 z-50 p-4 flex justify-center">
         <button
           onClick={scrollToPricing}
           className="bg-white text-[#709722] px-12 py-4 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform w-full max-w-md"
         >
           Enroll Now
         </button>
-      </div>
+      </div> */}
 
     </div>
   );
@@ -603,7 +661,7 @@ const ScrollBanner = () => {
   );
 };
 
-  
+
 
 
 
@@ -727,13 +785,13 @@ const PainPointsSection = () => {
 // Module Item Component
 const ModuleItem = ({ module, isOpen, toggle }) => (
   <div className="bg-[#8dc73d] rounded-2xl overflow-hidden transition-all self-start">
-    
+
     {/* Header */}
     <div
       onClick={toggle}
       className="px-6 py-5 lg:h-[80px] cursor-pointer flex justify-between items-center text-white font-extrabold text-lg md:text-xl"
     >
-      <span className="leading-tight whitespace-pre-line">
+      <span className="leading-tight font-mundial whitespace-pre-line">
         {module.title}
       </span>
       {isOpen ? <Minus className="w-6 h-6" /> : <Plus className="w-6 h-6" />}
@@ -741,9 +799,8 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
 
     {/* Content */}
     <div
-      className={`bg-[#3a3939] text-white px-6 overflow-hidden transition-[max-height,padding] duration-300 ease-in-out ${
-        isOpen ? "max-h-[1000px] py-6" : "max-h-0 py-0"
-      }`}
+      className={`bg-[#3a3939] text-white px-6 overflow-hidden transition-[max-height,padding] duration-300 ease-in-out ${isOpen ? "max-h-[1000px] py-6" : "max-h-0 py-0"
+        }`}
     >
       <p className="text-base leading-relaxed">{module.content}</p>
     </div>
@@ -757,8 +814,8 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
 // Pricing Card Component
 const PricingCard = ({ plan }) => (
   <div
-  style={{ backgroundColor: plan.color }}
-    className="rounded-[20px_100px_30px_30px] p-6 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px] w-[300px] lg:w-[330px] border-3 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
+    style={{ backgroundColor: plan.color }}
+    className="rounded-[20px_100px_30px_30px] p-6 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px] w-[300px] md:w-[70%] lg:w-[330px] border-3 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
     "
   >
     {/* Title */}
@@ -835,54 +892,54 @@ const faqs = [
 const CreatorsSection = () => {
   const creators = [
     {
-      name: "JESNA M",
+      name: "Jesna M",
       image: jesna,
-      profession: "Content Creator",
+      profession: "CEO of Talkio Talkies",
     },
     {
-      name: "SHAMSUDHEEN",
+      name: "Shamsudheen V",
       image: shamsudheen,
-      profession: "Video Creator",
+      profession: "Founder Boulevard Luxury Resorts",
     },
     {
-      name: "SREELAL",
+      name: "Sreelal Prospero",
       image: sreelal,
-      profession: "Content Creator",
+      profession: "Managing Director, Matrix Finbiz",
     },
     {
-      name: "ABIDA RASHEED",
+      name: "Abida Rasheed",
       image: abidarasheed,
-      profession: "Lifestyle Creator",
+      profession: "Celebrity Chef",
     },
     {
-      name: "BADARUL MUNEER",
+      name: "Badarul Muneer",
       image: badarulmuneer,
-      profession: "Content Creator",
+      profession: "Founder, Hap&Hop",
     },
     {
-      name: "FAISAL",
+      name: "Faisal V",
       image: faisal,
-      profession: "Influencer",
+      profession: "Founder, Messwala",
     },
     {
-      name: "FAZIL",
+      name: "Fazil",
       image: fazil,
-      profession: "Content Creator",
+      profession: "Co-Founder Msquare Automation Solutions",
     },
     {
-      name: "FEROZ",
+      name: "Feroz Kalathil",
       image: feroz,
-      profession: "Digital Creator",
+      profession: "CEO, Build World Constructions",
     },
     {
-      name: "HENNA AYOOB",
+      name: "Henna Ayoob",
       image: hennaayoob,
-      profession: "Content Creator",
+      profession: "Consultant psychologist",
     },
     {
-      name: "HENNA GAZAL",
+      name: "Henna Gazal",
       image: hennagazal,
-      profession: "Content Creator",
+      profession: "psychologist",
     },
   ];
 
@@ -950,7 +1007,7 @@ const pricingPlans = [
   {
     title: 'Basic Plan',
     price: '₹1,799',
-    color:'#58751c',
+    color: '#58751c',
     features: [
       { text: 'Pre-recorded Masterclass Videos', included: true },
       { text: 'Live Classes', included: false },
@@ -961,7 +1018,7 @@ const pricingPlans = [
   {
     title: 'Standard Plan',
     price: '₹2,499',
-    color:'#58751c',
+    color: '#58751c',
     features: [
       { text: 'Pre-recorded Masterclass Videos', included: true },
       { text: '1 Live Class', included: true },
@@ -972,7 +1029,7 @@ const pricingPlans = [
   {
     title: 'Advanced Plan',
     price: '₹3,499',
-    color:'#58751c',
+    color: '#58751c',
     features: [
       { text: 'Pre-recorded Masterclass Videos', included: true },
       { text: '6 Live Classes', included: true },
