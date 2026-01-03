@@ -66,7 +66,7 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
   const formatTime = (num) => String(num).padStart(2, "0");
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 px-3 pb-3 pt-2 flex justify-center">
+    <div className="fixed bottom-0 left-0 right-0 z-50 px-3 pb-3 pt-2 flex justify-center z-100">
       <button
         onClick={scrollToPricing}
         disabled={isSoldOut}
