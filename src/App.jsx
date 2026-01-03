@@ -104,7 +104,7 @@ const HeroSection = () => {
 
 
           {/* Headline */}
-          <h1 className="text-2xl w-full md:text-4xl lg:text-6xl text-center font-mundial font-bold">
+          <h1 className="text-2xl w-full md:text-4xl lg:text-5xl text-center font-mundial font-bold">
             <span className="font-light">Build a Personal Brand</span>
             <br />
             <span className="font-light">That Gets You </span>
@@ -112,7 +112,6 @@ const HeroSection = () => {
             <span className="font-bold">Clients,</span>
             <br />
 
-            {/* 👇 div → span ആക്കി, inline-flex + space-x കൊടുത്തു */}
             <span className="inline-flex items-center justify-center space-x-1 md:space-x-2">
               <span className="font-bold">Respect</span>
               <span>&</span>
@@ -121,11 +120,11 @@ const HeroSection = () => {
           </h1>
 
           {/* Mentor Area */}
-          <div className="relative min-h-[130px] md:min-h-[150px] mt-18 lg:min-h-[250px] lg:mt-[200px] xl:mt-[186px] md:bottom-5">
+          <div className="relative min-h-[130px] md:min-h-[150px] mt-18 lg:min-h-[250px] xl:min-h-[250px] 2xl:min-h-[180px] lg:mt-[200px] xl:mt-[186px] md:bottom-5">
             {/* SVG Curve */}
             <svg
               className="absolute bottom-0 left-0 ml-[-23px] w-[392px] sm:ml-[-19px]
-                sm:w-[729px]  sm:bottom-30 md:bottom-[-3rem] lg:bottom-20 h-[170px] md:ml-[-25px]  md:w-[980px] md:h-[200px] lg:w-[1281px] lg:h-[250px] z-9"
+                sm:w-[729px]  sm:bottom-30 md:bottom-[-3rem] lg:bottom-20 xl:bottom-20 2xl:bottom-12 h-[170px] md:ml-[-25px]  md:w-[980px] md:h-[200px] lg:w-[1281px] lg:h-[250px] 2xl:h-[200px] z-9"
               viewBox="0 0 1440 320"
               preserveAspectRatio="none"
             >
@@ -145,7 +144,7 @@ const HeroSection = () => {
                 md:w-[220px] md:ml-[30px] md:bottom-[-3rem]
                 lg:w-[320px] lg:ml-14 lg:bottom-19
                 xl:w-[290px] xl:h-[200px] xl:mb-42 xl:ml-16
-                2xl:w-[560px]
+                2xl:w-[260px] 2xl:mb-24 2xl:ml-28
                 md:left-[10%]
                 
                 z-20
@@ -169,8 +168,8 @@ const HeroSection = () => {
                 sm:w-[200px] sm:bottom-[50%]
                 md:bottom-[15%] md:left-[48%] md:w-[320px]
                 lg:w-[360px] lg:ml-[40px] lg:bottom-[63%]
-                xl:ml-[5rem] xl:bottom-[80%] 
-                2xl:w-[300px]
+                xl:ml-[5rem] xl:bottom-[70%] 
+                2xl:w-[300px] 2xl:bottom-[55%]
                 z-10
               "
             >
@@ -181,7 +180,7 @@ const HeroSection = () => {
                   md:text-2xl md:ml-30
                   lg:text-3xl lg:ml-35
                   xl:text-3xl xl:ml-[0%] 
-                  2xl:text-5xl
+                  2xl:text-3xl
                   font-semibold
                   text-white
                   uppercase
@@ -201,7 +200,7 @@ const HeroSection = () => {
                   lg:w-[400px]
                   xl:ml-[-180px]
                   rounded-lg sm:rounded-xl md:rounded-2xl
-                  text-[10px] sm:text-xs md:text-lg lg:text-2xl xl:text-2xl
+                  text-[10px] sm:text-xs md:text-lg lg:text-2xl xl:text-2xl 
                   leading-tight md:leading-snug
                   font-bold text-white shadow-lg text-center
                 "
@@ -253,7 +252,7 @@ const HeroSection = () => {
                 lg:h-[160px]
                 lg:w-[1281px]  lg:bottom-[72%]
                 xl:h-[260px]  xl:w-[1282px] xl:bottom-[5%]
-                2xl:h-[360px]
+                2xl:h-[200px] 2xl:mb-2.5
                 z-0
               "
               viewBox="0 0 1440 320"
