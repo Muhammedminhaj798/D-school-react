@@ -167,7 +167,7 @@ const HeroSection = () => {
                 left-[50%]
                 -translate-x-1/2
                 w-60
-                [@media(max-width:320px)]:left-[63%]
+                [@media(max-width:320px)]:left-[73%]
                 sm:w-[200px] sm:bottom-[50%]
                 md:bottom-[15%] md:left-[48%] md:w-[320px]
                 lg:w-[360px] lg:ml-[40px] lg:bottom-[63%]
