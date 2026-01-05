@@ -51,7 +51,7 @@ const HeroSection = () => {
 
 
 
-          <div className="w-24 h-1 md:w-32 md:h-3 flex items-center justify-center [@media(max-width:320px)]:pr-5">
+          <div className="w-24 h-1 md:w-32 md:h-3 flex items-center justify-center [@media(max-width:320px)]:pr-5 pr-7">
             <img
               src={logo}
               alt="Logo"
