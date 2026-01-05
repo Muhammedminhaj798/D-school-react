@@ -164,10 +164,10 @@ const HeroSection = () => {
               className="
                 absolute
                 bottom-[50%]
-                left-[50%]
+                left-[55%]
                 -translate-x-1/2
                 w-60
-                [@media(max-width:320px)]:left-[73%]
+                [@media(max-width:366px)]:left-[60%]
                 sm:w-[200px] sm:bottom-[50%]
                 md:bottom-[15%] md:left-[48%] md:w-[320px]
                 lg:w-[360px] lg:ml-[40px] lg:bottom-[63%]
@@ -203,6 +203,7 @@ const HeroSection = () => {
                   lg:w-[400px]
                   xl:ml-[-180px]
                   rounded-lg sm:rounded-xl md:rounded-2xl
+
                   text-[10px] sm:text-xs md:text-lg lg:text-2xl xl:text-2xl 
                   leading-tight md:leading-snug
                   font-bold text-white shadow-lg text-center
