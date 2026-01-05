@@ -63,29 +63,36 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
         onClick={scrollToPricing}
         disabled={isSoldOut}
         className={`
-          relative w-full max-w-md mx-auto
-          bg-white text-[#708a46]
-          rounded-full
-          px-8 py-7
-          shadow-2xl
-          transition-all duration-300
-          ${isSoldOut
-            ? "bg-gray-200 cursor-not-allowed"
-            : "hover:shadow-3xl hover:scale-105 active:scale-98"
-          }
-        `}
+  relative w-full max-w-md mx-auto
+  bg-white text-[#708a46]
+  rounded-full
+  px-8 py-7
+
+  border border-[#708a46]/30
+  shadow-[0_10px_30px_rgba(112,138,70,0.25)]
+
+  transition-all duration-300
+  ${isSoldOut
+    ? "bg-gray-200 cursor-not-allowed shadow-none border-gray-300"
+    : "hover:shadow-[0_18px_45px_rgba(112,138,70,0.35)] hover:scale-105 active:scale-98"
+  }
+`}
+
       >
         {/* Attached Countdown Badge - No Gap, Professional Look */}
         <div className="
-          absolute -top-5 left-1/2 -translate-x-1/2
-          bg-[#708a46] text-white
-          rounded-full px-6 py-2.5
-          shadow-xl
-          flex items-center gap-3
-          text-xs sm:text-sm font-bold
-          
-          whitespace-nowrap
-        ">
+  absolute -top-5 left-1/2 -translate-x-1/2
+  bg-[#708a46] text-white
+  rounded-full px-6 py-2.5
+
+  border border-white/30
+  shadow-[0_8px_25px_rgba(0,0,0,0.25)]
+
+  flex items-center gap-3
+  text-xs sm:text-sm font-bold
+  whitespace-nowrap
+">
+
           <span className="hidden sm:inline">Only</span>
           <span className="sm:hidden">Only</span>
           <span className="text-base sm:text-lg">{seatsLeft}</span>

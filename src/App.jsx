@@ -47,11 +47,11 @@ const HeroSection = () => {
       {/* Navigation */}
       <nav className="bg-[#708a46] pl-6">
         <div className="max-w-10xl h-12 mx-auto flex justify-between items-center">
-          <div className=" md:text-2xl font-clash font-black ml-[-10px]">Personal Branding Masterclass</div>
+          <div className="[@media(max-width:320px)]:font-normal [@media(max-width:320px)]:text-base md:text-2xl font-clash font-black ml-[-10px]">Personal Branding Masterclass</div>
 
 
 
-          <div className="w-24 h-1 md:w-32 md:h-3 flex items-center justify-center">
+          <div className="w-24 h-1 md:w-32 md:h-3 flex items-center justify-center [@media(max-width:320px)]:pr-5">
             <img
               src={logo}
               alt="Logo"
@@ -101,10 +101,12 @@ const HeroSection = () => {
               Personal Branding Mastery
             </h2>
           </div>
+          
+
 
 
           {/* Headline */}
-          <h1 className="text-2xl w-full md:text-4xl lg:text-5xl text-center font-mundial font-bold">
+          <h1 className="text-2xl w-full [@media(max-width:320px)]:text-xl md:text-4xl lg:text-5xl text-center font-mundial font-bold">
             <span className="font-light">Build a Personal Brand</span>
             <br />
             <span className="font-light">That Gets You </span>
@@ -165,6 +167,7 @@ const HeroSection = () => {
                 left-[50%]
                 -translate-x-1/2
                 w-60
+                [@media(max-width:320px)]:left-[63%]
                 sm:w-[200px] sm:bottom-[50%]
                 md:bottom-[15%] md:left-[48%] md:w-[320px]
                 lg:w-[360px] lg:ml-[40px] lg:bottom-[63%]
@@ -224,6 +227,7 @@ const HeroSection = () => {
                 w-[135px]
                 text-xs
                 z-1
+                 [@media(max-width:320px)]:translate-x-1/4 [@media(max-width:320px)]:bottom-[108%]
                 sm:w-[130px] sm:bottom-[101%] sm:right-[9%] sm:text-sm
                 md:bottom-[70%] md:right-[0%] md:px-5 md:py-4 md:w-[260px]
                 md:text-2xl md:rounded-2xl
@@ -537,7 +541,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <footer className="bg-[#6a9413] py-8 px-4">
+      <footer className="bg-[#6a9413] py-8 px-4 h-54 sm:h-64 md:h-59 lg:h-60">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-row mb-[50px] md:flex-row items-center justify-between gap-8">
 
@@ -567,7 +571,7 @@ const HeroSection = () => {
               <img
                 src={logo}
                 alt="D School"
-                className="w-35 sm:w-25 md:w-38 object-contain"
+                className="[@media(max-width:320px)]:w-35 w-35 sm:w-25 md:w-38 object-contain"
               />
             </div>
 
@@ -722,16 +726,16 @@ const PainPointsSection = () => {
               {/* TEXT */}
               <h3
                 className={`
-                  text-2xl md:text-3xl font-clash font-bold text-white
+                  [@media(max-width:320px)]:text-lg text-2xl md:text-2xl lg:text-4xl font-clash font-bold text-white
                   whitespace-pre-line
-                  max-w-[60%]
+                  
                   z-21 md:z-21
                   ${point.position === "left"
                     ? "text-right"
                     : "text-left"
                   }
                   ${idx === 1
-                    ? "relative z-0 md:z-10"
+                    ? "relative z-0 md:z-10  text-2xl"
                     : "relative z-10"
                   }
                 `}
@@ -752,11 +756,11 @@ const PainPointsSection = () => {
                     ? "h-[190%] md:h-[140%] bottom-[-40px] md:bottom-[-40px]"
                     : "h-full"
                   }
-                  ${idx === 1 ? "md:h-[420px] bottom-[-15px] md:bottom-[-59px]" : ""
+                  ${idx === 1 ? "[@media(max-width:320px)]:h-[150px] [@media(max-width:320px)]:bottom-[23px] [@media(max-width:320px)]:ml-[-40px]  [@media(max-width:320px)]:w-[280px] md:h-[420px] h-[300px] w-[650x] bottom-[-50px] md:bottom-[-59px]" : ""
                   }
                   ${idx === 2 ? "md:h-[320px]" : ""
                   }
-                  ${idx === 0 ? "bottom-6 md:bottom-[15px] lg:bottom-10 lg:h-[180px]" : ""
+                  ${idx === 0 ? "bottom-6 md:bottom-[40px] lg:bottom-10 lg:h-[185px]" : ""
                   }
                   
                   ${idx < 3 ? "translate-y-6 md:translate-y-10" : ""}

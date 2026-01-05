@@ -6,14 +6,17 @@ const config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        clash: ['Outfit', 'sans-serif'],
-        mundial: ['"Mundial"', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
+      screens: {
+        xs: "320px", // 👈 smallest mobile
       },
-animation: {
-  marquee: 'marquee 60s linear infinite', // slow & smooth ആക്കി 60s ആക്കി
-},
+      fontFamily: {
+        clash: ["Outfit", "sans-serif"],
+        mundial: ['"Mundial"', "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+      animation: {
+        marquee: "marquee 60s linear infinite",
+      },
     },
   },
   plugins: [],
