@@ -207,7 +207,7 @@ const HeroSection = () => {
 
                   text-[10px] sm:text-xs md:text-lg lg:text-2xl xl:text-2xl 
                   leading-tight md:leading-snug
-                  font-bold text-white shadow-lg text-center
+                  font-bold text-white shadow-lg text-left
                 "
               >
                 CEO - Desgro Media
@@ -249,7 +249,7 @@ const HeroSection = () => {
             <svg
               className="
                 absolute bottom-5 left-0 ml-[-23px] w-[392px]
-                h-[140px] sm:bottom-[-1.2rem]
+                h-[100px] sm:bottom-[-1.2rem]
                 sm:h-[90px] 
                 sm:ml-[-19px]
                 sm:w-[729px]
