@@ -80,9 +80,10 @@ xl:h-[380px]
             
 
             
-            w-[200px]
+            w-[210px]
+            
             h-[70px]
-            ml-[40px]
+            ml-[85px]
             sm:ml-[20px]
             sm:w-[230px]
             
@@ -102,7 +103,7 @@ xl:h-[380px]
             xl:ml-[-20px]
 
             z-20
-            text-center
+            text-left
             md:text-left
           "
             >

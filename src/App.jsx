@@ -207,7 +207,7 @@ const HeroSection = () => {
 
                   text-[10px] sm:text-xs md:text-lg lg:text-2xl xl:text-2xl 
                   leading-tight md:leading-snug
-                  font-bold text-white shadow-lg text-left
+                  font-bold text-white shadow-lg text-center
                 "
               >
                 CEO - Desgro Media
