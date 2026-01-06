@@ -47,10 +47,7 @@ const HeroSection = () => {
       {/* Navigation */}
       <nav className="bg-[#708a46] pl-6">
         <div className="max-w-10xl h-12 mx-auto flex justify-between items-center">
-          <div className="[@media(max-width:320px)]:font-normal [@media(max-width:320px)]:text-base md:text-2xl font-clash font-black ml-[-10px]">Personal Branding Masterclass</div>
-
-
-
+          <div className="[@media(max-width:320px)]:font-normal [@media(max-width:320px)]:text-base md:text-2xl font-clash font-base ml-[-10px]">Personal <span className="pl-0.2 md:pl-0">Branding Masterclass</span></div>
           <div className="w-24 h-1 md:w-32 md:h-3 flex items-center justify-center [@media(max-width:320px)]:pr-5 pr-7">
             <img
               src={logo}
@@ -141,8 +138,8 @@ const HeroSection = () => {
               className="
                 absolute
                 w-40 
-                bottom-2
-                [@media(max-width:767px)]:bottom-[-0.3rem]
+                
+                [@media(max-width:767px)]:bottom-[1rem]
                 sm:w-[200px] sm:ml-36 sm:bottom-30
                 md:w-[220px] md:ml-[30px] md:bottom-[-3rem]
                 lg:w-[320px] lg:ml-14 lg:bottom-19
@@ -248,14 +245,15 @@ const HeroSection = () => {
           <div className="relative z-30  flex flex-col gap-4 items-center bottom-0 md:bottom-0 lg:bottom-10 xl:bottom-19 2xl:bottom-20">
             <svg
               className="
-                absolute bottom-5 left-0 ml-[-23px] w-[392px]
+                absolute bottom-1 left-0 ml-[-23px] w-[392px]
                 h-[100px] sm:bottom-[-1.2rem]
                 sm:h-[90px] 
                 sm:ml-[-19px]
                 sm:w-[729px]
                 md:h-[216px]
 
-                [@media(max-width:767px)]:h-49
+                [@media(max-width:425px)]:h-39
+                [@media(max-width:767px)]:h-41  
                 [@media(max-width:639px)]:h-38
                 md:ml-[-25px] md:w-[980px]
                 lg:h-[160px]
@@ -373,7 +371,7 @@ const HeroSection = () => {
       <PainPointsSection />
 
       {/* achieve section */}
-      <section className="py-12 md:py-20 px-4">
+      <section className="py-12 md:py-9 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className=" text-3xl md:text-5xl font-clash font-extrabold mb-12">
             Here's What<br />You'll <span className="text-[#8dc73d]">Achieve</span>
@@ -741,7 +739,7 @@ const PainPointsSection = () => {
   ];
 
   return (
-    <section className=" md:py-20 px-4">
+    <section className=" md:py-0 px-4">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
           <span className="text-[#8dc73d]">Struggling</span> With
@@ -1023,7 +1021,7 @@ const CreatorsSection = () => {
   className="
     text-white
     w-full
-    ml-18
+    ml-25
     md:ml-28
     max-w-[350px] md:max-w-[550px]
     text-sm
