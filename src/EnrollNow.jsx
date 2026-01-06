@@ -98,7 +98,7 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
           {/* 🔁 ROTATING TEXT */}
           <RotatingText
             texts={["Offer Ends Soon", "500+ Enrolls"]}
-            mainClassName="uppercase tracking-wide justify-center"
+            mainClassName="uppercase tracking-wide justify-center overflow-hidden"
             staggerFrom="last"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
