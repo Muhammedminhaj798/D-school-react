@@ -52,29 +52,25 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-6 pt-4 flex justify-center">
       <button
-  onClick={scrollToPricing}
-  disabled={isSoldOut}
-  className={`
-    relative w-full max-w-md mx-auto
-    bg-white text-[#708a46]
-    rounded-full
+        onClick={scrollToPricing}
+        disabled={isSoldOut}
+        className={`
+          relative w-full max-w-md mx-auto
+          bg-white text-[#708a46]
+          rounded-full
+          px-8 py-7
 
-    px-5 py-4
-    sm:px-7 sm:py-6
-    md:px-8 md:py-7
+          border border-[#708a46]/30
+          shadow-[0_10px_30px_rgba(112,138,70,0.25)]
 
-    border border-[#708a46]/30
-    shadow-[0_10px_30px_rgba(112,138,70,0.25)]
-
-    transition-all duration-300
-    ${
-      isSoldOut
-        ? "bg-gray-200 cursor-not-allowed shadow-none border-gray-300"
-        : "hover:shadow-[0_18px_45px_rgba(112,138,70,0.35)] hover:scale-105 active:scale-98"
-    }
-  `}
->
-    
+          transition-all duration-300
+          ${
+            isSoldOut
+              ? "bg-gray-200 cursor-not-allowed shadow-none border-gray-300"
+              : "hover:shadow-[0_18px_45px_rgba(112,138,70,0.35)] hover:scale-105 active:scale-98"
+          }
+        `}
+      >
         {/* COUNTDOWN BADGE */}
         <div
           className="

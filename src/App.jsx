@@ -516,6 +516,8 @@ const HeroSection = () => {
     scrollbar-hide
 
     [@media(max-width:320px)]:gap-14
+    [@media(max-width:390px)]:gap-11
+
     [@media(max-width:376px)]:gap-11
     lg:grid
     lg:grid-cols-3
@@ -612,7 +614,7 @@ const HeroSection = () => {
 
 
             {/* Right Section */}
-            <div className="text-center [@media(max-width:376px)]:ml-[-40px] max-[365px]:ml-[-40px] mt-[-30px] sm:mt-0 md:text-right">
+            <div className="text-center [@media(max-width:376px)]:ml-[-40] max-[365px]:ml-[-40px] mt-[-30px] sm:mt-0 md:text-right">
               <p className="font-clash w-35 text-white mb-2 ">
                 Contact us on
               </p>
