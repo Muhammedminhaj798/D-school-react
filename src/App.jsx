@@ -228,7 +228,8 @@ const HeroSection = () => {
                 w-[135px]
                 text-xs
                 z-1
-                 [@media(max-width:320px)]:translate-x-1/4 [@media(max-width:320px)]:bottom-[108%]
+                [@media(max-width:366px)]:left-[60%]
+                 [@media(max-width:366px)]:left-2 [@media(max-width:366px)]:w-29  [@media(max-width:376px)]:left-[60%]  [@media(max-width:376px)]:bottom-[105%] [@media(max-width:320px)]:bottom-[108%]
                 sm:w-[130px] sm:bottom-[101%] sm:right-[9%] sm:text-sm
                 md:bottom-[70%] md:right-[0%] md:px-5 md:py-4 md:w-[260px]
                 md:text-2xl md:rounded-2xl
@@ -494,6 +495,7 @@ const HeroSection = () => {
     snap-x snap-mandatory
     scrollbar-hide
 
+    [@media(max-width:320px)]:gap-14
     lg:grid
     lg:grid-cols-3
     lg:gap-8
@@ -511,6 +513,7 @@ const HeroSection = () => {
               md:min-w-[70%]
               lg:min-w-0
               snap-center
+              
             "
                 >
                   <PricingCard plan={plan} />
@@ -547,7 +550,7 @@ const HeroSection = () => {
           <div className="flex flex-row mb-[50px] md:flex-row items-center justify-between gap-8">
 
             {/* Left Section */}
-            <div className="text-center mt-[-30px] sm:mt-0 md:text-left">
+            <div className="text-center mt-[-30px] sm:mt-0 md:text-left z-30">
               <p className="font-clash w-25  text-white mb-2 ">
                 Follow us on
               </p>
@@ -568,16 +571,26 @@ const HeroSection = () => {
             </div>
 
             {/* Center Logo */}
-            <div className="flex items-center justify-center">
-              <img
-                src={logo}
-                alt="D School"
-                className="[@media(max-width:320px)]:w-35 w-35 sm:w-25 md:w-38 object-contain"
-              />
-            </div>
+            <div className="flex items-center justify-center flex-shrink-0">
+  <img
+    src={logo}
+    alt="D School"
+    className="
+      max-[365px]:w-24
+      w-44
+      sm:w-36
+      md:w-40
+      lg:w-44
+      h-auto
+      object-contain
+    "
+  />
+</div>
+
+
 
             {/* Right Section */}
-            <div className="text-center mt-[-30px] sm:mt-0 md:text-right">
+            <div className="text-center max-[365px]:ml-[-40px] mt-[-30px] sm:mt-0 md:text-right">
               <p className="font-clash w-35 text-white mb-2 ">
                 Contact us on
               </p>
@@ -819,7 +832,7 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
 const PricingCard = ({ plan }) => (
   <div
     style={{ backgroundColor: plan.color }}
-    className="rounded-[20px_100px_30px_30px] p-6 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px] w-[300px] md:w-[70%] lg:w-[330px] border-3 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
+    className="rounded-[20px_100px_30px_30px] p-6 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px]  [@media(max-width:366px)]:w-[270px] w-[300px] md:w-[70%] lg:w-[330px] border-3 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
     "
   >
     {/* Title */}
@@ -845,7 +858,7 @@ const PricingCard = ({ plan }) => (
           ) : (
             <X className="w-8 h-8 mt-1 text-green-600 flex-shrink-0" />
           )}
-          <span className="text-lg md:text-2xl">{feature.text}</span>
+          <span className=" [@media(max-width:366px)]:text-base text-lg md:text-2xl">{feature.text}</span>
         </div>
       ))}
     </div>
@@ -980,9 +993,27 @@ const CreatorsSection = () => {
                 </div>
 
                 {/* Profession */}
-                <div className="text-white w-[350px] md:w-[550px]  text-sm -translate-y-15 font-semibold text-center">
-                  {creator.profession}
-                </div>
+                <div
+  className="
+    text-white
+    w-full
+    ml-18
+    md:ml-28
+    max-w-[350px] md:max-w-[550px]
+    text-sm
+    font-semibold
+    text-center
+
+    break-words
+    leading-snug
+
+    -translate-y-15
+    px-2
+  "
+>
+  {creator.profession}
+</div>
+
               </div>
             ))}
           </div>

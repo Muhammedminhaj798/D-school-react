@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
-  const TOTAL_SEATS = 50;
-
   const getNextDeadline = () => {
     const now = new Date();
     const deadline = new Date();
@@ -20,7 +18,6 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
     seconds: 0,
   });
   const [isSoldOut, setIsSoldOut] = useState(false);
-  const [seatsLeft, setSeatsLeft] = useState(TOTAL_SEATS);
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -31,23 +28,18 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
       if (difference <= 0) {
         setIsSoldOut(true);
         setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
-        setSeatsLeft(0);
         return;
       }
 
-      setIsSoldOut(false);
-
       let hours = Math.floor(difference / (1000 * 60 * 60));
-      let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      let minutes = Math.floor(
+        (difference % (1000 * 60 * 60)) / (1000 * 60)
+      );
       let seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
       if (hours === 0) hours = null;
 
       setTimeLeft({ hours, minutes, seconds });
-
-      const progress = (24 * 60 * 60 * 1000 - difference) / (24 * 60 * 60 * 1000);
-      const simulatedSeats = Math.max(1, Math.floor(TOTAL_SEATS * (1 - progress * 0.9)));
-      setSeatsLeft(simulatedSeats);
     };
 
     calculateTimeLeft();
@@ -63,58 +55,60 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
         onClick={scrollToPricing}
         disabled={isSoldOut}
         className={`
-  relative w-full max-w-md mx-auto
-  bg-white text-[#708a46]
-  rounded-full
-  px-8 py-7
+          relative w-full max-w-md mx-auto
+          bg-white text-[#708a46]
+          rounded-full
+          px-8 py-7
 
-  border border-[#708a46]/30
-  shadow-[0_10px_30px_rgba(112,138,70,0.25)]
+          border border-[#708a46]/30
+          shadow-[0_10px_30px_rgba(112,138,70,0.25)]
 
-  transition-all duration-300
-  ${isSoldOut
-    ? "bg-gray-200 cursor-not-allowed shadow-none border-gray-300"
-    : "hover:shadow-[0_18px_45px_rgba(112,138,70,0.35)] hover:scale-105 active:scale-98"
-  }
-`}
-
+          transition-all duration-300
+          ${
+            isSoldOut
+              ? "bg-gray-200 cursor-not-allowed shadow-none border-gray-300"
+              : "hover:shadow-[0_18px_45px_rgba(112,138,70,0.35)] hover:scale-105 active:scale-98"
+          }
+        `}
       >
-        {/* Attached Countdown Badge - No Gap, Professional Look */}
-        <div className="
-  absolute -top-5 left-1/2 -translate-x-1/2
-  bg-[#708a46] text-white
-  rounded-full px-6 py-2.5
+        {/* COUNTDOWN BADGE */}
+        <div
+          className="
+            absolute -top-5 left-1/2 -translate-x-1/2
+            bg-[#708a46] text-white
+            rounded-full px-6 py-2.5
 
-  border border-white/30
-  shadow-[0_8px_25px_rgba(0,0,0,0.25)]
+            border border-white/30
+            shadow-[0_8px_25px_rgba(0,0,0,0.25)]
 
-  flex items-center gap-3
-  text-xs sm:text-sm font-bold
-  whitespace-nowrap
-">
+            flex items-center gap-3
+            text-xs sm:text-sm font-bold
+            whitespace-nowrap
+          "
+        >
+          <span className="text-sm sm:text-base font-bold uppercase tracking-wide">
+            Ending Soon
+          </span>
 
-          <span className="hidden sm:inline">Only</span>
-          <span className="sm:hidden">Only</span>
-          <span className="text-base sm:text-lg">{seatsLeft}</span>
-          <span className="hidden sm:inline">seats left!</span>
-          <span className="sm:hidden">left!</span>
-          
           <span className="mx-1">•</span>
-          
+
           <span className="flex items-center gap-1">
             <span>⏰</span>
             <span>
               {isSoldOut
                 ? "Sold Out"
                 : timeLeft.hours != null
-                ? `${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
-                : `${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
-              }
+                ? `${formatTime(timeLeft.hours)}:${formatTime(
+                    timeLeft.minutes
+                  )}:${formatTime(timeLeft.seconds)}`
+                : `${formatTime(timeLeft.minutes)}:${formatTime(
+                    timeLeft.seconds
+                  )}`}
             </span>
           </span>
         </div>
 
-        {/* Main CTA */}
+        {/* MAIN CTA */}
         <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold">
           Enroll Now
         </div>
