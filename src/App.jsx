@@ -126,7 +126,7 @@ const HeroSection = () => {
             {/* SVG Curve */}
             <svg
               className="absolute bottom-0 left-0 ml-[-23px] w-[392px] sm:ml-[-19px]
-                sm:w-[729px]  sm:bottom-30 md:bottom-[-3rem] lg:bottom-20 xl:bottom-20 2xl:bottom-12 h-[170px] md:ml-[-25px]  md:w-[980px] md:h-[200px] lg:w-[1281px] lg:h-[250px] 2xl:h-[200px] z-9"
+                sm:w-[729px] [@media(max-width:767px)]:bottom-[-0.3rem]  sm:bottom-30 md:bottom-[-3rem] lg:bottom-20 xl:bottom-20 2xl:bottom-12 h-[170px] md:ml-[-25px]  md:w-[980px] md:h-[200px] lg:w-[1281px] lg:h-[250px] 2xl:h-[200px] z-9"
               viewBox="0 0 1440 320"
               preserveAspectRatio="none"
             >
@@ -142,6 +142,7 @@ const HeroSection = () => {
                 absolute
                 w-40 
                 bottom-2
+                [@media(max-width:767px)]:bottom-[-0.3rem]
                 sm:w-[200px] sm:ml-36 sm:bottom-30
                 md:w-[220px] md:ml-[30px] md:bottom-[-3rem]
                 lg:w-[320px] lg:ml-14 lg:bottom-19
@@ -254,6 +255,8 @@ const HeroSection = () => {
                 sm:w-[729px]
                 md:h-[216px]
 
+                [@media(max-width:767px)]:h-49
+                [@media(max-width:639px)]:h-38
                 md:ml-[-25px] md:w-[980px]
                 lg:h-[160px]
                 lg:w-[1281px]  lg:bottom-[72%]
@@ -526,7 +529,6 @@ const HeroSection = () => {
     lg:px-0
   "
 >
-
               {pricingPlans.map((plan, idx) => (
                 <div
                   key={idx}
@@ -601,7 +603,7 @@ const HeroSection = () => {
     className="
     [@media(max-width:376px)]:w-24
       max-[365px]:w-24
-      w-44
+      w-34
       sm:w-36
       md:w-40
       lg:w-44
@@ -614,7 +616,7 @@ const HeroSection = () => {
 
 
             {/* Right Section */}
-            <div className="text-center [@media(max-width:376px)]:ml-[-40] max-[365px]:ml-[-40px] mt-[-30px] sm:mt-0 md:text-right">
+            <div className="text-center [@media(max-width:376px)]:ml-[-40] ml-[-60px] max-[365px]:ml-[-40px] mt-[-30px] sm:mt-0 md:text-right">
               <p className="font-clash w-35 text-white mb-2 ">
                 Contact us on
               </p>
