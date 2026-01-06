@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import RotatingText from "./RoatingText";
+// import RotatingText from "./RotatingText";
 
 const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
   const getNextDeadline = () => {
@@ -58,7 +60,10 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
           relative w-full max-w-md mx-auto
           bg-white text-[#708a46]
           rounded-full
-          px-8 py-7
+
+          px-5 py-4
+          sm:px-7 sm:py-6
+          md:px-8 md:py-7
 
           border border-[#708a46]/30
           shadow-[0_10px_30px_rgba(112,138,70,0.25)]
@@ -71,13 +76,17 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
           }
         `}
       >
-        {/* COUNTDOWN BADGE */}
+        {/* ROTATING BADGE */}
         <div
           className="
-            absolute -top-5 left-1/2 -translate-x-1/2
+            absolute -top-8.5  left-1/2 -translate-x-1/2
             bg-[#708a46] text-white
-            rounded-full px-6 py-2.5
+            rounded-full px-5 py-2
 
+            w-69
+            h-13
+            md:h-15
+            md:w-84
             border border-white/30
             shadow-[0_8px_25px_rgba(0,0,0,0.25)]
 
@@ -86,9 +95,18 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
             whitespace-nowrap
           "
         >
-          <span className="text-sm sm:text-base font-bold uppercase tracking-wide">
-           Offer End Soon
-          </span>
+          {/* 🔁 ROTATING TEXT */}
+          <RotatingText
+            texts={["Offer Ends Soon", "500+ Enrolls"]}
+            mainClassName="uppercase tracking-wide justify-center"
+            staggerFrom="last"
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-120%" }}
+            staggerDuration={0.025}
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+            rotationInterval={2500}
+          />
 
           <span className="mx-1">•</span>
 
@@ -109,7 +127,7 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
         </div>
 
         {/* MAIN CTA */}
-        <div className="text-2xl  sm:text-3xl md:text-4xl font-extrabold">
+        <div className="text-xl sm:text-3xl md:text-4xl font-extrabold">
           Enroll Now
         </div>
       </button>

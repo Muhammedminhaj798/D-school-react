@@ -98,7 +98,7 @@ const HeroSection = () => {
               Personal Branding Mastery
             </h2>
           </div>
-          
+
 
 
 
@@ -376,11 +376,11 @@ const HeroSection = () => {
           <h2 className=" text-3xl md:text-5xl font-clash font-extrabold mb-12">
             Here's What<br />You'll <span className="text-[#8dc73d]">Achieve</span>
           </h2>
-<div className="flex flex-row gap-3 md:gap-6 overflow-x-auto scrollbar-hide">
+          <div className="flex flex-row gap-3 md:gap-6 overflow-x-auto scrollbar-hide">
             {['Build Your\nIdentity', 'Grow Your\nEngagement', 'Become a\nRecognised\nExpert'].map((text, idx) => (
               <div
-  key={idx}
-  className="
+                key={idx}
+                className="
     bg-[#8dc73d] text-white
     px-3 py-4
     md:px-6 md:py-12
@@ -397,9 +397,9 @@ const HeroSection = () => {
     whitespace-pre-line
     text-center
   "
->
-  {text}
-</div>
+              >
+                {text}
+              </div>
 
             ))}
           </div>
@@ -506,8 +506,8 @@ const HeroSection = () => {
 
             {/* CARDS */}
             <div
-  ref={scrollRef}
-  className="
+              ref={scrollRef}
+              className="
     flex
     gap-4
     overflow-x-auto
@@ -526,7 +526,7 @@ const HeroSection = () => {
     lg:overflow-visible
     lg:px-0
   "
->
+            >
               {pricingPlans.map((plan, idx) => (
                 <div
                   key={idx}
@@ -595,10 +595,10 @@ const HeroSection = () => {
 
             {/* Center Logo */}
             <div className="flex items-center justify-center flex-shrink-0">
-  <img
-    src={logo}
-    alt="D School"
-    className="
+              <img
+                src={logo}
+                alt="D School"
+                className="
     [@media(max-width:376px)]:w-24
       max-[365px]:w-24
       w-34
@@ -608,8 +608,8 @@ const HeroSection = () => {
       h-auto
       object-contain
     "
-  />
-</div>
+              />
+            </div>
 
 
 
@@ -1018,7 +1018,7 @@ const CreatorsSection = () => {
 
                 {/* Profession */}
                 <div
-  className="
+                  className="
     text-white
     w-full
     ml-25
@@ -1034,9 +1034,9 @@ const CreatorsSection = () => {
     -translate-y-15
     px-2
   "
->
-  {creator.profession}
-</div>
+                >
+                  {creator.profession}
+                </div>
 
               </div>
             ))}

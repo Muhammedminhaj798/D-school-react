@@ -1,7 +1,7 @@
 'use client';
 
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState } from 'react';
-import {  AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 
 function cn(...classes) {
   return classes.filter(Boolean).join(' ');
