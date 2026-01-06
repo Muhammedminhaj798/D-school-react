@@ -65,10 +65,10 @@ const HeroSection = () => {
       <section className="px-4 py-15 md:py-15 bg-black">
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-[#435c19] to-[#556b2f] rounded-3xl md:rounded-[40px] px-6 py-6 md:py-16 relative overflow-hidden">
           {/* Sparkles */}
-          <div className="absolute top-[15%] left-[10%] text-white text-3xl md:text-5xl opacity-80">
+          <div className="absolute top-[15%] left-[4%] md:left-[15%] text-white text-3xl md:text-5xl opacity-80">
             ✦
           </div>
-          <div className="absolute top-[15%] right-[15%] text-white text-3xl md:text-5xl opacity-80">
+          <div className="absolute top-[15%] right-[5%] md:right-[15%] text-white text-3xl md:text-5xl opacity-80">
             ✦
           </div>
           <div className="absolute bottom-[29%] right-[28%] text-[#9dc657] text-4xl sm:mb-8 md:text-6xl md:mb-1 xl:mb-14 z-90 opacity-70">
@@ -372,14 +372,34 @@ const HeroSection = () => {
       {/* achieve section */}
       <section className="py-12 md:py-20 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-clash font-extrabold mb-12">
+          <h2 className=" text-3xl md:text-5xl font-clash font-extrabold mb-12">
             Here's What<br />You'll <span className="text-[#8dc73d]">Achieve</span>
           </h2>
-          <div className="flex flex-col md:flex-row gap-6">
+<div className="flex flex-row gap-3 md:gap-6 overflow-x-auto scrollbar-hide">
             {['Build Your\nIdentity', 'Grow Your\nEngagement', 'Become a\nRecognised\nExpert'].map((text, idx) => (
-              <div key={idx} className="bg-[#8dc73d] text-white px-6 py-8 md:py-12 rounded-3xl text-2xl md:text-3xl font-extrabold flex items-center justify-center min-h-[150px] flex-1 whitespace-pre-line">
-                {text}
-              </div>
+              <div
+  key={idx}
+  className="
+    bg-[#8dc73d] text-white
+    px-3 py-4
+    md:px-6 md:py-12
+
+    rounded-2xl md:rounded-3xl
+    max-[370px]:text-sm
+    text-base sm:text-lg md:text-3xl
+    font-extrabold
+
+    flex items-center justify-center
+    min-h-[100px] md:min-h-[150px]
+
+    flex-1
+    whitespace-pre-line
+    text-center
+  "
+>
+  {text}
+</div>
+
             ))}
           </div>
         </div>
@@ -496,6 +516,7 @@ const HeroSection = () => {
     scrollbar-hide
 
     [@media(max-width:320px)]:gap-14
+    [@media(max-width:376px)]:gap-11
     lg:grid
     lg:grid-cols-3
     lg:gap-8
@@ -576,6 +597,7 @@ const HeroSection = () => {
     src={logo}
     alt="D School"
     className="
+    [@media(max-width:376px)]:w-24
       max-[365px]:w-24
       w-44
       sm:w-36
@@ -590,7 +612,7 @@ const HeroSection = () => {
 
 
             {/* Right Section */}
-            <div className="text-center max-[365px]:ml-[-40px] mt-[-30px] sm:mt-0 md:text-right">
+            <div className="text-center [@media(max-width:376px)]:ml-[-40px] max-[365px]:ml-[-40px] mt-[-30px] sm:mt-0 md:text-right">
               <p className="font-clash w-35 text-white mb-2 ">
                 Contact us on
               </p>
