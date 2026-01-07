@@ -60,7 +60,7 @@ const HeroSection = () => {
       {/* Navigation */}
       <nav className="bg-[#708a46] pl-6">
         <div className="max-w-10xl h-12 mx-auto flex justify-between items-center">
-          <div className="[@media(max-width:320px)]:font-normal [@media(max-width:320px)]:text-base md:text-2xl font-clash font-base ml-[-10px]">Personal <span className="pl-0.2 md:pl-0">Branding Masterclass</span></div>
+          <div className="[@media(max-width:320px)]:font-normal [@media(max-width:320px)]:text-base w-[10rem] md:w-[30rem] md:text-2xl font-clash font-base ml-[-10px]">Personal <span className="pl-0.2 md:pl-0">Branding Masterclass</span></div>
           <div className="w-24 h-1 md:w-32 md:h-3 flex items-center justify-center [@media(max-width:320px)]:pr-5 pr-7">
             <img
               src={logo}
@@ -581,7 +581,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <footer className="bg-[#6a9413] py-8 px-4 h-64 sm:h-64 md:h-65 lg:h-66">
+      <footer className="bg-[#6a9413] py-8 px-4 h-54  sm:h-64 md:h-65 lg:h-66">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-row mb-[50px] md:flex-row items-center justify-between gap-8">
 
@@ -613,12 +613,15 @@ const HeroSection = () => {
                 alt="D School"
                 className="
     [@media(max-width:376px)]:w-24
-      max-[365px]:w-24
+      max-[365px]:w-20
+      [@media(max-width:321px)]:ml-[-30px]
+      ml-[-10px]
       w-34
       sm:w-36
       md:w-40
       lg:w-44
       h-auto
+      z-10
       object-contain
     "
               />
@@ -627,7 +630,7 @@ const HeroSection = () => {
 
 
             {/* Right Section */}
-            <div className="text-center [@media(max-width:376px)]:ml-[-40] ml-[-60px] max-[365px]:ml-[-40px] mt-[-30px] sm:mt-0 md:text-right">
+            <div className="text-center [@media(max-width:376px)]:ml-[-40] [@media(max-width:320px)]:ml-[-60px] z-30 ml-[-60px] max-[365px]:ml-[-40px] mt-[-30px] sm:mt-0 md:text-right">
               <p className="font-clash w-35 text-white mb-2 ">
                 Contact us on
               </p>
@@ -1037,7 +1040,7 @@ const CreatorsSection = () => {
       profession: "Psychologist",
     },
   ];
-const [paused, setPaused] = useState(false);
+  const [paused, setPaused] = useState(false);
 
   return (
     <section className=" overflow-hidden">
@@ -1047,23 +1050,23 @@ const [paused, setPaused] = useState(false);
           <span className="text-white">we Work with</span>
         </h2>
 
-<div
-  className="relative overflow-hidden"
-  onMouseEnter={() => setPaused(true)}
-  onMouseLeave={() => setPaused(false)}
->
- <div
-  className="flex w-max animate-scroll-creators will-change-transform"
-  style={{
-    animationPlayState: paused ? "paused" : "running",
-  }}
->
+        <div
+          className="relative overflow-hidden"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          <div
+            className="flex w-max animate-scroll-creators will-change-transform"
+            style={{
+              animationPlayState: paused ? "paused" : "running",
+            }}
+          >
 
-    {[...creators, ...creators].map((creator, idx) => (
-      <div
-        key={idx}
-        className="flex-shrink-0 w-[200px] md:w-[300px] sm:w-[260px]"
-      >
+            {[...creators, ...creators].map((creator, idx) => (
+              <div
+                key={idx}
+                className="flex-shrink-0 w-[200px] md:w-[300px] sm:w-[260px]"
+              >
                 {/* Image */}
                 <div className="w-[350px] h-[350px] md:w-[550px] md:h-[550px] aspect-[3/4] rounded-2xl overflow-hidden mb-4">
                   <img
