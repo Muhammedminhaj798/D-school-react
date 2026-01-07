@@ -369,7 +369,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl relative pt-[56.25%]">
             <iframe className="absolute top-0 left-0 w-full h-full"
-              src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
+              src="https://drive.google.com/file/d/1UFwZuEe7vqySozHYBx9lFg_uPqpWtPlu/preview"
               title="Course Preview"
               allow="autoplay; encrypted-media"
               allowFullScreen
