@@ -7,12 +7,12 @@ import { getGlobalEnrollCount } from "./utils/enrollCount";
 
 const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
   const enrollCount = getGlobalEnrollCount({
-  startTime: new Date("2025-01-01T10:00:00Z"), // 👈 manual start time
-  baseCount: 200,
-  intervalMinutes: 1,
-  maxCount: 1500,
-  resetTo: 199,
-});
+    startTime: new Date("2025-01-01T10:00:00Z"), // 👈 manual start time
+    baseCount: 565,
+    intervalMinutes: 20,
+    maxCount: 1500,
+    resetTo: 199,
+  });
 
   const getNextDeadline = () => {
     const now = new Date();
@@ -80,10 +80,9 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
           shadow-[0_10px_30px_rgba(112,138,70,0.25)]
 
           transition-all duration-300
-          ${
-            isSoldOut
-              ? "bg-gray-200 cursor-not-allowed shadow-none border-gray-300"
-              : "hover:shadow-[0_18px_45px_rgba(112,138,70,0.35)] hover:scale-105 active:scale-98"
+          ${isSoldOut
+            ? "bg-gray-200 cursor-not-allowed shadow-none border-gray-300"
+            : "hover:shadow-[0_18px_45px_rgba(112,138,70,0.35)] hover:scale-105 active:scale-98"
           }
         `}
       >
@@ -109,23 +108,22 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
         >
           {/* 🔁 ROTATING TEXT */}
           <RotatingText
-  texts={[
-    `Offer Ends Soon • ⏰ ${
-      timeLeft.hours != null
-        ? `${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
-        : `${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
-    }`,
-    `${enrollCount}+ Learners Upskilled`
-  ]}
-  rotationInterval={5500}
-  mainClassName="uppercase tracking-wide font-bold text-sm sm:text-base [@media(max-width:376px)]:text-xs"
-/>
-
-
-
-         
-
-          
+            texts={[
+              `Offer Ends Soon • ⏰ ${timeLeft.hours != null
+                ? `${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
+                : `${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
+              }`,
+              `${enrollCount}+ Learners Upskilled`
+            ]}
+            rotationInterval={5500}
+            mainClassName="
+    uppercase tracking-wide font-bold
+    text-sm sm:text-base
+    text-center justify-center
+    [@media(max-width:376px)]:text-xs
+    w-full
+  "
+          />
         </div>
 
         {/* MAIN CTA */}

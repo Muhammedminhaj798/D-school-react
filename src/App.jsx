@@ -15,16 +15,20 @@ import fazil from './assets/fazil.png'
 import feroz from './assets/feroz.png'
 import hennaayoob from './assets/henna ayoob.png'
 import hennagazal from './assets/henna gazal.png'
+import thumbnail from "./assets/thumbnail.png";
 
 import { ArrowUpRight, Check, ChevronLeft, ChevronRight, GraduationCap, Instagram, Linkedin, MessageCircle, Minus, Plus, X } from "lucide-react";
 import { CourseMentorSection } from "./CourseMentorSection";
 import EnrollButtonWithCountdown from "./EnrollNow";
+import { getGlobalEnrollCount } from "./utils/enrollCount";
 // import PricingCard from "./PricingCard";
 
 const HeroSection = () => {
   const [openModuleId, setOpenModuleId] = useState(null);
   const [openFaqs, setOpenFaqs] = useState({});
   const scrollRef = useRef(null);
+  const [playVideo, setPlayVideo] = useState(false);
+
   const toggleModule = (id) => {
     setOpenModuleId((prev) => (prev === id ? null : id));
   };
@@ -35,6 +39,14 @@ const HeroSection = () => {
   const scrollToPricing = () => {
     document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const enrollCount = getGlobalEnrollCount({
+      startTime: new Date("2025-01-01T10:00:00Z"), // 👈 manual start time
+      baseCount: 565,
+      intervalMinutes: 20,
+      maxCount: 1500,
+      resetTo: 199,
+    });
 
 
   return (
@@ -236,7 +248,7 @@ const HeroSection = () => {
             >
               <GraduationCap className="w-6 h-6 md:w-12 md:h-12 shrink-0" />
               <span className="font-clash font-normal leading-tight">
-                565 + Enrolled
+                {enrollCount} + Enrolled
               </span>
             </div>
           </div>
@@ -350,21 +362,58 @@ const HeroSection = () => {
       <ScrollBanner />
 
 
-      {/*  Video Sectio */}
+      {/*  Video Section */}
 
-      <section className="py-8 md:py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl relative pt-[56.25%]">
+<section className="py-8 md:py-12 px-4">
+      <div className="max-w-4xl mx-auto">
+        <div className="relative overflow-hidden rounded-3xl md:rounded-[40px] shadow-2xl bg-black aspect-video">
+
+          {/* THUMBNAIL */}
+          {!playVideo && (
+            <button
+              onClick={() => setPlayVideo(true)}
+              className="absolute inset-0 group focus:outline-none"
+              aria-label="Play course preview"
+            >
+              <img
+                src={thumbnail}
+                alt="Course preview"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+
+              {/* Subtle gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/10 to-transparent" />
+
+              {/* Play button */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white shadow-xl flex items-center justify-center transition group-hover:scale-110">
+                  <svg
+                    className="w-6 h-6 md:w-7 md:h-7 text-black translate-x-[1px]"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          )}
+
+          {/* VIDEO (no autoplay) */}
+          {playVideo && (
             <iframe
-              className="absolute top-0 left-0 w-full h-full"
+              className="absolute inset-0 w-full h-full"
               src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/preview"
               title="Course Preview"
-              allow="autoplay; encrypted-media"
+              allow="encrypted-media"
               allowFullScreen
             />
-          </div>
+          )}
+
         </div>
-      </section>
+      </div>
+    </section>
+
 
       {/* pain point section */}
 
@@ -854,20 +903,61 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
 
 // Pricing Card Component
 const PricingCard = ({ plan }) => (
+  
   <div
-    style={{ backgroundColor: plan.color }}
-    className="rounded-[20px_100px_30px_30px] p-6 sm:p-8 md:p-10 flex flex-col min-h-[450px] md:min-h-[520px] lg:min-h-[560px]  [@media(max-width:366px)]:w-[270px] w-[300px] md:w-[70%] lg:w-[330px] border-3 border-transparent transition-all duration-300 ease-out md:hover:scale-[1.03] md:hover:shadow-2xl md:hover:border-[#8dc73d]
-    "
-  >
+  style={{ backgroundColor: plan.color }}
+  className="
+    relative
+    rounded-[20px_100px_30px_30px]
+    p-6 sm:p-8 md:p-10
+    flex flex-col
+    min-h-[450px] md:min-h-[520px] lg:min-h-[560px]
+    w-[300px] md:w-[70%] lg:w-[330px]
+    overflow-hidden
+    transition-all duration-300
+  "
+>
+
+{plan.isBestSeller && (
+  <div className="
+    absolute
+    top-6
+    right-[-48px]
+    rotate-45
+
+    bg-[#8dc73d]
+    text-white
+
+    text-xs sm:text-sm
+    font-clash font-bold
+    tracking-wide
+
+    px-16 py-2
+    shadow-lg
+  ">
+    BEST VALUE
+  </div>
+)}
+
+
+    
     {/* Title */}
     <h3 className="text-2xl sm:text-2xl  md:text-3xl font-clash font-semibold text-white ">
       {plan.title}
     </h3>
 
     {/* Price */}
-    <div className="text-4xl sm:text-4xl md:text-5xl font-clash font-semibold text-white  mb-6 font-montserrat leading-none">
-      {plan.price}
-    </div>
+    {/* Price */}
+<div className="mb-6">
+  <div className="text-lg sm:text-xl md:text-2xl text-white/70 line-through font-clash">
+    {plan.actualPrice}
+  </div>
+
+  <div className="text-4xl sm:text-4xl md:text-5xl font-clash font-semibold text-white leading-none">
+    {plan.price}
+  </div>
+</div>
+
 
 
     {/* Features */}
@@ -1066,6 +1156,7 @@ const pricingPlans = [
   {
     title: 'Basic Plan',
     price: '₹1,799',
+    actualPrice: '₹2,499',
     color: '#58751c',
     features: [
       { text: 'Pre-recorded Masterclass Videos', included: true },
@@ -1077,6 +1168,8 @@ const pricingPlans = [
   {
     title: 'Standard Plan',
     price: '₹2,499',
+    actualPrice: '₹3,499',
+    isBestSeller: true, // 👈 IMPORTANT
     color: '#58751c',
     features: [
       { text: 'Pre-recorded Masterclass Videos', included: true },
@@ -1088,6 +1181,7 @@ const pricingPlans = [
   {
     title: 'Advanced Plan',
     price: '₹3,499',
+    actualPrice: '₹4,999',
     color: '#58751c',
     features: [
       { text: 'Pre-recorded Masterclass Videos', included: true },
@@ -1097,6 +1191,7 @@ const pricingPlans = [
     ]
   },
 ];
+
 
 
 

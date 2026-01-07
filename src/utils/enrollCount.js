@@ -1,7 +1,7 @@
 export function getGlobalEnrollCount({
   startTime,
-  baseCount = 200,
-  intervalMinutes = 1,
+  baseCount = 565,
+  intervalMinutes = 20,
   maxCount = 1500,
   resetTo = 199,
 }) {
