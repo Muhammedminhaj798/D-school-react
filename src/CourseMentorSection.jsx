@@ -2,7 +2,7 @@ import nisam from "./assets/nisam vm.png";
 
 export function CourseMentorSection() {
   return (
-    <section className="py-12 md:py-20 px-4">
+    <section className="py-12 md:py-15 px-4">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
           <span className="text-white">Course </span>

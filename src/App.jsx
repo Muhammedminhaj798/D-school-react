@@ -407,7 +407,7 @@ const HeroSection = () => {
       </section>
 
       {/* course module section */}
-      <section className=" md:py-20 px-4">
+      <section className=" md:py-5 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-clash font-extrabold text-center mb-12">
             Course <span className="text-[#8dc73d]">Module</span>
@@ -568,7 +568,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <footer className="bg-[#6a9413] py-8 px-4 h-54 sm:h-64 md:h-59 lg:h-60">
+      <footer className="bg-[#6a9413] py-8 px-4 h-54 sm:h-64 md:h-59 lg:h-65">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-row mb-[50px] md:flex-row items-center justify-between gap-8">
 

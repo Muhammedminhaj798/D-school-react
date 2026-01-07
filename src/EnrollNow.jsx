@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from "react";
 import RotatingText from "./RoatingText";
+import { getGlobalEnrollCount } from "./utils/enrollCount";
+
+
 // import RotatingText from "./RotatingText";
 
 const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
+  const enrollCount = getGlobalEnrollCount({
+  startTime: new Date("2025-01-01T10:00:00Z"), // 👈 manual start time
+  baseCount: 200,
+  intervalMinutes: 1,
+  maxCount: 1500,
+  resetTo: 199,
+});
+
   const getNextDeadline = () => {
     const now = new Date();
     const deadline = new Date();
@@ -90,6 +101,7 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
             border border-white/30
             shadow-[0_8px_25px_rgba(0,0,0,0.25)]
 
+            
             flex items-center gap-3
             text-xs sm:text-sm font-bold
             whitespace-nowrap
@@ -97,33 +109,23 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
         >
           {/* 🔁 ROTATING TEXT */}
           <RotatingText
-            texts={["Offer Ends Soon", "500+ Enrolls"]}
-            mainClassName="uppercase tracking-wide justify-center overflow-hidden"
-            staggerFrom="last"
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            exit={{ y: "-120%" }}
-            staggerDuration={0.025}
-            transition={{ type: "spring", damping: 30, stiffness: 400 }}
-            rotationInterval={2500}
-          />
+  texts={[
+    `Offer Ends Soon • ⏰ ${
+      timeLeft.hours != null
+        ? `${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
+        : `${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
+    }`,
+    `${enrollCount}+ Learners Upskilled`
+  ]}
+  rotationInterval={5500}
+  mainClassName="uppercase tracking-wide font-bold text-sm sm:text-base [@media(max-width:376px)]:text-xs"
+/>
 
-          <span className="mx-1">•</span>
 
-          <span className="flex items-center gap-1">
-            <span>⏰</span>
-            <span>
-              {isSoldOut
-                ? "Sold Out"
-                : timeLeft.hours != null
-                ? `${formatTime(timeLeft.hours)}:${formatTime(
-                    timeLeft.minutes
-                  )}:${formatTime(timeLeft.seconds)}`
-                : `${formatTime(timeLeft.minutes)}:${formatTime(
-                    timeLeft.seconds
-                  )}`}
-            </span>
-          </span>
+
+         
+
+          
         </div>
 
         {/* MAIN CTA */}
