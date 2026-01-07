@@ -581,7 +581,7 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <footer className="bg-[#6a9413] py-8 px-4 h-64 sm:h-64 md:h-65 lg:h-65">
+      <footer className="bg-[#6a9413] py-8 px-4 h-64 sm:h-64 md:h-65 lg:h-66">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-row mb-[50px] md:flex-row items-center justify-between gap-8">
 
