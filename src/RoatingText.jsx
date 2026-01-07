@@ -44,13 +44,21 @@ const RotatingText = forwardRef((props, ref) => {
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
-  const elements = useMemo(() => {
-    const currentText = texts[currentTextIndex];
-    return currentText.split(' ').map((word, i, arr) => ({
-      characters: [word],
-      needsSpace: i !== arr.length - 1,
-    }));
-  }, [texts, currentTextIndex]);
+const elements = useMemo(() => {
+  const currentText = texts[currentTextIndex];
+
+  // ✅ JSX / ReactNode support
+  if (typeof currentText !== 'string') {
+    return currentText;
+  }
+
+  // ✅ String support (existing behaviour)
+  return currentText.split(' ').map((word, i, arr) => ({
+    characters: [word],
+    needsSpace: i !== arr.length - 1,
+  }));
+}, [texts, currentTextIndex]);
+
 
   const handleIndexChange = useCallback(
     newIndex => {
@@ -101,14 +109,23 @@ const RotatingText = forwardRef((props, ref) => {
           transition={transition}
           aria-hidden="true"
         >
-          {elements.map((wordObj, i) => (
-            <span key={i} className={cn('inline-flex', splitLevelClassName)}>
-              <span className={cn('inline-block', elementLevelClassName)}>
-                {wordObj.characters[0]}
-              </span>
-              {wordObj.needsSpace && <span>&nbsp;</span>}
-            </span>
-          ))}
+          {typeof elements === 'string' || Array.isArray(elements) ? (
+  Array.isArray(elements) ? (
+    elements.map((wordObj, i) => (
+      <span key={i} className={cn('inline-flex', splitLevelClassName)}>
+        <span className={cn('inline-block', elementLevelClassName)}>
+          {wordObj.characters[0]}
+        </span>
+        {wordObj.needsSpace && <span>&nbsp;</span>}
+      </span>
+    ))
+  ) : (
+    elements
+  )
+) : (
+  elements
+)}
+
         </motion.span>
       </AnimatePresence>
     </motion.span>

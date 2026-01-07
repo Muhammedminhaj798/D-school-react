@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RotatingText from "./RoatingText";
 import { getGlobalEnrollCount } from "./utils/enrollCount";
+import { GraduationCap } from "lucide-react";
 
 
 // import RotatingText from "./RotatingText";
@@ -9,7 +10,7 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
   const enrollCount = getGlobalEnrollCount({
     startTime: new Date("2025-01-01T10:00:00Z"), // 👈 manual start time
     baseCount: 565,
-    intervalMinutes: 20,
+    intervalMinutes: 1,
     maxCount: 1500,
     resetTo: 199,
   });
@@ -108,22 +109,28 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
         >
           {/* 🔁 ROTATING TEXT */}
           <RotatingText
-            texts={[
-              `Offer Ends Soon • ⏰ ${timeLeft.hours != null
-                ? `${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
-                : `${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
-              }`,
-              `${enrollCount}+ Learners Upskilled`
-            ]}
-            rotationInterval={5500}
-            mainClassName="
+  texts={[
+    `Offer Ends Soon • ⏰ ${
+      timeLeft.hours != null
+        ? `${formatTime(timeLeft.hours)}:${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
+        : `${formatTime(timeLeft.minutes)}:${formatTime(timeLeft.seconds)}`
+    }`,
+    (
+      <span className="flex items-center gap-2 justify-center">
+        <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5" />
+        <span>{enrollCount}+ Enrolled</span>
+      </span>
+    )
+  ]}
+  rotationInterval={5500}
+  mainClassName="
     uppercase tracking-wide font-bold
-    text-sm sm:text-base
+    text-xs sm:text-base
     text-center justify-center
-    [@media(max-width:376px)]:text-xs
     w-full
   "
-          />
+/>
+
         </div>
 
         {/* MAIN CTA */}
