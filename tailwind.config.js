@@ -10,7 +10,7 @@ const config = {
         xs: "320px", // 👈 smallest mobile
       },
       fontFamily: {
-        clash: ["Outfit", "sans-serif"],
+        clash: ["Clash Display", "sans-serif"],
         mundial: ['"Mundial"', "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
       },

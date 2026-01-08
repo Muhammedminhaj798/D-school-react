@@ -197,6 +197,7 @@ const HeroSection = () => {
                   lg:text-3xl lg:ml-35
                   xl:text-3xl xl:ml-[0%] 
                   2xl:text-3xl
+                  font-clash
                   font-semibold
                   text-white
                   uppercase
@@ -219,7 +220,7 @@ const HeroSection = () => {
 
                   text-[10px] sm:text-xs md:text-lg lg:text-2xl xl:text-2xl 
                   leading-tight md:leading-snug
-                  font-bold text-white shadow-lg text-center
+                  font-clash font-semibold text-white shadow-lg text-center
                 "
               >
                 CEO - Desgro Media
@@ -273,7 +274,7 @@ const HeroSection = () => {
                 md:ml-[-25px] md:w-[980px]
                 lg:h-[160px]
                 lg:w-[1281px]  lg:bottom-[72%]
-                xl:h-[260px]  xl:w-[1282px] xl:bottom-[5%]
+                xl:h-[280px]  xl:w-[1282px] xl:bottom-[5%]
                 2xl:h-[200px] 2xl:mb-2.5
                 z-0
               "
@@ -304,7 +305,7 @@ const HeroSection = () => {
     sm:px-6 sm:py-3
     md:px-8 md:py-4
 
-    text-xs sm:text-sm md:text-lg lg:text-xl
+    text-xs sm:text-sm md:text-lg lg:text-2xl
     w-auto
     
     min-w-[180px]
@@ -316,7 +317,7 @@ const HeroSection = () => {
     md:bottom-[-20px]
   "
             >
-              <span className="block font-medium leading-tight">
+              <span className="block font-clash font-bold leading-tight">
                 Course Duration
               </span>
               <span className="block font-extrabold leading-tight">
@@ -338,7 +339,7 @@ const HeroSection = () => {
     sm:px-6 sm:py-3
     md:px-8 md:py-4
 
-    text-xs sm:text-sm md:text-lg lg:text-xl
+    text-xs sm:text-sm md:text-lg lg:text-2xl
 
     w-auto
     min-w-[180px]
@@ -350,7 +351,7 @@ const HeroSection = () => {
     md:bottom-[-20px]
   "
             >
-              <span className="block font-medium leading-tight">
+              <span className="block font-clash font-bold leading-tight">
                 Monthly
               </span>
               <span className="block font-extrabold leading-tight">
@@ -387,7 +388,7 @@ const HeroSection = () => {
       {/* achieve section */}
       <section className="py-12 md:py-9 px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className=" text-3xl md:text-5xl font-clash font-extrabold mb-12">
+          <h2 className=" text-3xl md:text-5xl font-clash font-semibold mb-12">
             Here's What<br />You'll <span className="text-[#8dc73d]">Achieve</span>
           </h2>
           <div className="flex flex-row gap-3 md:gap-6 overflow-x-auto scrollbar-hide">
@@ -423,7 +424,7 @@ const HeroSection = () => {
       {/* course module section */}
       <section className=" md:py-5 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-clash font-extrabold text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-clash font-semibold text-center mb-12">
             Course <span className="text-[#8dc73d]">Module</span>
           </h2>
 
@@ -454,7 +455,7 @@ const HeroSection = () => {
 
       <section id="pricing" className=" md:py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-clash font-semibold text-center mb-12">
             Choose Your <span className="text-[#8dc73d]">Plan</span>
           </h2>
 
@@ -565,7 +566,7 @@ const HeroSection = () => {
       {/* faq */}
       <section className="py-12 md:py-8 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-clash font-semibold text-center mb-12">
             Frequently <span className="text-white">Asked</span><br />
             <span className="text-[#8dc73d]">Questions</span>
           </h2>
@@ -758,7 +759,7 @@ const PainPointsSection = () => {
   return (
     <section className=" md:py-0 px-4">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
+        <h2 className="text-3xl md:text-5xl font-clash font-semibold text-center mb-12">
           <span className="text-[#8dc73d]">Struggling</span> With
           <br />
           Any of These?
@@ -1046,7 +1047,7 @@ const CreatorsSection = () => {
   return (
     <section className=" overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-center ">
+        <h2 className="text-3xl md:text-5xl font-clash font-semibold text-center ">
           <span className="text-[#8dc73d]">Creators </span>
           <span className="text-white">we Work with</span>
         </h2>

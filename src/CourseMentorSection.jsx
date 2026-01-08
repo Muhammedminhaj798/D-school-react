@@ -5,7 +5,7 @@ export function CourseMentorSection() {
   return (
     <section className="py-12 md:py-15 px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12">
+        <h2 className="text-3xl md:text-5xl font-clash font-semibold text-center mb-12">
           <span className="text-white">Course </span>
           <span className="text-[#8dc73d]">Mentor</span>
         </h2>
@@ -108,10 +108,10 @@ xl:h-[380px]
             md:text-left
           "
             >
-              <div className="text-xl h-2 ml-[0px] mt-[-14px] md:text-2xl  md:pl-[50px] font-medium text-white uppercase mb-1">
+              <div className="text-xl h-2 ml-[0px] mt-[-14px] md:text-2xl  md:pl-[50px] font-clash font-semibold text-white uppercase mb-1">
                 NISAM VM
               </div>
-              <div className="text-sm mt-5 ml-[25px] md:text-base md:pl-[60px]  font-semibold text-white leading-snug">
+              <div className="text-sm mt-5 ml-[25px] md:text-base md:pl-[60px]  font-clash font-semibold text-white leading-snug">
                 CEO - Desgro Media
                 <br />
                 Demand School
@@ -126,18 +126,19 @@ xl:h-[380px]
             
             md:text-right
             ml-auto
-            
+            font-clash
+            font-bold
             md:mt-10
             lg:ml-[660px]
           "
             >
-              <div className="text-3xl ml-[-140px] mt-[-100px] sm:text-5xl md:text-5xl sm:ml-[0px] md:mt-5 sm:mt-[-230px] lg:text-7xl font-black text-[#556B2F]">
+              <div className="text-3xl ml-[-140px] mt-[-100px] sm:text-5xl md:text-5xl sm:ml-[0px] md:mt-5 sm:mt-[-230px] lg:text-7xl  text-[#556B2F]">
                 146k+
               </div>
-              <div className="text-xl ml-[-173px] sm:text-4xl md:text-4xl sm:ml-[-50px] lg:text-5xl font-black text-[#556B2F]">
+              <div className="text-xl ml-[-173px] sm:text-4xl md:text-4xl sm:ml-[-50px] lg:text-5xl  text-[#556B2F]">
                 Followers
               </div>
-              <div className="text-xl ml-[-200px] sm:text-4xl sm:ml-[-100px] md:text-4xl lg:ml-[-150px] lg:mt-2 lg:w-[400px] lg:text-6xl font-black text-[#556B2F]">
+              <div className="text-xl ml-[-200px] sm:text-4xl sm:ml-[-100px] md:text-4xl lg:ml-[-150px] lg:mt-2 lg:w-[400px] lg:text-5xl text-[#556B2F]">
                 on Instagram
               </div>
             </div>
