@@ -21,6 +21,8 @@ import { ArrowUpRight, Check, ChevronLeft, ChevronRight, GraduationCap, Instagra
 import { CourseMentorSection } from "./CourseMentorSection";
 import EnrollButtonWithCountdown from "./EnrollNow";
 import { getGlobalEnrollCount } from "./utils/enrollCount";
+import CreatorImage from "./utils/ImageMemo";
+// import CreatorImage from "./utils/imageMemo";
 // import PricingCard from "./PricingCard";
 
 const HeroSection = () => {
@@ -163,10 +165,10 @@ const HeroSection = () => {
                 z-20
               "
             >
-              <img
+              <CreatorImage
                 src={nisam}
-                alt="Mentor"
-                className="w-full h-auto rounded-3xl md:rounded-[40px]"
+                alt={"Mentor"}
+                className={"w-full h-auto rounded-3xl md:rounded-[40px]"}
               />
             </div>
 
@@ -607,9 +609,9 @@ const HeroSection = () => {
 
             {/* Center Logo */}
             <div className="flex items-center justify-center flex-shrink-0">
-              <img
+              <CreatorImage
                 src={logo}
-                alt="D School"
+                alt={"D School"}
                 className="
     [@media(max-width:376px)]:w-24
       max-[365px]:w-20
@@ -821,7 +823,7 @@ const PainPointsSection = () => {
                   ${idx === 1 ? "z-20" : "z-0"}
                 `}
               >
-                <img
+                <CreatorImage
                   src={point.img}
                   alt=""
                   className="w-full h-full object-cover"
@@ -1068,7 +1070,7 @@ const CreatorsSection = () => {
               >
                 {/* Image */}
                 <div className="w-[350px] h-[350px] md:w-[550px] md:h-[550px] aspect-[3/4] rounded-2xl overflow-hidden mb-4">
-                  <img
+                  <CreatorImage
                     src={creator.image}
                     alt={creator.name}
                     loading="lazy"
