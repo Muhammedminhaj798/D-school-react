@@ -1,5 +1,5 @@
 import nisam from "./assets/nisam vm.png";
-import CreatorImage from "./utils/ImageMemo";
+import LazyImage from "./utils/LazyImage";
 
 export function CourseMentorSection() {
   return (
@@ -63,7 +63,7 @@ xl:h-[380px]
                             
                         "
             >
-              <CreatorImage
+              <LazyImage
                 src={nisam}
                 alt="Nisam VM"
                 className="

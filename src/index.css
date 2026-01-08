@@ -87,13 +87,7 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Clash Display';
-  src: url('/fonts/ClashDisplay-Extrabold.woff2') format('woff2');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
+
 @font-face {
   font-family: "Mundial";
   src: url("/fonts/mundial/MundialRegular.otf") format("opentype");

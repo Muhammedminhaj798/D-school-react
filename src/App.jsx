@@ -1,23 +1,34 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import nisam from "./assets/nisam vm.png";
 import logo from "./assets/d logo.png";
 import img1 from "./assets/asna2.png";
 import img2 from "./assets/aflu2.png";
 import img3 from "./assets/asna1.png";
 import img4 from "./assets/aflu-1.png";
-import jesna from './assets/jesna.png';
-import shamsudheen from './assets/shamsudheen.png';
-import sreelal from './assets/sreelal.png';
-import abidarasheed from './assets/abida rasheed.png';
-import badarulmuneer from './assets/badarul muneer.png'
-import faisal from './assets/faisal.png'
-import fazil from './assets/fazil.png'
-import feroz from './assets/feroz.png'
-import hennaayoob from './assets/henna ayoob.png'
-import hennagazal from './assets/henna gazal.png'
+import jesna from "./assets/jesna.png";
+import shamsudheen from "./assets/shamsudheen.png";
+import sreelal from "./assets/sreelal.png";
+import abidarasheed from "./assets/abida rasheed.png";
+import badarulmuneer from "./assets/badarul muneer.png";
+import faisal from "./assets/faisal.png";
+import fazil from "./assets/fazil.png";
+import feroz from "./assets/feroz.png";
+import hennaayoob from "./assets/henna ayoob.png";
+import hennagazal from "./assets/henna gazal.png";
 
-
-import { ArrowUpRight, Check, ChevronLeft, ChevronRight, GraduationCap, Instagram, Linkedin, MessageCircle, Minus, Plus, X } from "lucide-react";
+import {
+  ArrowUpRight,
+  Check,
+  ChevronLeft,
+  ChevronRight,
+  GraduationCap,
+  Instagram,
+  Linkedin,
+  MessageCircle,
+  Minus,
+  Plus,
+  X,
+} from "lucide-react";
 import { CourseMentorSection } from "./CourseMentorSection";
 import EnrollButtonWithCountdown from "./EnrollNow";
 import { getGlobalEnrollCount } from "./utils/enrollCount";
@@ -30,17 +41,15 @@ const HeroSection = () => {
   const [openFaqs, setOpenFaqs] = useState({});
   const scrollRef = useRef(null);
 
-
-
   const toggleModule = (id) => {
     setOpenModuleId((prev) => (prev === id ? null : id));
   };
   const toggleFaq = (id) => {
-    setOpenFaqs(prev => ({ ...prev, [id]: !prev[id] }));
+    setOpenFaqs((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
   const scrollToPricing = () => {
-    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const enrollCount = getGlobalEnrollCount({
@@ -50,7 +59,6 @@ const HeroSection = () => {
     maxCount: 1500,
     resetTo: 199,
   });
-
 
   return (
     <div className="bg-black text-white font-sans overflow-x-hidden">
@@ -62,13 +70,12 @@ const HeroSection = () => {
       {/* Navigation */}
       <nav className="bg-[#708a46] pl-6">
         <div className="max-w-10xl h-12 mx-auto flex justify-between items-center">
-          <div className="[@media(max-width:320px)]:font-normal [@media(max-width:320px)]:text-base w-[10rem] md:w-[30rem] md:text-2xl font-clash font-base ml-[-10px]">Personal <span className="pl-0.2 md:pl-0">Branding Masterclass</span></div>
+          <div className="[@media(max-width:320px)]:font-normal [@media(max-width:320px)]:text-base w-[10rem] md:w-[30rem] md:text-2xl font-clash font-base ml-[-10px]">
+            Personal{" "}
+            <span className="pl-0.2 md:pl-0">Branding Masterclass</span>
+          </div>
           <div className="w-24 h-1 md:w-32 md:h-3 flex items-center justify-center [@media(max-width:320px)]:pr-5 pr-7">
-            <img
-              src={logo}
-              alt="Logo"
-              className="w-full h-auto"
-            />
+            <img src={logo} alt="Logo" className="w-full h-auto" />
           </div>
         </div>
       </nav>
@@ -113,9 +120,6 @@ const HeroSection = () => {
               Personal Branding Mastery
             </h2>
           </div>
-
-
-
 
           {/* Headline */}
           <h1 className="text-2xl w-full [@media(max-width:320px)]:text-xl md:text-4xl lg:text-5xl text-center font-mundial font-bold">
@@ -282,7 +286,13 @@ const HeroSection = () => {
               preserveAspectRatio="none"
             >
               <defs>
-                <linearGradient id="ctaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient
+                  id="ctaGrad"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
                   <stop offset="0%" stopColor="#435c19" />
                   <stop offset="100%" stopColor="#556b2f" />
                 </linearGradient>
@@ -325,8 +335,6 @@ const HeroSection = () => {
               </span>
             </button>
 
-
-
             <button
               className="
     relative z-10
@@ -358,27 +366,25 @@ const HeroSection = () => {
                 Mentorship Session
               </span>
             </button>
-
-
           </div>
         </div>
       </section>
       <ScrollBanner />
 
-
       {/*  Video Section */}
 
-      <section className="py-8 md:py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl relative pt-[56.25%]">
-            <iframe className="absolute top-0 left-0 w-full h-full"
-              src="https://drive.google.com/file/d/1UFwZuEe7vqySozHYBx9lFg_uPqpWtPlu/preview"
-              title="Course Preview"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </section>
+     <section className="py-8 md:py-12 px-4">
+  <div className="max-w-4xl mx-auto">
+    <div className="relative aspect-video bg-white rounded-3xl md:rounded-[40px] overflow-hidden shadow-2xl">
+      <iframe
+        src="https://www.youtube.com/embed/g3zJhiOvOiw?controls=0&modestbranding=1&rel=0"
+        className="w-full h-full"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  </div>
+</section>
 
 
       {/* pain point section */}
@@ -389,10 +395,16 @@ const HeroSection = () => {
       <section className="py-12 md:py-9 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className=" text-3xl md:text-5xl font-clash font-semibold mb-12">
-            Here's What<br />You'll <span className="text-[#8dc73d]">Achieve</span>
+            Here's What
+            <br />
+            You'll <span className="text-[#8dc73d]">Achieve</span>
           </h2>
           <div className="flex flex-row gap-3 md:gap-6 overflow-x-auto scrollbar-hide">
-            {['Build Your\nIdentity', 'Grow Your\nEngagement', 'Become a\nRecognised\nExpert'].map((text, idx) => (
+            {[
+              "Build Your\nIdentity",
+              "Grow Your\nEngagement",
+              "Become a\nRecognised\nExpert",
+            ].map((text, idx) => (
               <div
                 key={idx}
                 className="
@@ -415,7 +427,6 @@ const HeroSection = () => {
               >
                 {text}
               </div>
-
             ))}
           </div>
         </div>
@@ -489,7 +500,6 @@ const HeroSection = () => {
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
 
-
             {/* RIGHT ARROW */}
             <button
               onClick={() =>
@@ -562,12 +572,12 @@ const HeroSection = () => {
         </div>
       </section>
 
-
       {/* faq */}
       <section className="py-12 md:py-8 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-clash font-semibold text-center mb-12">
-            Frequently <span className="text-white">Asked</span><br />
+            Frequently <span className="text-white">Asked</span>
+            <br />
             <span className="text-[#8dc73d]">Questions</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
@@ -586,12 +596,9 @@ const HeroSection = () => {
       <footer className="bg-[#6a9413] py-8 px-4 h-54  sm:h-64 md:h-65 lg:h-66">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-row mb-[50px] md:flex-row items-center justify-between gap-8">
-
             {/* Left Section */}
             <div className="text-center mt-[-30px] sm:mt-0 md:text-left z-30">
-              <p className="font-clash w-25  text-white mb-2 ">
-                Follow us on
-              </p>
+              <p className="font-clash w-25  text-white mb-2 ">Follow us on</p>
               <div className="flex gap-4 justify-center md:justify-start">
                 <a
                   href="https://www.linkedin.com/company/demandschoolofficial?originalSubdomain=in"
@@ -629,13 +636,9 @@ const HeroSection = () => {
               />
             </div>
 
-
-
             {/* Right Section */}
             <div className="text-center [@media(max-width:376px)]:ml-[-40] [@media(max-width:320px)]:ml-[-60px] z-30 ml-[-60px] max-[365px]:ml-[-40px] mt-[-30px] sm:mt-0 md:text-right">
-              <p className="font-clash w-35 text-white mb-2 ">
-                Contact us on
-              </p>
+              <p className="font-clash w-35 text-white mb-2 ">Contact us on</p>
               <div className="flex gap-4 justify-center md:justify-end">
                 <a
                   href="#"
@@ -645,7 +648,6 @@ const HeroSection = () => {
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </footer>
@@ -659,7 +661,6 @@ const HeroSection = () => {
           Enroll Now
         </button>
       </div> */}
-
     </div>
   );
 };
@@ -671,34 +672,38 @@ const ScrollBanner = () => {
   return (
     <section className="relative w-full h-[180px] bg-black overflow-hidden flex justify-center items-center -mt-[50px] z-10">
       {/* Band 1: Left to Right */}
-      <div className="
+      <div
+        className="
         absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
         w-[140vw] md:w-[120vw] 
         bg-[#8dc73d] text-white py-1 md:py-2 
         flex items-center justify-center 
         shadow-[0_0_20px_rgba(138,189,76,0.4)]
         rotate-5 md:rotate-2 lg:rotate-2
-      ">
+      "
+      >
         <div
           className="whitespace-nowrap"
-          style={{ animation: 'scroll-left-to-right 35s linear infinite' }}
+          style={{ animation: "scroll-left-to-right 35s linear infinite" }}
         >
           {repeatedText}
         </div>
       </div>
 
       {/* Band 2: Right to Left */}
-      <div className="
+      <div
+        className="
         absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
         w-[140vw] md:w-[120vw] 
         bg-[#8dc73d] text-white py-1 md:py-2 
         flex items-center justify-center 
         shadow-[0_0_20px_rgba(138,189,76,0.4)]
         -rotate-5 md:-rotate-2 lg:-rotate-2
-      ">
+      "
+      >
         <div
           className="whitespace-nowrap"
-          style={{ animation: 'scroll-right-to-left 35s linear infinite' }}
+          style={{ animation: "scroll-right-to-left 35s linear infinite" }}
         >
           {repeatedText}
         </div>
@@ -707,22 +712,26 @@ const ScrollBanner = () => {
       {/* Global Keyframes - Add this to your global CSS (index.css or App.css) */}
       <style jsx global>{`
         @keyframes scroll-left-to-right {
-          0% { transform: translateX(-30%); }
-          100% { transform: translateX(30%); }
+          0% {
+            transform: translateX(-30%);
+          }
+          100% {
+            transform: translateX(30%);
+          }
         }
 
         @keyframes scroll-right-to-left {
-          0% { transform: translateX(30%); }
-          100% { transform: translateX(-30%); }
+          0% {
+            transform: translateX(30%);
+          }
+          100% {
+            transform: translateX(-30%);
+          }
         }
       `}</style>
     </section>
   );
 };
-
-
-
-
 
 const PainPointsSection = () => {
   const painPoints = [
@@ -786,13 +795,11 @@ const PainPointsSection = () => {
                   whitespace-pre-line
                   
                   z-21 md:z-21
-                  ${point.position === "left"
-                    ? "text-right"
-                    : "text-left"
-                  }
-                  ${idx === 1
-                    ? "relative z-0 md:z-10  text-2xl"
-                    : "relative z-10"
+                  ${point.position === "left" ? "text-right" : "text-left"}
+                  ${
+                    idx === 1
+                      ? "relative z-0 md:z-10  text-2xl"
+                      : "relative z-10"
                   }
                 `}
               >
@@ -808,15 +815,21 @@ const PainPointsSection = () => {
 
                   w-[60%] md:w-[75%]
 
-                  ${idx === 1 || idx === 2
-                    ? "h-[190%] md:h-[140%] bottom-[-40px] md:bottom-[-40px]"
-                    : "h-full"
+                  ${
+                    idx === 1 || idx === 2
+                      ? "h-[190%] md:h-[140%] bottom-[-40px] md:bottom-[-40px]"
+                      : "h-full"
                   }
-                  ${idx === 1 ? "[@media(max-width:320px)]:h-[150px] [@media(max-width:320px)]:bottom-[23px] [@media(max-width:320px)]:ml-[-40px]  [@media(max-width:320px)]:w-[280px] md:h-[420px] h-[300px] w-[650x] bottom-[-50px] md:bottom-[-59px]" : ""
+                  ${
+                    idx === 1
+                      ? "[@media(max-width:320px)]:h-[150px] [@media(max-width:320px)]:bottom-[23px] [@media(max-width:320px)]:ml-[-40px]  [@media(max-width:320px)]:w-[280px] md:h-[420px] h-[300px] w-[650x] bottom-[-50px] md:bottom-[-59px]"
+                      : ""
                   }
-                  ${idx === 2 ? "md:h-[320px]" : ""
-                  }
-                  ${idx === 0 ? "bottom-6 md:bottom-[40px] lg:bottom-10 lg:h-[185px]" : ""
+                  ${idx === 2 ? "md:h-[320px]" : ""}
+                  ${
+                    idx === 0
+                      ? "bottom-6 md:bottom-[40px] lg:bottom-10 lg:h-[185px]"
+                      : ""
                   }
                   
                   ${idx < 3 ? "translate-y-6 md:translate-y-10" : ""}
@@ -838,13 +851,9 @@ const PainPointsSection = () => {
   );
 };
 
-
-
-
 // Module Item Component
 const ModuleItem = ({ module, isOpen, toggle }) => (
   <div className="bg-[#8dc73d] rounded-2xl overflow-hidden transition-all self-start">
-
     {/* Header */}
     <div
       onClick={toggle}
@@ -858,21 +867,19 @@ const ModuleItem = ({ module, isOpen, toggle }) => (
 
     {/* Content */}
     <div
-      className={`bg-[#3a3939] text-white px-6 overflow-hidden transition-[max-height,padding] duration-300 ease-in-out ${isOpen ? "max-h-[1000px] py-6" : "max-h-0 py-0"
-        }`}
+      className={`bg-[#3a3939] text-white px-6 overflow-hidden transition-[max-height,padding] duration-300 ease-in-out ${
+        isOpen ? "max-h-[1000px] py-6" : "max-h-0 py-0"
+      }`}
     >
       <p className="text-base leading-relaxed">{module.content}</p>
     </div>
-
   </div>
 );
-
 
 // pricing card module
 
 // Pricing Card Component
 const PricingCard = ({ plan }) => (
-
   <div
     style={{ backgroundColor: plan.color }}
     className="
@@ -886,9 +893,9 @@ const PricingCard = ({ plan }) => (
     transition-all duration-300
   "
   >
-
     {plan.isBestSeller && (
-      <div className="
+      <div
+        className="
     absolute
     top-6
     right-[-48px]
@@ -903,12 +910,11 @@ const PricingCard = ({ plan }) => (
 
     px-16 py-2
     shadow-lg
-  ">
+  "
+      >
         BEST VALUE
       </div>
     )}
-
-
 
     {/* Title */}
     <h3 className="text-2xl sm:text-2xl  md:text-3xl font-clash font-semibold text-white ">
@@ -927,8 +933,6 @@ const PricingCard = ({ plan }) => (
       </div>
     </div>
 
-
-
     {/* Features */}
     <div className="flex-1 space-y-2 mb-6">
       {plan.features.map((feature, idx) => (
@@ -941,7 +945,9 @@ const PricingCard = ({ plan }) => (
           ) : (
             <X className="w-8 h-8 mt-1 text-green-600 flex-shrink-0" />
           )}
-          <span className=" [@media(max-width:366px)]:text-base text-lg md:text-2xl">{feature.text}</span>
+          <span className=" [@media(max-width:366px)]:text-base text-lg md:text-2xl">
+            {feature.text}
+          </span>
         </div>
       ))}
     </div>
@@ -977,16 +983,31 @@ const PricingCard = ({ plan }) => (
   </div>
 );
 
-
-
-
-
-
 const faqs = [
-  { id: 1, title: 'Who is this course for?', content: 'This course is designed for creators, freelancers, entrepreneurs, and anyone who wants to build a strong personal brand that attracts clients and opportunities.' },
-  { id: 2, title: 'How long is the course?', content: 'The core masterclass runs for 1 hr 30+ minutes, but you\'ll also get monthly live mentorship sessions (depending on your plan).' },
-  { id: 3, title: 'Will this help me grow on Instagram?', content: 'Yes. You\'ll learn content pillars, engagement strategies, and community-building techniques specifically for Instagram.' },
-  { id: 4, title: 'Is this course suitable for working professionals?', content: 'Yes! All sessions can be watched anytime, and the system is built for busy schedules.' },
+  {
+    id: 1,
+    title: "Who is this course for?",
+    content:
+      "This course is designed for creators, freelancers, entrepreneurs, and anyone who wants to build a strong personal brand that attracts clients and opportunities.",
+  },
+  {
+    id: 2,
+    title: "How long is the course?",
+    content:
+      "The core masterclass runs for 1 hr 30+ minutes, but you'll also get monthly live mentorship sessions (depending on your plan).",
+  },
+  {
+    id: 3,
+    title: "Will this help me grow on Instagram?",
+    content:
+      "Yes. You'll learn content pillars, engagement strategies, and community-building techniques specifically for Instagram.",
+  },
+  {
+    id: 4,
+    title: "Is this course suitable for working professionals?",
+    content:
+      "Yes! All sessions can be watched anytime, and the system is built for busy schedules.",
+  },
 ];
 
 const CreatorsSection = () => {
@@ -1043,6 +1064,32 @@ const CreatorsSection = () => {
     },
   ];
   const [paused, setPaused] = useState(false);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    let loaded = 0;
+    const total = creators.length;
+
+    creators.forEach((c) => {
+      const img = new Image();
+      img.src = c.image;
+
+      const done = () => {
+        loaded++;
+        if (loaded === total) setReady(true);
+      };
+
+      img.onload = done;
+      img.onerror = done;
+    });
+
+    // safety fallback – UI block aavathirikkaan
+    setTimeout(() => setReady(true), 6000);
+  }, []);
+
+  if (!ready) {
+    return <div>loading...</div>;
+  }
 
   return (
     <section className=" overflow-hidden">
@@ -1058,19 +1105,18 @@ const CreatorsSection = () => {
           onMouseLeave={() => setPaused(false)}
         >
           <div
-            className="flex w-max animate-scroll-creators will-change-transform"
-            style={{
-              animationPlayState: paused ? "paused" : "running",
-            }}
+            className={`flex w-max will-change-transform transition-opacity duration-300 ${
+              ready ? "animate-scroll-creators opacity-100" : "opacity-0"
+            }`}
+            style={{ animationPlayState: paused ? "paused" : "running" }}
           >
-
             {[...creators, ...creators].map((creator, idx) => (
               <div
                 key={idx}
                 className="flex-shrink-0 w-[200px] md:w-[300px] sm:w-[260px]"
               >
                 {/* Image */}
-                <div className="w-[350px] h-[350px] md:w-[550px] md:h-[550px] aspect-[3/4] rounded-2xl overflow-hidden mb-4">
+                <div className="w-[350px] h-[350px] md:w-[550px] md:h-[550px] aspect-[3/4] rounded-2xl overflow-hidden mb-4 will">
                   <CreatorImage
                     src={creator.image}
                     alt={creator.name}
@@ -1078,7 +1124,6 @@ const CreatorsSection = () => {
                     decoding="async"
                     className="w-full h-full object-cover"
                   />
-
                 </div>
 
                 {/* Name */}
@@ -1110,7 +1155,6 @@ const CreatorsSection = () => {
                 >
                   {creator.profession}
                 </div>
-
               </div>
             ))}
           </div>
@@ -1120,62 +1164,95 @@ const CreatorsSection = () => {
   );
 };
 
-
-
-
 const modules = [
-  { id: 1, title: 'Module 1:\nWhy Personal Branding', content: 'Why personal branding matters in today\'s digital-first world. How a strong personal brand creates career and business opportunities. The impact of personal branding on trust, influence, and visibility.' },
-  { id: 2, title: 'Module 2:\nBuilding Your Brand Foundation', content: 'Identifying your niche and area of expertise. How to understand your target audience and their needs. Defining your brand personality and tone of voice.' },
-  { id: 3, title: 'Module 3:\nContent Creation', content: 'Types of content that work for personal brands. Creating content that reflects your identity and expertise. Basics of storytelling for personal branding. Building confidence to show up on camera or in writing.' },
-  { id: 4, title: 'Module 4:\nViral Content Creation', content: 'Psychology behind viral content. What makes people stop scrolling. Using emotions, relatability, and trends effectively.' },
-  { id: 5, title: 'Module 5:\nContent Structure', content: 'Simple frameworks to organise content ideas. How to script short-form and long-form content. Structuring posts for clarity and impact.' },
-  { id: 6, title: 'Module 6:\nCommunity Building and Engagement', content: 'Difference between followers and community. Building trust through authentic interaction. How to engage using comments, DMs, and stories.' },
-  { id: 7, title: 'Module 7:\nEstablishing Industry Authority', content: 'Positioning yourself as an industry expert. Creating thought leadership content. Sharing insights, opinions, and experiences confidently.' },
-  { id: 8, title: 'Module 8:\nThe Motivation and The Consistency', content: 'Developing the right mindset for long-term growth. Overcoming fear, self-doubt, and burnout. Building habits that keep your personal brand growing.' },
+  {
+    id: 1,
+    title: "Module 1:\nWhy Personal Branding",
+    content:
+      "Why personal branding matters in today's digital-first world. How a strong personal brand creates career and business opportunities. The impact of personal branding on trust, influence, and visibility.",
+  },
+  {
+    id: 2,
+    title: "Module 2:\nBuilding Your Brand Foundation",
+    content:
+      "Identifying your niche and area of expertise. How to understand your target audience and their needs. Defining your brand personality and tone of voice.",
+  },
+  {
+    id: 3,
+    title: "Module 3:\nContent Creation",
+    content:
+      "Types of content that work for personal brands. Creating content that reflects your identity and expertise. Basics of storytelling for personal branding. Building confidence to show up on camera or in writing.",
+  },
+  {
+    id: 4,
+    title: "Module 4:\nViral Content Creation",
+    content:
+      "Psychology behind viral content. What makes people stop scrolling. Using emotions, relatability, and trends effectively.",
+  },
+  {
+    id: 5,
+    title: "Module 5:\nContent Structure",
+    content:
+      "Simple frameworks to organise content ideas. How to script short-form and long-form content. Structuring posts for clarity and impact.",
+  },
+  {
+    id: 6,
+    title: "Module 6:\nCommunity Building and Engagement",
+    content:
+      "Difference between followers and community. Building trust through authentic interaction. How to engage using comments, DMs, and stories.",
+  },
+  {
+    id: 7,
+    title: "Module 7:\nEstablishing Industry Authority",
+    content:
+      "Positioning yourself as an industry expert. Creating thought leadership content. Sharing insights, opinions, and experiences confidently.",
+  },
+  {
+    id: 8,
+    title: "Module 8:\nThe Motivation and The Consistency",
+    content:
+      "Developing the right mindset for long-term growth. Overcoming fear, self-doubt, and burnout. Building habits that keep your personal brand growing.",
+  },
 ];
-
 
 const pricingPlans = [
   {
-    title: 'Basic Plan',
-    price: '₹1,799',
-    actualPrice: '₹2,499',
-    color: '#58751c',
+    title: "Basic Plan",
+    price: "₹1,799",
+    actualPrice: "₹2,499",
+    color: "#58751c",
     features: [
-      { text: 'Pre-recorded Masterclass Videos', included: true },
-      { text: 'Live Classes', included: false },
-      { text: 'Certificate of Completion', included: true },
-      { text: 'Access Validity: 3 Month', included: true },
-    ]
+      { text: "Pre-recorded Masterclass Videos", included: true },
+      { text: "Live Classes", included: false },
+      { text: "Certificate of Completion", included: true },
+      { text: "Access Validity: 3 Month", included: true },
+    ],
   },
   {
-    title: 'Standard Plan',
-    price: '₹2,499',
-    actualPrice: '₹3,499',
+    title: "Standard Plan",
+    price: "₹2,499",
+    actualPrice: "₹3,499",
     isBestSeller: true, // 👈 IMPORTANT
-    color: '#58751c',
+    color: "#58751c",
     features: [
-      { text: 'Pre-recorded Masterclass Videos', included: true },
-      { text: '1 Live Class', included: true },
-      { text: 'Certificate of Completion', included: true },
-      { text: 'Access Validity: 3 Month', included: true },
-    ]
+      { text: "Pre-recorded Masterclass Videos", included: true },
+      { text: "1 Live Class", included: true },
+      { text: "Certificate of Completion", included: true },
+      { text: "Access Validity: 3 Month", included: true },
+    ],
   },
   {
-    title: 'Advanced Plan',
-    price: '₹3,499',
-    actualPrice: '₹4,999',
-    color: '#58751c',
+    title: "Advanced Plan",
+    price: "₹3,499",
+    actualPrice: "₹4,999",
+    color: "#58751c",
     features: [
-      { text: 'Pre-recorded Masterclass Videos', included: true },
-      { text: '6 Live Classes', included: true },
-      { text: 'Certificate of Completion', included: true },
-      { text: 'Access Validity: 12 Month', included: true },
-    ]
+      { text: "Pre-recorded Masterclass Videos", included: true },
+      { text: "6 Live Classes", included: true },
+      { text: "Certificate of Completion", included: true },
+      { text: "Access Validity: 12 Month", included: true },
+    ],
   },
 ];
-
-
-
 
 export default HeroSection;
