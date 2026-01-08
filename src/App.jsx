@@ -1079,7 +1079,7 @@ const CreatorsSection = () => {
                 </div>
 
                 {/* Name */}
-                <div className="text-[#8dc73d] w-[350px]  md:ml-35 md:w-[250px] md:mt-[-40px]  transform -translate-y-15  text-lg font-extrabold text-center uppercase">
+                <div className="text-[#8dc73d] w-[180px]  ml-23 md:ml-19  md:ml-35 md:w-[250px] md:mt-[-40px]  transform -translate-y-15  text-lg font-extrabold  text-left uppercase">
                   {creator.name}
                 </div>
 
@@ -1088,20 +1088,21 @@ const CreatorsSection = () => {
                   className="
     text-white
     w-full
-    ml-25
+
+    ml-23
     md:ml-35
     max-w-[150px] md:max-w-[250px]
     text-xs
     md:text-sm
     font-semibold
-    text-center
+    text-left
     [@media(max-width:366px)]:w-50
     [@media(max-width:366px)]:text-xs
     break-words
     leading-snug
 
     -translate-y-15
-    px-2
+    
   "
                 >
                   {creator.profession}
