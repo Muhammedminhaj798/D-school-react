@@ -133,7 +133,7 @@ xl:h-[380px]
           "
             >
               <div className="text-3xl ml-[-140px] mt-[-100px] sm:text-5xl md:text-5xl sm:ml-[0px] md:mt-5 sm:mt-[-230px] lg:text-7xl  text-[#556B2F]">
-                146k+
+                150k+
               </div>
               <div className="text-xl ml-[-173px] sm:text-4xl md:text-4xl sm:ml-[-50px] lg:text-5xl  text-[#556B2F]">
                 Followers

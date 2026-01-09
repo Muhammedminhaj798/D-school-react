@@ -1055,7 +1055,7 @@ const CreatorsSection = () => {
     {
       name: "Henna Ayoob",
       image: hennaayoob,
-      profession: "Consultant psychologist",
+      profession: "Consultant Psychologist",
     },
     {
       name: "Henna Gazal",
