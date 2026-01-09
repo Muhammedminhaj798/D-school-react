@@ -279,7 +279,7 @@ const HeroSection = () => {
                 lg:h-[160px]
                 lg:w-[1281px]  lg:bottom-[72%]
                 xl:h-[280px]  xl:w-[1282px] xl:bottom-[5%]
-                2xl:h-[200px] 2xl:mb-2.5
+                2xl:h-[200px] 2xl:mb-10
                 z-0
               "
               viewBox="0 0 1440 320"
