@@ -12,7 +12,7 @@ const EnrollButtonWithCountdown = ({ scrollToPricing }) => {
     baseCount: 565,
     intervalMinutes: 1,
     maxCount: 1500,
-    resetTo: 199,
+    resetTo: 565,
   });
 
   const getNextDeadline = () => {
