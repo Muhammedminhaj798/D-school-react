@@ -57,7 +57,7 @@ const HeroSection = () => {
     baseCount: 565,
     intervalMinutes: 1,
     maxCount: 1500,
-    resetTo: 199,
+    resetTo: 565,
   });
 
   return (
