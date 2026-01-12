@@ -641,7 +641,9 @@ const HeroSection = () => {
               <p className="font-clash w-35 text-white mb-2 ">Contact us on</p>
               <div className="flex gap-4 justify-center md:justify-end">
                 <a
-                  href="#"
+                  href="https://wa.me/918891804490"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white transition-transform hover:scale-110 active:scale-95"
                 >
                   <MessageCircle className="w-4 h-4 sm:w-7 sm:h-7 md:w-6 md:h-6" />
